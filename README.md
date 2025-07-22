@@ -1,4 +1,4 @@
-# 🩺 Pathology Foundation Model Semantic Segmentation Framework
+# 🩺 Pathology Foundation Models Meet Semantic Segmentation
 
 A comprehensive semantic segmentation framework based on Pathology Foundation Models (PFMs), designed specifically for pathological image analysis, supporting multiple state-of-the-art pathology foundation models with complete training, inference, and evaluation capabilities.
 
