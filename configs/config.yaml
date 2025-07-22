@@ -1,0 +1,66 @@
+# Dataset configuration
+dataset:
+  json_file: "/path/to/dataset.json"  # Path to the JSON configuration file
+  num_classes: 2  # Number of classes; must match num_classes in the JSON file
+  ignore_index: 255  # Index value to ignore during training
+
+system:
+  num_workers: 2  # Number of worker threads for data loading
+  pin_memory: true  # Whether to use pin_memory to accelerate data loading
+  seed: 42  
+  device: "cuda:1"  # Device to use, 'cuda' or 'cpu'
+
+# Model configuration
+model:
+  pfm_name: "uni_v1"  # Options: uni_v1, uni_v2, virvhow_v2, conch_v1_5, gigapath
+  emb_dim: 1024 # uni_v1: 1024, uni_v2: 1536, virvhow_v2: 1280, conch_v1_5: 1024, gigapath: 1536
+  finetune_mode:
+    type: lora # Options: lora, full, frozen
+    rank: 16 # only used when finetune_mode.type is lora
+    alpha: 1.0 # only used when finetune_mode.type is lora
+  pfm_weights_path: '/path/to/pytorch_model.bin'  # Path to the PFM model weights
+  mean: [0.485, 0.456, 0.406]  # match the PFM model's input normalization
+  std: [0.229, 0.224, 0.225] # match the PFM model's input normalization
+  num_classes: 2  # Must match num_classes in the JSON file
+
+# Training configuration
+training:
+  batch_size: 1
+  epochs: 10
+  learning_rate: 0.01
+  weight_decay: 0.0001
+  use_amp: true  # Whether to use automatic mixed precision (AMP) for training
+  accumulate_grad_batches: 1  # Number of batches to accumulate gradients over before performing an optimizer step
+  clip_grad_norm: 5.0  # Gradient clipping value to prevent exploding gradients
+  
+  # Data augmentation
+  augmentation:
+    RandomResizedCropSize: 512 # virchow_v2,uni_v2: must be a multiple of 14 (token_size) / uni_v1, conch_v1_5, gigapath: must be a multiple of 16 (token_size) 
+
+  # Optimizer settings
+  optimizer: 
+    type: "SGD"  # Options: SGD, Adam, AdamW
+  
+  # Learning rate scheduler
+  scheduler:
+    type: "cosine"  # Options: cosine, step
+    warmup_epochs: 2
+    
+  # Loss function
+  loss:
+    type: "cross_entropy"  # Options: cross_entropy, dice, ohem, iou
+    
+# Validation configuration
+validation:
+  eval_interval: 1  # Validate every N epochs
+  batch_size: 16
+  augmentation:
+    ResizedSize: 512 # virchow_v2,uni_v2: must be a multiple of 14 (token_size) / uni_v1, conch_v1_5, gigapath: must be a multiple of 16 (token_size) 
+  
+logging:
+  log_dir: "/path/to/logs" 
+  experiment_name: "your_xperiment_name"
+
+visualization:
+  save_interval: 2  # Save visualization results every N epochs
+  num_vis_samples: 8  # Number of samples to visualize

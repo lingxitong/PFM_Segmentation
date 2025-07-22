@@ -1,0 +1,39 @@
+{
+  "num_classes": 3,
+  "data": {
+    "train": [
+      {
+        "image_path": "/images/train/patient001_slide01.jpg",
+        "mask_path": "/masks/train/patient001_slide01.png"
+      },
+      {
+        "image_path": "/images/train/patient001_slide02.jpg", 
+        "mask_path": "masks/train/patient001_slide02.png"
+      },
+      {
+        "image_path": "/images/train/patient002_slide01.jpg",
+        "mask_path": "/masks/train/patient002_slide01.png"
+      }
+    ],
+    "val": [
+      {
+        "image_path": "/images/val/patient003_slide01.jpg",
+        "mask_path": "/masks/val/patient003_slide01.png"
+      },
+      {
+        "image_path": "/images/val/patient003_slide02.jpg",
+        "mask_path": "/masks/val/patient003_slide02.png"
+      }
+    ],
+    "test": [
+      {
+        "image_path": "/images/val/patient004_slide01.jpg",
+        "mask_path": "/masks/val/patient004_slide01.png"
+      },
+      {
+        "image_path": "/images/val/patient004_slide02.jpg",
+        "mask_path": "/masks/val/patient004_slide02.png"
+      }
+    ]
+  }
+}
