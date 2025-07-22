@@ -4,7 +4,7 @@ A comprehensive semantic segmentation framework based on Pathology Foundation Mo
 
 ## 🌟 Features
 
-- 🧬 **Support for Multiple Top-tier Pathology Foundation Models**: uni_v1, uni_v2, conch_v1_5, gigapath, virchow_v2
+- 🧬 **Support for SOTA Pathology Foundation Models**: uni_v1, uni_v2, conch_v1_5, gigapath, virchow_v2
 - 🔧 **Flexible Fine-tuning Strategies**: LoRA, full parameter fine-tuning, frozen backbone
 - 📊 **Complete Training Pipeline**: Mixed precision training, learning rate scheduling, gradient accumulation
 - 🎯 **Advanced Data Augmentation**: Integrated 10+ advanced data augmentations including spatial, color, and noise transformations
@@ -18,7 +18,6 @@ A comprehensive semantic segmentation framework based on Pathology Foundation Mo
 - [Training Script Usage](#-training-script-usage)
 - [Inference Script Usage](#-inference-script-usage)
 - [Pathology Foundation Models Details](#-pathology-foundation-models-details)
-- [FAQ](#-faq)
 
 ## 📁 Dataset Format
 
@@ -260,10 +259,10 @@ python scripts/infer.py \
 | `--checkpoint` | str | ✅ | Trained model checkpoint path |
 | `--input_json` | str | ✅ | JSON file containing data to be inferred |
 | `--output_dir` | str | ✅ | Inference results save directory |
-| `--device` | str | ❌ | Inference device, default cuda:0 |
-| `--input_size` | int | ❌ | Input image size for model, not original image size |
-| `--resize_or_windowslide` | str | ❌ | Inference mode, default windowslide |
-| `--batch_size` | int | ❌ | Inference batch size, default 2 |
+| `--device` | str | ✅ | Inference device, default cuda:0 |
+| `--input_size` | int | ✅ | Input image size for model, not original image size |
+| `--resize_or_windowslide` | str | ✅ | Inference mode, default windowslide |
+| `--batch_size` | int | ✅ | Inference batch size, default 2 |
 
 ### Inference Mode Selection
 
