@@ -303,7 +303,7 @@ output_dir/
 | Model Name | Parameters | Embedding Dim | Token Size | HuggingFace |
 |------------|------------|---------------|------------|-------------|
 | **uni_v1** | 307M | 1024 | 16×16 | [MahmoodLab/UNI](https://huggingface.co/MahmoodLab/UNI) |
-| **uni_v2** | 1.1B | 1536 | 14×14 | [MahmoodLab/UNI](https://huggingface.co/MahmoodLab/UNI2-h) |
+| **uni_v2** | 1.1B | 1536 | 14×14 | [MahmoodLab/UNI2](https://huggingface.co/MahmoodLab/UNI2-h) |
 | **virchow_v2** | 632M | 1280 | 14×14 | [paige-ai/Virchow2](https://huggingface.co/paige-ai/Virchow2) |
 | **conch_v1_5** | 307M | 1024 | 16×16 | [MahmoodLab/TITAN](https://huggingface.co/MahmoodLab/TITAN) |
 | **gigapath** | 1.1B | 1536 | 16×16 | [prov-gigapath/prov-gigapath](https://huggingface.co/prov-gigapath/prov-gigapath) |
