@@ -1,6 +1,6 @@
 # Dataset configuration
 dataset:
-  json_file: "/path/to/dataset.json"  # Path to the JSON configuration file
+  json_file: "/mnt/net_sda/chenwm/PFM_Segmentation/dataset_json/TNBC.json"  # Path to the JSON configuration file
   num_classes: 2  # Number of classes; must match num_classes in the JSON file
   ignore_index: 255  # Index value to ignore during training
 
@@ -8,25 +8,32 @@ system:
   num_workers: 2  # Number of worker threads for data loading
   pin_memory: true  # Whether to use pin_memory to accelerate data loading
   seed: 42  
-  device: "cuda:1"  # Device to use, 'cuda' or 'cpu'
+  device: "cuda:0"  # Device to use, 'cuda' or 'cpu'
 
 # Model configuration
 model:
-  pfm_name: "uni_v1"  # Options: uni_v1, uni_v2, virvhow_v2, conch_v1_5, gigapath
-  emb_dim: 1024 # uni_v1: 1024, uni_v2: 1536, virvhow_v2: 1280, conch_v1_5: 1024, gigapath: 1536
+  # Options: uni_v1, uni_v2, virchow_v1, virchow_v2, conch_v1_5, conch_v1, midnight12k, lunit_vits8, musk,PathOrchestra
+  # Options: gigapath, phikon , patho3dmatrix-vision, phikon_v2, hoptimus_0, hoptimus_1, kaiko-vitl14, hibou_l
+  pfm_name: "hoptimus_1"  
+
+  # midnight12k/hoptimus_0/hoptimus_1/uni_v2/gigapath: 1536
+  # virchow_v1/virchow_v2: 1280
+  # uni_v1/hibou_l/musk/phikon_v2/kaiko-vitl14/conch_v1/patho3dmatrix-vision/PathOrchestra: 1024
+  # conch_v1_5/phikon: 768
+  # lunit_vits8: 384
+  emb_dim: 1536 
   finetune_mode:
-    type: lora # Options: lora, full, frozen
-    rank: 16 # only used when finetune_mode.type is lora
-    alpha: 1.0 # only used when finetune_mode.type is lora
-  pfm_weights_path: '/path/to/pytorch_model.bin'  # Path to the PFM model weights
-  mean: [0.485, 0.456, 0.406]  # match the PFM model's input normalization
-  std: [0.229, 0.224, 0.225] # match the PFM model's input normalization
+    type: dora # Options: lora, full, frozen, dora
+    rank: 16 # only used when finetune_mode.type is lora or dora 
+    alpha: 1.0 # only used when finetune_mode.type is lora or dora
+  #Musk and hibou_l can only be loaded from huggingface.co,so we don't need to specify the path
+  pfm_weights_path: '/mnt/net_sda/chenwm/PFM_Segmentation/weight/H-optimus-0/pytorch_model.bin'  # Path to the PFM model weights
   num_classes: 2  # Must match num_classes in the JSON file
 
 # Training configuration
 training:
-  batch_size: 1
-  epochs: 10
+  batch_size: 8
+  epochs: 2
   learning_rate: 0.01
   weight_decay: 0.0001
   use_amp: true  # Whether to use automatic mixed precision (AMP) for training
@@ -35,11 +42,16 @@ training:
   
   # Data augmentation
   augmentation:
-    RandomResizedCropSize: 512 # virchow_v2,uni_v2: must be a multiple of 14 (token_size) / uni_v1, conch_v1_5, gigapath: must be a multiple of 16 (token_size) 
+    # virchow_v1,virchow_v2,uni_v2,midnight12k,kaiko-vitl14,hibou_l: must be a multiple of 14 (token_size) 
+    # uni_v1,conch_v1_5,gigapath,conch_v1 ,phikon,phikon_v2,patho3dmatrix-vision,PathOrchestra: must be a multiple of 16 (token_size) 
+    # lunit_vits8: must be a multiple of 8 (token_size)
+    # special: H-optimus-1/H-optimus-0: 224
+    # special: musk: 384
+    RandomResizedCropSize: 224 
 
   # Optimizer settings
   optimizer: 
-    type: "SGD"  # Options: SGD, Adam, AdamW
+    type: "Adam"  # Options: SGD, Adam, AdamW
   
   # Learning rate scheduler
   scheduler:
@@ -48,18 +60,23 @@ training:
     
   # Loss function
   loss:
-    type: "cross_entropy"  # Options: cross_entropy, dice, ohem, iou
+    type: "dice"  # Options: cross_entropy, dice, ohem, iou
     
 # Validation configuration
 validation:
   eval_interval: 1  # Validate every N epochs
-  batch_size: 16
+  batch_size: 8
   augmentation:
-    ResizedSize: 512 # virchow_v2,uni_v2: must be a multiple of 14 (token_size) / uni_v1, conch_v1_5, gigapath: must be a multiple of 16 (token_size) 
+    # virchow_v1,virchow_v2,uni_v2,midnight12k,kaiko-vitl14,hibou_l: must be a multiple of 14 (token_size) 
+    # uni_v1,conch_v1_5,gigapath,conch_v1,phikon,phikon_v2,patho3dmatrix-vision,PathOrchestra: must be a multiple of 16 (token_size) 
+    # lunit_vits8: must be a multiple of 8 (token_size)
+    # special: H-optimus-1/H-optimus-0: 224
+    # specia:  musk: 384
+    ResizedSize: 224 
   
 logging:
-  log_dir: "/path/to/logs" 
-  experiment_name: "your_xperiment_name"
+  log_dir: "/mnt/net_sda/chenwm/PFM_Segmentation/logs" 
+  experiment_name: "test"
 
 visualization:
   save_interval: 2  # Save visualization results every N epochs

@@ -214,6 +214,60 @@ class OHEMLoss(nn.Module):
             return pixel_losses.sum() / mask.sum()
 
 
+class BCEWithLogitsLoss(nn.Module):
+    """
+    Binary Cross Entropy with Logits Loss for semantic segmentation.
+    For multi-class segmentation, this applies BCE to each class independently.
+    
+    Args:
+        ignore_index (int): Index to ignore in loss calculation
+        weight (Optional[torch.Tensor]): Class weights for handling imbalanced datasets
+        reduction (str): Reduction method ('mean', 'sum', 'none')
+        pos_weight (Optional[torch.Tensor]): Weight of positive examples
+    """
+    
+    def __init__(self, ignore_index: int = 255, weight: Optional[torch.Tensor] = None,
+                 reduction: str = 'mean', pos_weight: Optional[torch.Tensor] = None):
+        super(BCEWithLogitsLoss, self).__init__()
+        self.ignore_index = ignore_index
+        self.weight = weight
+        self.reduction = reduction
+        self.pos_weight = pos_weight
+        self.bce_loss = nn.BCEWithLogitsLoss(weight=weight, reduction='none', pos_weight=pos_weight)
+        
+    def forward(self, pred: torch.Tensor, target: torch.Tensor) -> torch.Tensor:
+        """
+        Forward pass of BCE with Logits Loss.
+        
+        Args:
+            pred (torch.Tensor): Predictions of shape (B, C, H, W)
+            target (torch.Tensor): Ground truth of shape (B, H, W)
+            
+        Returns:
+            torch.Tensor: Loss value
+        """
+        # Convert target to one-hot encoding
+        num_classes = pred.shape[1]
+        target_one_hot = F.one_hot(target, num_classes).permute(0, 3, 1, 2).float()
+        
+        # Create mask for valid pixels
+        mask = (target != self.ignore_index).unsqueeze(1).float()
+        
+        # Apply BCE loss to each class
+        loss = self.bce_loss(pred, target_one_hot)
+        
+        # Apply mask to ignore invalid pixels
+        loss = loss * mask
+        
+        if self.reduction == 'mean':
+            # Average over valid pixels only
+            return loss.sum() / mask.sum()
+        elif self.reduction == 'sum':
+            return loss.sum()
+        else:
+            return loss
+
+
 def get_loss_function(loss_config: dict) -> nn.Module:
     """
     Factory function to create loss function based on configuration.
@@ -247,6 +301,15 @@ def get_loss_function(loss_config: dict) -> nn.Module:
         base_loss = loss_config.get('ohem_base_loss', 'ce')
         return OHEMLoss(thresh=thresh, min_kept=min_kept, 
                        ignore_index=ignore_index, base_loss=base_loss)
+    
+    elif loss_type == 'bce_with_logits' or loss_type == 'bce':
+        weight = loss_config.get('class_weights')
+        if weight is not None:
+            weight = torch.tensor(weight, dtype=torch.float32)
+        pos_weight = loss_config.get('pos_weight')
+        if pos_weight is not None:
+            pos_weight = torch.tensor(pos_weight, dtype=torch.float32)
+        return BCEWithLogitsLoss(ignore_index=ignore_index, weight=weight, pos_weight=pos_weight)
     
     else:
         raise ValueError(f"Unsupported loss type: {loss_type}")

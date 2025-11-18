@@ -27,7 +27,7 @@ from typing import Dict, Any
 # Add project root to path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from models import create_pfm_segmentation_model,count_parameters
+from models import create_segmentation_model, count_parameters
 from models.losses import get_loss_function
 # from data.datasets import get_dataset
 # from data.transforms import get_transforms
@@ -44,11 +44,11 @@ def parse_args():
     """Parse command line arguments."""
     parser = argparse.ArgumentParser(description='Training script for semantic segmentation')
     
-    parser.add_argument('--config', type=str, default='/mnt/sdb/lxt/PFM_Seg/base.yaml',
+    parser.add_argument('--config', type=str, default='/mnt/net_sda/chenwm/PFM_Segmentation/configs/config.yaml',
                        help='Path to configuration file')
     parser.add_argument('--resume', type=str, default=None,
                        help='Path to checkpoint to resume from')
-    parser.add_argument('--device', type=str, default='cuda:3',
+    parser.add_argument('--device', type=str, default='',
                        help='Device to use (cuda/cpu/auto)')
     
     return parser.parse_args()
@@ -83,7 +83,7 @@ def set_random_seed(seed: int):
 
 
 
-def get_device(device_arg: str) -> str:
+def get_device(device_arg: str, config: Dict[str, Any]) -> str:
     """
     Get device for training.
     
@@ -93,6 +93,9 @@ def get_device(device_arg: str) -> str:
     Returns:
         str: Device string
     """
+    # If device_arg is empty, get device from config or default to 'cuda' if available
+    if not device_arg:
+        device_arg = config['system'].get('device', 'cuda' if torch.cuda.is_available() else 'cpu')
     return torch.device(device_arg)
 
 def save_config(config: Dict[str, Any], save_path: str):
@@ -191,7 +194,7 @@ def main():
     generator.manual_seed(seed) 
     
     # Get device
-    device = get_device(args.device)
+    device = get_device(args.device,config)
     
     # Setup logging
     log_dir = config['logging'].get('log_dir')
@@ -208,9 +211,17 @@ def main():
     logger.info(f"Random seed: {seed}")
     
     # Create model
-    logger.info(f"Creating model: {config['model']['pfm_name']}...")
-    logging.info(f"Model fintune-model: {config['model']['finetune_mode']}")
-    model = create_pfm_segmentation_model(config['model'])
+    pfm_name = config['model'].get('pfm_name', 'unet')
+    model_type = config['model'].get('model_type', '')
+    if pfm_name.lower() == 'unet' or model_type.lower() == 'unet':
+        logger.info(f"Creating model: UNet...")
+        model = create_segmentation_model(config['model'])
+    else:
+        logger.info(f"Creating model: {pfm_name}...")
+        finetune_mode = config['model'].get('finetune_mode', {})
+        if finetune_mode:
+            logger.info(f"Model finetune-mode: {finetune_mode}")
+        model = create_segmentation_model(config['model'])
     model = model.to(device)
     
     # Log model information
@@ -221,8 +232,16 @@ def main():
     dataset_config = config['dataset']
     
     # Training dataset
-    # train_transforms = get_transforms(config['training']['augmentation'])
-    train_transforms = SegmentationTransforms.get_training_transforms(img_size=config['training']['augmentation']['RandomResizedCropSize'],seed=seed,mean=config['model']['mean'],std=config['model']['std'])
+    # Get normalization values based on model name
+    from data.transforms import get_model_normalization
+    pfm_name = config['model'].get('pfm_name', 'unet')
+    mean, std = get_model_normalization(pfm_name)
+    train_transforms = SegmentationTransforms.get_training_transforms(
+        img_size=config['training']['augmentation']['RandomResizedCropSize'],
+        seed=seed,
+        mean=mean,
+        std=std
+    )
     train_dataset = get_dataset(dataset_config, train_transforms, split='train')
     
     train_loader = create_dataloader(
@@ -237,8 +256,11 @@ def main():
     )
     
     # Validation dataset
-
-    val_transforms = SegmentationTransforms.get_validation_transforms(img_size=config['validation']['augmentation']['ResizedSize'], mean=config['model']['mean'], std=config['model']['std'])
+    val_transforms = SegmentationTransforms.get_validation_transforms(
+        img_size=config['validation']['augmentation']['ResizedSize'],
+        mean=mean,
+        std=std
+    )
     val_dataset = get_dataset(dataset_config, val_transforms, split='val')
     
     val_loader = create_dataloader(

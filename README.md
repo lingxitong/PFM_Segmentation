@@ -85,18 +85,34 @@ model:
   # === Base Model Selection ===
   pfm_name: "uni_v1"                    # Pathology foundation model name
   # Options:
-  # - "uni_v1"      : UNI model version 1 (1024 dim)
-  # - "uni_v2"      : UNI model version 2 (1536 dim)  
-  # - "virchow_v2"  : Virchow model version 2 (1280 dim)
-  # - "conch_v1_5"  : Conch model version 1.5 (1024 dim)
-  # - "gigapath"    : Gigapath model (1536 dim)
+  # - "uni_v1"       : UNI model version 1 (1024 dim)
+  # - "uni_v2"       : UNI model version 2 (1536 dim)
+  # - "conch_v1"     : Conch model version 1 (1024 dim)
+  # - "conch_v1_5"   : Conch model version 1.5 (768 dim)
+  # - "virchow_v1"   : Virchow model version 2 (1280 dim)
+  # - "virchow_v2"   : Virchow model version 2 (1280 dim)
+  # - "phikon"       : Phikon model (768 dim)
+  # - "phikon_v2"    : Phikon-v2 model (1024 dim)
+  # - "hoptimus_0"   : H-Optimus-0 model (1536 dim)
+  # - "hoptimus_1"   : H-Optimus-1 model (1536 dim)
+  # - "gigapath"     : Gigapath model (1536 dim)
+  # - "midnight12k"  : Midnight-12k model (1536 dim)
+  # - "kaiko-vitl14" : Kaiko-ViT-L14 model (1024 dim)
+  # - "lunit_vits8"  : Lunit-S8 model (384 dim)
+  # - 'musk'         : MUSK model (1024 dim)
+  # - "patho3dmatrix-vision": Patho3DMatrix-Vision model (1536 dim)
+  # - "pathorchestra": PathOrchestra model (1536 dim)
+  # - "hibou_l"     : Hibou-Large model (1024 dim)
+  
   
   # === Model Parameter Configuration ===
   emb_dim: 1024                         # Embedding dimension, must match selected PFM model
   # Corresponding embedding dimensions for each model:
-  # - uni_v1: 1024      - uni_v2: 1536
-  # - virchow_v2: 1280  - conch_v1_5: 1024  
-  # - gigapath: 1536
+  # midnight12k/hoptimus_0/hoptimus_1/uni_v2/gigapath: 1536
+  # virchow_v1/virchow_v2: 1280
+  # uni_v1/hibou_l/musk/phikon_v2/kaiko-vitl14/conch_v1/patho3dmatrix-vision: 1024
+  # conch_v1_5/phikon: 768
+  # lunit_vits8: 384
   
   pfm_weights_path: '/path/to/pytorch_model.bin'  # Path to pre-trained weights file
   
@@ -110,10 +126,6 @@ model:
     
     rank: 16              # LoRA rank, only used when type is "lora"
     alpha: 1.0            # LoRA scaling factor, only used when type is "lora"
-  
-  # === Data Preprocessing Configuration ===
-  mean: [0.485, 0.456, 0.406]    # Input normalization mean, must match PFM model training settings
-  std: [0.229, 0.224, 0.225]     # Input normalization std, must match PFM model training settings
   
   num_classes: 3                  # Number of segmentation classes, must match dataset.num_classes
 ```
@@ -137,8 +149,11 @@ training:
   augmentation:
     RandomResizedCropSize: 512     # Random crop size
     # Note: Different PFM models have input size requirements
-    # - virchow_v2, uni_v2: must be multiple of 14
-    # - uni_v1, conch_v1_5, gigapath: must be multiple of 16
+    # virchow_v1,virchow_v2,uni_v2,midnight12k,kaiko-vitl14,hibou_l: must be a multiple of 14 (token_size) 
+    # uni_v1,conch_v1_5,gigapath,conch_v1 ,phikon,phikon_v2,patho3dmatrix-vision: must be a multiple of 16 (token_size) 
+    # lunit_vits8: must be a multiple of 8 (token_size)
+    # special: H-optimus-1/H-optimus-0: 224
+    # special: musk: 384
   
   # === Optimizer Configuration ===
   optimizer:
@@ -164,6 +179,12 @@ validation:
   batch_size: 16          # Validation batch size
   augmentation:
     ResizedSize: 512      # Image size during validation
+    # Note: Different PFM models have input size requirements
+    # virchow_v1,virchow_v2,uni_v2,midnight12k,kaiko-vitl14,hibou_l: must be a multiple of 14 (token_size) 
+    # uni_v1,conch_v1_5,gigapath,conch_v1 ,phikon,phikon_v2,patho3dmatrix-vision: must be a multiple of 16 (token_size) 
+    # lunit_vits8: must be a multiple of 8 (token_size)
+    # special: H-optimus-1/H-optimus-0: 224
+    # special: musk: 384
 ```
 
 ### Logging and Visualization Configuration
@@ -256,7 +277,7 @@ python scripts/infer.py \
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
 | `--config` | str | ✅ | Configuration file path used during training |
-| `--checkpoint` | str | ✅ | Trained model checkpoint path |
+| `--checkpoint` | str | ✅ | Path to model checkpoint file or checkpoint directory. For LoRA/DoRA mode, will automatically load both base model and LoRA/DoRA weights. |
 | `--input_json` | str | ✅ | JSON file containing data to be inferred |
 | `--output_dir` | str | ✅ | Inference results save directory |
 | `--device` | str | ✅ | Inference device, default cuda:0 |
@@ -302,11 +323,24 @@ output_dir/
 
 | Model Name | Parameters | Embedding Dim | Token Size | HuggingFace |
 |------------|------------|---------------|------------|-------------|
-| **uni_v1** | 307M | 1024 | 16×16 | [MahmoodLab/UNI](https://huggingface.co/MahmoodLab/UNI) |
-| **uni_v2** | 1.1B | 1536 | 14×14 | [MahmoodLab/UNI2](https://huggingface.co/MahmoodLab/UNI2-h) |
-| **virchow_v2** | 632M | 1280 | 14×14 | [paige-ai/Virchow2](https://huggingface.co/paige-ai/Virchow2) |
-| **conch_v1_5** | 307M | 1024 | 16×16 | [MahmoodLab/TITAN](https://huggingface.co/MahmoodLab/TITAN) |
-| **gigapath** | 1.1B | 1536 | 16×16 | [prov-gigapath/prov-gigapath](https://huggingface.co/prov-gigapath/prov-gigapath) |
+| UNI | 307M | 1024 | 16×16 | [MahmoodLab/UNI](https://huggingface.co/MahmoodLab/UNI) |
+| UNI2-h | 1.1B | 1536 | 14×14 | [MahmoodLab/UNI2-h](https://huggingface.co/MahmoodLab/UNI2-h) |
+| CONCH | 90M | 512 | 16×16 | [MahmoodLab/CONCH](https://huggingface.co/MahmoodLab/CONCH) |
+| CONCHv1.5 | 307M | 768 | 16×16 | [MahmoodLab/conchv1_5](https://huggingface.co/MahmoodLab/conchv1_5) |
+| Virchow | 632M | 2560 | 14×14 | [paige-ai/Virchow](https://huggingface.co/paige-ai/Virchow) |
+| Virchow2 | 632M | 2560 | 14×14 | [paige-ai/Virchow2](https://huggingface.co/paige-ai/Virchow2) |
+| Phikon | 85.8M | 768 | 16×16 | [owkin/phikon](https://huggingface.co/owkin/phikon) |
+| Phikon-v2 | 300M | 1024 | 16×16 | [owkin/phikon-v2](https://huggingface.co/owkin/phikon-v2) |
+| Prov-Gigapath | 1.1B | 1536 | 16×16 | [prov-gigapath/prov-gigapath](https://huggingface.co/prov-gigapath/prov-gigapath) |
+| H-Optimus-0 | 1.1B | 1536 | 16×16 | [bioptimus/H-optimus-0](https://huggingface.co/bioptimus/H-optimus-0) |
+| H-Optimus-1 | 1.1B | 1536 | 16×16 | [bioptimus/H-optimus-1](https://huggingface.co/bioptimus/H-optimus-1) |
+| MUSK | - | 1024 | 32×32 | [xiangjx/musk](https://huggingface.co/xiangjx/musk) |
+| Midnight-12k | - | 3072 | 14×14 | [kaiko-ai/midnight](https://huggingface.co/kaiko-ai/midnight) |
+| Kaiko | Various | 384/768/1024 | Various (8×8 or 16×16 or 14×14) | [1aurent/kaikoai-models-66636c99d8e1e34bc6dcf795](https://huggingface.co/collections/1aurent/kaikoai-models) |
+| Lunit | 21.7M | 384 | 8×8 | [1aurent/vit_small_patch8_224.lunit_dino](https://huggingface.co/1aurent/vit_small_patch8_224.lunit_dino) |
+| Hibou | - | 1024 | 14×14 | [histai/hibou-L](https://huggingface.co/histai/hibou-L) |
+| PathOrchestra | 307M | 1024 | 16×16 | [AI4Pathology/PathOrchestra](https://huggingface.co/AI4Pathology/PathOrchestra) |
+| patho3dmatrix-vision | 307M | 1024 | 16×16 | - |
 
 ## 🤝 Contributing
 
@@ -316,7 +350,7 @@ Welcome to submit issues and feature requests! Please check the contribution gui
 
 If you have questions or suggestions, please contact us through:
 - Submit GitHub Issue
-- Send email to: [lingxt23@mails.tsinghua.edu.cn]
+- Send email to: [lingxt23@mails.tsinghua.edu.cn] or [cwm25@mails.tsinghua.edu.cn]
 
 ---
 
