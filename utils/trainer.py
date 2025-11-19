@@ -86,6 +86,12 @@ class SegmentationTrainer:
         self.train_losses = []
         self.val_losses = []
         self.val_mious = []
+        
+        # LoRA/DoRA specific settings
+        self.finetune_mode = config.get('model', {}).get('finetune_mode', {}).get('type', None)
+        self.best_lora_state_dict = None  # Store best LoRA/DoRA weights in memory
+        self.best_epoch = 0  # Record the epoch of best weights
+        self.best_checkpoint = None
 
         # Setup logging
         self._setup_logging()
@@ -143,6 +149,16 @@ class SegmentationTrainer:
         )
         self.logger = logging.getLogger(__name__)
         
+    def _clone_state_dict(self, obj: Any) -> Any:
+        if isinstance(obj, torch.Tensor):
+            return obj.detach().clone().cpu()
+        elif isinstance(obj, dict):
+            return {k: self._clone_state_dict(v) for k, v in obj.items()}
+        elif isinstance(obj, list):
+            return [self._clone_state_dict(item) for item in obj]
+        else:
+            return obj
+    
     def train_epoch(self) -> float:
         """
         Train for one epoch.
@@ -314,36 +330,87 @@ class SegmentationTrainer:
         
         return avg_loss, metrics_dict
     
+    def _extract_lora_dora_params(self) -> Dict[str, torch.Tensor]:
+        """
+        Extract LoRA/DoRA parameters from model.
+        
+        Returns:
+            Dict[str, torch.Tensor]: Dictionary containing only LoRA/DoRA parameters
+        """
+        lora_dora_params = {}
+        for name, param in self.model.named_parameters():
+            # Typically LoRA/DoRA parameters have 'lora' or 'dora' in their names
+            if 'lora' in name.lower() or 'dora' in name.lower():
+                lora_dora_params[name] = param.detach().cpu().clone()
+        return lora_dora_params
+    
     def save_checkpoint(self, metrics: Dict[str, float], is_best: bool = False , only_best: bool = True):
         """
         Save model checkpoint.
+        For LoRA/DoRA mode, best weights are stored in memory first and saved to disk at the end.
         
         Args:
             metrics (Dict[str, float]): Current metrics
             is_best (bool): Whether this is the best checkpoint
+            only_best (bool): Whether to save only the best checkpoint
         """
-        checkpoint = {
-            'epoch': self.current_epoch + 1,
-            'model_state_dict': self.model.state_dict(),
-            'optimizer_state_dict': self.optimizer.state_dict(),
-            'scheduler_state_dict': self.scheduler.state_dict() if self.scheduler else None,
-            'scaler_state_dict': self.scaler.state_dict() if self.scaler else None,
-            'metrics': metrics,
-            'config': self.config,
-            'train_losses': self.train_losses,
-            'val_losses': self.val_losses,
-            'val_mious': self.val_mious
-        }
-        # Save best checkpoint
+        
         if is_best:
-            best_path = os.path.join(self.checkpoint_dir, 'best_model.pth')
-            torch.save(checkpoint, best_path)
-            self.logger.info(f'New best model saved with mIoU: {metrics["mIoU"]:.4f}')
+            model_sd = self._clone_state_dict(self.model.state_dict())
+            opt_sd = self._clone_state_dict(self.optimizer.state_dict())
+            sch_sd = self._clone_state_dict(self.scheduler.state_dict()) if self.scheduler else None
+            sc_sd = self._clone_state_dict(self.scaler.state_dict()) if self.scaler else None
+            
+            checkpoint = {
+                'epoch': self.current_epoch + 1,
+                'model_state_dict': model_sd,
+                'optimizer_state_dict': opt_sd,
+                'scheduler_state_dict': sch_sd,
+                'scaler_state_dict': sc_sd,
+                'metrics': metrics,
+                'config': self.config,
+                'train_losses': self.train_losses[:],
+                'val_losses': self.val_losses[:],
+                'val_mious': self.val_mious[:],
+                'finetune_mode': self.finetune_mode
+            }
+            
+            self.best_checkpoint = checkpoint
+            self.best_epoch = self.current_epoch + 1
+            
+            primary_metric_name = 'mIoU' if 'mIoU' in metrics else 'mDice'
+            primary_metric = metrics.get(primary_metric_name, 0.0)
+            
+            self.logger.info(
+                f'New best model state stored in memory - '
+                f'Epoch: {self.best_epoch}, {primary_metric_name}: {primary_metric:.4f}'
+            )
+            
+            if self.finetune_mode in ['lora', 'dora']:
+                self.best_lora_state_dict = self._extract_lora_dora_params()
+                self.logger.info(
+                    f'New best LoRA/DoRA weights stored in memory - '
+                    f'Epoch: {self.best_epoch}, {primary_metric_name}: {primary_metric:.4f}'
+                )
         else:
             if only_best:
                 self.logger.info("Skipping regular checkpoint save as only_best is True.")
                 return
-            # Save regular checkpoint
+            
+            checkpoint = {
+                'epoch': self.current_epoch + 1,
+                'model_state_dict': self.model.state_dict(),
+                'optimizer_state_dict': self.optimizer.state_dict(),
+                'scheduler_state_dict': self.scheduler.state_dict() if self.scheduler else None,
+                'scaler_state_dict': self.scaler.state_dict() if self.scaler else None,
+                'metrics': metrics,
+                'config': self.config,
+                'train_losses': self.train_losses,
+                'val_losses': self.val_losses,
+                'val_mious': self.val_mious,
+                'finetune_mode': self.finetune_mode
+            }
+            
             checkpoint_path = os.path.join(
                 self.checkpoint_dir, 
                 f'checkpoint_epoch_{self.current_epoch + 1:03d}.pth'
@@ -351,9 +418,86 @@ class SegmentationTrainer:
             torch.save(checkpoint, checkpoint_path)
             self.logger.info(f'Checkpoint saved: {checkpoint_path}')
     
+    def save_best_lora_dora_weights(self):
+        """
+        Save the best LoRA/DoRA weights from memory to disk at the end of training.
+        This method should be called after training completes.
+        """
+        if self.finetune_mode not in ['lora', 'dora']:
+            return
+        
+        if self.best_lora_state_dict is None:
+            self.logger.warning('No best LoRA/DoRA weights found in memory.')
+            return
+        
+        # Create checkpoint with LoRA/DoRA weights
+        checkpoint = {
+            'epoch': self.best_epoch,
+            'lora_dora_state_dict': self.best_lora_state_dict,
+            'best_miou': self.best_miou,
+            'config': self.config,
+            'finetune_mode': self.finetune_mode,
+            'train_losses': self.train_losses,
+            'val_losses': self.val_losses,
+            'val_mious': self.val_mious
+        }
+        
+        # Save to disk
+        best_path = os.path.join(self.checkpoint_dir, 'best_lora_dora_weights.pth')
+        torch.save(checkpoint, best_path)
+        self.logger.info(
+            f'Best LoRA/DoRA weights saved to disk - '
+            f'Epoch: {self.best_epoch}, mIoU: {self.best_miou:.4f}'
+        )
+        self.logger.info(f'Checkpoint path: {best_path}')
+
+    def save_best_full_model(self):
+        """
+        Save the best full model checkpoint from memory to disk at the end of training.
+        """
+        if self.best_checkpoint is None:
+            self.logger.warning('No best checkpoint found. Performing final validation and saving current as best.')
+            val_loss, metrics = self.validate()
+            primary_metric_name = 'mIoU' if 'mIoU' in metrics else 'mDice'
+            self.best_miou = metrics.get(primary_metric_name, 0.0)
+            self.best_epoch = self.epochs
+            
+            model_sd = self._clone_state_dict(self.model.state_dict())
+            opt_sd = self._clone_state_dict(self.optimizer.state_dict())
+            sch_sd = self._clone_state_dict(self.scheduler.state_dict()) if self.scheduler else None
+            sc_sd = self._clone_state_dict(self.scaler.state_dict()) if self.scaler else None
+            
+            self.best_checkpoint = {
+                'epoch': self.best_epoch,
+                'model_state_dict': model_sd,
+                'optimizer_state_dict': opt_sd,
+                'scheduler_state_dict': sch_sd,
+                'scaler_state_dict': sc_sd,
+                'metrics': metrics,
+                'config': self.config,
+                'train_losses': self.train_losses[:],
+                'val_losses': self.val_losses[:],
+                'val_mious': self.val_mious[:],
+                'finetune_mode': self.finetune_mode
+            }
+            
+            if self.finetune_mode in ['lora', 'dora']:
+                self.best_lora_state_dict = self._extract_lora_dora_params()
+        
+        best_path = os.path.join(self.checkpoint_dir, 'best_model.pth')
+        torch.save(self.best_checkpoint, best_path)
+        primary_metric_name = 'mIoU' if 'mIoU' in self.best_checkpoint['metrics'] else 'mDice'
+        primary_metric = self.best_checkpoint['metrics'].get(primary_metric_name, 0.0)
+        self.logger.info(
+            f'Best full model saved to disk - '
+            f'Epoch: {self.best_checkpoint["epoch"]}, {primary_metric_name}: {primary_metric:.4f}'
+        )
+        self.logger.info(f'Checkpoint path: {best_path}')
+    
     def load_checkpoint(self, checkpoint_path: str):
         """
         Load model checkpoint.
+        Supports both full model checkpoints and LoRA/DoRA-only checkpoints.
         
         Args:
             checkpoint_path (str): Path to checkpoint file
@@ -364,28 +508,53 @@ class SegmentationTrainer:
         
         checkpoint = torch.load(checkpoint_path, map_location=self.device)
         
-        # Load model state
-        self.model.load_state_dict(checkpoint['model_state_dict'])
-        
-        # Load optimizer state
-        self.optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
-        
-        # Load scheduler state
-        if self.scheduler and checkpoint.get('scheduler_state_dict'):
-            self.scheduler.load_state_dict(checkpoint['scheduler_state_dict'])
-        
-        # Load scaler state
-        if self.scaler and checkpoint.get('scaler_state_dict'):
-            self.scaler.load_state_dict(checkpoint['scaler_state_dict'])
-        
-        # Load training state
-        self.current_epoch = checkpoint['epoch']
-        self.train_losses = checkpoint.get('train_losses', [])
-        self.val_losses = checkpoint.get('val_losses', [])
-        self.val_mious = checkpoint.get('val_mious', [])
-        
-        if self.val_mious:
-            self.best_miou = max(self.val_mious)
+        # Check if this is a LoRA/DoRA checkpoint
+        if 'lora_dora_state_dict' in checkpoint:
+            # Load only LoRA/DoRA parameters
+            lora_dora_params = checkpoint['lora_dora_state_dict']
+            model_state = self.model.state_dict()
+            
+            # Update only LoRA/DoRA parameters
+            for name, param in lora_dora_params.items():
+                if name in model_state:
+                    model_state[name] = param.to(self.device)
+                else:
+                    self.logger.warning(f'Parameter {name} not found in model')
+            
+            self.model.load_state_dict(model_state)
+            self.logger.info('LoRA/DoRA weights loaded successfully')
+            
+            # Load training statistics
+            self.current_epoch = checkpoint.get('epoch', 0)
+            self.train_losses = checkpoint.get('train_losses', [])
+            self.val_losses = checkpoint.get('val_losses', [])
+            self.val_mious = checkpoint.get('val_mious', [])
+            self.best_miou = checkpoint.get('best_miou', 0.0)
+            
+        else:
+            # Load full model checkpoint
+            self.model.load_state_dict(checkpoint['model_state_dict'])
+            
+            # Load optimizer state
+            if 'optimizer_state_dict' in checkpoint:
+                self.optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+            
+            # Load scheduler state
+            if self.scheduler and checkpoint.get('scheduler_state_dict'):
+                self.scheduler.load_state_dict(checkpoint['scheduler_state_dict'])
+            
+            # Load scaler state
+            if self.scaler and checkpoint.get('scaler_state_dict'):
+                self.scaler.load_state_dict(checkpoint['scaler_state_dict'])
+            
+            # Load training state
+            self.current_epoch = checkpoint.get('epoch', 0)
+            self.train_losses = checkpoint.get('train_losses', [])
+            self.val_losses = checkpoint.get('val_losses', [])
+            self.val_mious = checkpoint.get('val_mious', [])
+            
+            if self.val_mious:
+                self.best_miou = max(self.val_mious)
         
         self.logger.info(f'Checkpoint loaded: {checkpoint_path}')
         self.logger.info(f'Resuming from epoch {self.current_epoch}')
@@ -436,6 +605,12 @@ class SegmentationTrainer:
                     f'Epoch {epoch + 1}/{self.epochs} - Train Loss: {train_loss:.4f}'
                 )
             self.save_checkpoint(val_metrics, is_best=is_best, only_best = True)
+        
+        # Save best LoRA/DoRA weights from memory to disk
+        if self.finetune_mode in ['lora', 'dora']:
+            self.save_best_lora_dora_weights()
+        
+        self.save_best_full_model()
         
         total_time = time.time() - start_time
         self.logger.info(f'Training completed in {total_time / 3600:.2f} hours')

@@ -155,6 +155,11 @@ class JSONSegmentationDataset(Dataset):
             mask = Image.open(item['mask_path'])
             if mask.mode != 'L':
                 mask = mask.convert('L')
+            # 确保掩码尺寸与图像一致
+            if mask.size != image.size:
+                print(f"Warning: Resizing mask to match image size for {item['mask_path']}")
+                print(f"Image size: {image.size}, Mask size: {mask.size}")
+                mask = mask.resize(image.size, Image.Resampling.NEAREST)
             mask = np.array(mask, dtype=np.int64)
         else:
             mask = np.ones((ori_size[1],ori_size[0]), dtype=np.int64) * (-1)

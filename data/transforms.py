@@ -9,8 +9,78 @@ import albumentations as A
 from albumentations.pytorch import ToTensorV2
 import cv2
 import numpy as np
-from typing import List, Dict, Any, Optional, Callable
+from typing import List, Dict, Any, Optional, Callable, Tuple
 import torch
+
+
+def get_model_normalization(pfm_name: str) -> Tuple[List[float], List[float]]:
+    """
+    Get normalization mean and std values for a given PFM model.
+    
+    Args:
+        pfm_name (str): Name of the PFM model
+        
+    Returns:
+        Tuple[List[float], List[float]]: (mean, std) values for normalization
+        
+    Note:
+        - conch_v1 uses CLIP normalization values
+        - Other models use ImageNet normalization values
+    """
+    pfm_name = pfm_name.lower()
+    
+    # Conch v1 uses CLIP normalization
+    if pfm_name == 'conch_v1':
+        mean = [0.48145466, 0.4578275, 0.40821073]
+        std = [0.26862954, 0.26130258, 0.27577711]
+    elif pfm_name == 'conch_v1_5':
+        mean = (0.485, 0.456, 0.406)
+        std = (0.229, 0.224, 0.225)
+    elif pfm_name == 'virchow_v1':
+        mean = [0.485, 0.456, 0.406]
+        std = [0.229, 0.224, 0.225]
+    elif pfm_name == 'virchow_v2':
+        mean = [0.485, 0.456, 0.406]
+        std = [0.229, 0.224, 0.225]
+    elif pfm_name == 'gigapath':
+        mean = (0.485, 0.456, 0.406)
+        std = (0.229, 0.224, 0.225)
+    elif pfm_name == 'patho3dmatrix-vision':
+        mean = [0.485, 0.456, 0.406]
+        std = [0.229, 0.224, 0.225]
+    elif pfm_name == 'uni_v2':
+        mean = [0.485, 0.456, 0.406]
+        std = [0.229, 0.224, 0.225]
+    elif pfm_name == 'uni_v1':
+        mean = [0.485, 0.456, 0.406]
+        std = [0.229, 0.224, 0.225]
+    elif pfm_name == 'phikon' or pfm_name == 'phikon_v2':
+        # Phikon uses ImageNet normalization
+        mean = [0.485, 0.456, 0.406]
+        std = [0.229, 0.224, 0.225]
+    elif pfm_name == 'hoptimus_0' or pfm_name == 'hoptimus_1':
+        mean=(0.707223, 0.578729, 0.703617)
+        std=(0.211883, 0.230117, 0.177517)
+    elif pfm_name == 'musk':
+        mean = [0.485, 0.456, 0.406]
+        std = [0.229, 0.224, 0.225]
+    elif pfm_name == 'midnight12k':
+        mean = [0.5, 0.5, 0.5]
+        std = [0.5, 0.5, 0.5]
+    elif pfm_name.startswith('kaiko-'):
+        mean = [0.5, 0.5, 0.5]
+        std = [0.5, 0.5, 0.5]
+    elif pfm_name == 'hibou_l':
+        mean = [0.7068,0.5755,0.722]
+        std = [0.195,0.2316,0.1816]
+    else:
+        # Default ImageNet normalization for other models
+        # (uni_v1, uni_v2, virchow_v1, virchow_v2, gigapath, 
+        #  patho3dmatrix-vision, conch_v1_5, unet, phikon)
+        mean = [0.485, 0.456, 0.406]
+        std = [0.229, 0.224, 0.225]
+    
+    return mean, std
 
 class SegmentationTransforms:
     """

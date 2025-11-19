@@ -5,7 +5,8 @@ This package contains model definitions, loss functions, and utilities
 for semantic segmentation tasks.
 """
 
-from .pfm_seg_models import create_pfm_segmentation_model
+from .pfm_seg_models import create_pfm_segmentation_model, create_segmentation_model
+from .unet import create_unet_model, UNet
 from .lora import equip_model_with_lora
 from .losses import (
     CrossEntropyLoss, DiceLoss, IoULoss, OHEMLoss,get_loss_function
@@ -19,6 +20,9 @@ from .utils import (
 __all__ = [
     # Models
     'create_pfm_segmentation_model',
+    'create_segmentation_model',
+    'create_unet_model',
+    'UNet',
     'equip_model_with_lora',
     
     # Loss functions

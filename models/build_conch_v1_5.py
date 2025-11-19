@@ -255,7 +255,7 @@ class VisionTransformer(nn.Module):
 
     def __init__(
             self,
-             img_size: Union[int, Tuple[int, int]] = 224,
+             img_size: Union[int, Tuple[int, int]] = 448,#CWM
             patch_size: Union[int, Tuple[int, int]] = 16,
             in_chans: int = 3,
             num_classes: int = 0,
