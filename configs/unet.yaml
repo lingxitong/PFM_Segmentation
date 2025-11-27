@@ -3,7 +3,7 @@
 
 # Dataset configuration
 dataset:
-  json_file: "/mnt/net_sda/chenwm/PFM_Segmentation/dataset_json/CoNSeP.json"  # Path to the JSON configuration file
+  json_file: "/mnt/sdb/chenwm/PFM_Segmentation/dataset_json/CoNSeP.json"  # Path to the JSON configuration file
   num_classes: 8  # Number of classes; must match num_classes in the JSON file
   ignore_index: 255  # Index value to ignore during training
 
@@ -66,7 +66,7 @@ validation:
     ResizedSize: 512  # Input image size for validation (can be any size for UNet)
   
 logging:
-  log_dir: "/mnt/net_sda/chenwm/PFM_Segmentation/logs_unet" 
+  log_dir: "/mnt/sdb/chenwm/PFM_Segmentation/logs_unet" 
   experiment_name: "unet_test_CoNSeP"
 
 visualization:

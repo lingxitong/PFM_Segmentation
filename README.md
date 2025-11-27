@@ -137,7 +137,7 @@ training:
   # === Basic Training Parameters ===
   batch_size: 8           # Batch size
   epochs: 100             # Number of training epochs
-  learning_rate: 0.01     # Initial learning rate
+  learning_rate: 0.001     # Initial learning rate
   weight_decay: 0.0001    # Weight decay
   
   # === Training Optimization Settings ===
@@ -149,10 +149,9 @@ training:
   augmentation:
     RandomResizedCropSize: 512     # Random crop size
     # Note: Different PFM models have input size requirements
-    # virchow_v1,virchow_v2,uni_v2,midnight12k,kaiko-vitl14,hibou_l: must be a multiple of 14 (token_size) 
+    # virchow_v1,virchow_v2,uni_v2,midnight12k,kaiko-vitl14,hibou_l,H-optimus-1,H-optimus-0: must be a multiple of 14 (token_size) 
     # uni_v1,conch_v1_5,gigapath,conch_v1 ,phikon,phikon_v2,patho3dmatrix-vision: must be a multiple of 16 (token_size) 
     # lunit_vits8: must be a multiple of 8 (token_size)
-    # special: H-optimus-1/H-optimus-0: 224
     # special: musk: 384
   
   # === Optimizer Configuration ===
@@ -168,7 +167,7 @@ training:
   
   # === Loss Function ===
   loss:
-    type: "cross_entropy"          # Loss function: cross_entropy, dice, ohem, iou
+    type: "dice"          # Loss function: cross_entropy, dice, ohem, iou
 ```
 
 ### Validation Configuration (validation)
@@ -180,10 +179,9 @@ validation:
   augmentation:
     ResizedSize: 512      # Image size during validation
     # Note: Different PFM models have input size requirements
-    # virchow_v1,virchow_v2,uni_v2,midnight12k,kaiko-vitl14,hibou_l: must be a multiple of 14 (token_size) 
+    # virchow_v1,virchow_v2,uni_v2,midnight12k,kaiko-vitl14,hibou_l,H-optimus-1,H-optimus-0: must be a multiple of 14 (token_size) 
     # uni_v1,conch_v1_5,gigapath,conch_v1 ,phikon,phikon_v2,patho3dmatrix-vision: must be a multiple of 16 (token_size) 
     # lunit_vits8: must be a multiple of 8 (token_size)
-    # special: H-optimus-1/H-optimus-0: 224
     # special: musk: 384
 ```
 
@@ -325,15 +323,15 @@ output_dir/
 |------------|------------|---------------|------------|-------------|
 | UNI | 307M | 1024 | 16×16 | [MahmoodLab/UNI](https://huggingface.co/MahmoodLab/UNI) |
 | UNI2-h | 1.1B | 1536 | 14×14 | [MahmoodLab/UNI2-h](https://huggingface.co/MahmoodLab/UNI2-h) |
-| CONCH | 90M | 512 | 16×16 | [MahmoodLab/CONCH](https://huggingface.co/MahmoodLab/CONCH) |
-| CONCHv1.5 | 307M | 768 | 16×16 | [MahmoodLab/conchv1_5](https://huggingface.co/MahmoodLab/conchv1_5) |
+| CONCH | 90M | 768 | 16×16 | [MahmoodLab/CONCH](https://huggingface.co/MahmoodLab/CONCH) |
+| CONCHv1.5 | 307M | 1024 | 16×16 | [MahmoodLab/conchv1_5](https://huggingface.co/MahmoodLab/conchv1_5) |
 | Virchow | 632M | 2560 | 14×14 | [paige-ai/Virchow](https://huggingface.co/paige-ai/Virchow) |
 | Virchow2 | 632M | 2560 | 14×14 | [paige-ai/Virchow2](https://huggingface.co/paige-ai/Virchow2) |
 | Phikon | 85.8M | 768 | 16×16 | [owkin/phikon](https://huggingface.co/owkin/phikon) |
 | Phikon-v2 | 300M | 1024 | 16×16 | [owkin/phikon-v2](https://huggingface.co/owkin/phikon-v2) |
 | Prov-Gigapath | 1.1B | 1536 | 16×16 | [prov-gigapath/prov-gigapath](https://huggingface.co/prov-gigapath/prov-gigapath) |
-| H-Optimus-0 | 1.1B | 1536 | 16×16 | [bioptimus/H-optimus-0](https://huggingface.co/bioptimus/H-optimus-0) |
-| H-Optimus-1 | 1.1B | 1536 | 16×16 | [bioptimus/H-optimus-1](https://huggingface.co/bioptimus/H-optimus-1) |
+| H-Optimus-0 | 1.1B | 1536 | 14×14 | [bioptimus/H-optimus-0](https://huggingface.co/bioptimus/H-optimus-0) |
+| H-Optimus-1 | 1.1B | 1536 | 14×14 | [bioptimus/H-optimus-1](https://huggingface.co/bioptimus/H-optimus-1) |
 | MUSK | - | 1024 | 32×32 | [xiangjx/musk](https://huggingface.co/xiangjx/musk) |
 | Midnight-12k | - | 3072 | 14×14 | [kaiko-ai/midnight](https://huggingface.co/kaiko-ai/midnight) |
 | Kaiko | Various | 384/768/1024 | Various (8×8 or 16×16 or 14×14) | [1aurent/kaikoai-models-66636c99d8e1e34bc6dcf795](https://huggingface.co/collections/1aurent/kaikoai-models) |

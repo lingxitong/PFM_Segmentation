@@ -93,7 +93,8 @@ def get_PFM_model(PFM_name: str, PFM_weights_path: str) -> nn.Module:
             "hf-hub:paige-ai/Virchow",
             pretrained=False,
             mlp_layer=SwiGLUPacked,
-            act_layer=torch.nn.SiLU
+            act_layer=torch.nn.SiLU,
+            dynamic_img_size=True
         )
         # Load weights from local path
         # Handle different weight file formats
@@ -210,7 +211,7 @@ def get_PFM_model(PFM_name: str, PFM_weights_path: str) -> nn.Module:
             "img_size": 224,
             "global_pool": "token",
             "init_values": 1e-5,
-            "dynamic_img_size": False
+            "dynamic_img_size": True
         }
         model = timm.create_model("vit_giant_patch14_reg4_dinov2", **hoptimus_0_config)
         
@@ -225,22 +226,28 @@ def get_PFM_model(PFM_name: str, PFM_weights_path: str) -> nn.Module:
 
     elif PFM_name == 'hoptimus_1':
         # H-Optimus-1: ViT-Giant model with DinoV2 backbone (similar architecture to H-Optimus-0)
-        hoptimus_1_config = {
-            "num_classes": 0,
-            "img_size": 224,
-            "global_pool": "token",
-            "init_values": 1e-5,
-            "dynamic_img_size": False
-        }
-        
-        model = timm.create_model("vit_giant_patch14_reg4_dinov2", **hoptimus_1_config)
-        try:
-            state_dict = torch.load(PFM_weights_path, map_location="cpu", weights_only=True)
-            model.load_state_dict(state_dict, strict=True)
-        except Exception:
-            raise Exception(
-                f"Failed to create H-Optimus-1 model from local checkpoint at '{PFM_weights_path}'. "
-                "You can download the required `pytorch_model.bin` from: https://huggingface.co/bioptimus/H-optimus-1."
+        if PFM_weights_path:
+            try:
+                hoptimus_1_config = {
+                    "num_classes": 0,
+                    "img_size": 224,
+                    "global_pool": "token",
+                    "init_values": 1e-5,
+                    "dynamic_img_size": True
+                }
+                model = timm.create_model("vit_giant_patch14_reg4_dinov2", **hoptimus_1_config)
+                model.load_state_dict(torch.load(PFM_weights_path, map_location="cpu"), strict=True)
+            except Exception:
+                raise Exception(
+                    f"Failed to create H-Optimus-1 model from local checkpoint at '{PFM_weights_path}'. "
+                    "You can download the required `pytorch_model.bin` from: https://huggingface.co/bioptimus/H-optimus-1."
+                )
+        else:
+            try:
+                model = timm.create_model("hf-hub:bioptimus/H-optimus-1", pretrained=True, init_values=1e-5, dynamic_img_size=True)
+            except Exception:
+                raise Exception(
+                f"Failed to download HOptimus-1 model, make sure that you were granted access and that you correctly registered your token"
             )
 
     elif PFM_name.startswith('kaiko-'):
@@ -294,7 +301,7 @@ def get_PFM_model(PFM_name: str, PFM_weights_path: str) -> nn.Module:
     elif PFM_name == 'lunit_vits8':
         # Lunit-S8: ViT-Small with Dino pretraining, using timm
         try:
-            timm_kwargs = {"img_size": 224}
+            timm_kwargs = {"img_size": 224, "dynamic_img_size": True}
             model = timm.create_model("vit_small_patch8_224", checkpoint_path=PFM_weights_path, **timm_kwargs)
         except Exception:
             raise Exception(

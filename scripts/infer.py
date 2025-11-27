@@ -44,19 +44,19 @@ def parse_args() -> argparse.Namespace:
     """Parse command line arguments for inference configuration."""
     parser = argparse.ArgumentParser(description='Semantic Segmentation Inference Script')
     parser.add_argument('--config', type=str, 
-                       default='/mnt/net_sda/chenwm/PFM_Segmentation/configs/config.yaml',
+                       default='/mnt/sdb/chenwm/PFM_Segmentation/configs/test.yaml',
                        help='Path to config YAML file')
     parser.add_argument('--checkpoint', type=str, 
-                       default='/mnt/net_sda/chenwm/PFM_Segmentation/logs/test/checkpoints',
+                       default='/mnt/sdb/chenwm/PFM_Segmentation/logs/test/checkpoints',
                        help='Path to model checkpoint file or checkpoint directory. '
                             'For LoRA/DoRA mode, will automatically load both base model and LoRA/DoRA weights.')
     parser.add_argument('--input_json', type=str, 
-                       default='/mnt/net_sda/chenwm/PFM_Segmentation/dataset_json/TNBC.json',
+                       default='/mnt/sdb/chenwm/PFM_Segmentation/dataset_json/TNBC.json',
                        help='Path to JSON file containing input data')
     parser.add_argument('--output_dir', type=str, 
-                       default='/mnt/net_sda/chenwm/PFM_Segmentation/inference_slidewindow',
+                       default='/mnt/sdb/chenwm/PFM_Segmentation/inference_slidewindow',
                        help='Directory to save inference results')
-    parser.add_argument('--device', type=str, default='cuda:0',
+    parser.add_argument('--device', type=str, default='cuda:7',
                        help='Device for inference (e.g., "cuda:0" or "cpu")')
     parser.add_argument('--input_size', type=int, default=224,
                        help='Input size for resize or window size for sliding window')
@@ -79,37 +79,55 @@ def get_device(device_str: str) -> torch.device:
     return torch.device(device_str if torch.cuda.is_available() else 'cpu')
 
 
-def resolve_checkpoint_paths(checkpoint_path: str) -> Tuple[str, str]:
+def resolve_checkpoint_paths(checkpoint_path: str, finetune_mode: str) -> Tuple[str, str]:
     """
-    Resolve checkpoint paths for base model and LoRA/DoRA weights.
+    Resolve checkpoint paths for model weights and LoRA/DoRA weights based on finetune mode.
     
     Args:
         checkpoint_path: Path to checkpoint file or checkpoint directory
+        finetune_mode: Finetune mode ('full', 'frozen', 'lora', 'dora')
         
     Returns:
-        Tuple of (base_model_path, lora_dora_path)
-        lora_dora_path will be None if checkpoint_path is a file and directory doesn't exist
+        Tuple of (model_path, lora_dora_path)
+        lora_dora_path will be None if not in LoRA/DoRA mode or file doesn't exist
     """
-    if os.path.isdir(checkpoint_path):
-        # If it's a directory, look for both files
-        base_model_path = os.path.join(checkpoint_path, 'best_model.pth')
-        lora_dora_path = os.path.join(checkpoint_path, 'best_lora_dora_weights.pth')
+    if finetune_mode == 'full':
+        # Full mode: use best_full_model.pth
+        expected_filename = 'best_full_model.pth'
     else:
-        # If it's a file, use it as base model and look for LoRA/DoRA in same directory
-        base_model_path = checkpoint_path
+        # Non-full mode: use best_decoder_head.pth
+        expected_filename = 'best_decoder_head.pth'
+    
+    if os.path.isdir(checkpoint_path):
+        # If it's a directory, look for model file and LoRA/DoRA file
+        model_path = os.path.join(checkpoint_path, expected_filename)
+        lora_dora_path = os.path.join(checkpoint_path, 'best_lora_dora_weights.pth')
+        if not os.path.exists(lora_dora_path):
+            lora_dora_path = None
+    else:
+        # If it's a file, use it as model path and look for LoRA/DoRA in same directory
+        model_path = checkpoint_path
         checkpoint_dir = os.path.dirname(checkpoint_path)
+        # Verify filename matches expected pattern
+        filename = os.path.basename(checkpoint_path)
+        if finetune_mode == 'full' and 'best_full_model' not in filename:
+            logging.warning(f'Expected filename containing "best_full_model" for full mode, got: {filename}')
+        elif finetune_mode != 'full' and 'best_decoder_head' not in filename:
+            logging.warning(f'Expected filename containing "best_decoder_head" for {finetune_mode} mode, got: {filename}')
+        
         lora_dora_path = os.path.join(checkpoint_dir, 'best_lora_dora_weights.pth')
         if not os.path.exists(lora_dora_path):
             lora_dora_path = None
     
-    return base_model_path, lora_dora_path
+    return model_path, lora_dora_path
 
 
 def load_model(config: Dict[str, Any], checkpoint_path: str, device: torch.device) -> torch.nn.Module:
     """
     Load model from checkpoint with configuration.
-    For LoRA/DoRA mode, loads base model and LoRA/DoRA weights separately.
-    For full model mode, loads single checkpoint.
+    For full mode: loads entire model from best_full_model.pth
+    For non-full modes (frozen, lora, dora): loads only decoder+head from best_decoder_head.pth
+    For LoRA/DoRA mode: additionally loads LoRA/DoRA weights from best_lora_dora_weights.pth
     
     Args:
         config: Model configuration dictionary
@@ -119,82 +137,96 @@ def load_model(config: Dict[str, Any], checkpoint_path: str, device: torch.devic
     Returns:
         Loaded and configured model in evaluation mode
     """
-    # Check if LoRA/DoRA mode is enabled in config
+    # Get finetune mode from config
     finetune_mode = config.get('model', {}).get('finetune_mode', {}).get('type', None)
-    is_lora_dora_mode = finetune_mode in ['lora', 'dora']
+    if finetune_mode is None:
+        logging.warning('Finetune mode not specified in config, defaulting to full mode')
+        finetune_mode = 'full'
     
-    # Create model
+    is_lora_dora_mode = finetune_mode in ['lora', 'dora']
+    is_full_mode = finetune_mode == 'full'
+    
+    # Create model (PFM weights are loaded during model creation)
     model = create_segmentation_model(config['model']).to(device)
     
-    if is_lora_dora_mode:
-        # LoRA/DoRA mode: load base model and LoRA/DoRA weights separately
-        base_model_path, lora_dora_path = resolve_checkpoint_paths(checkpoint_path)
-        
-        # Load base model (contains segmentation head and base weights)
-        if not os.path.exists(base_model_path):
-            raise FileNotFoundError(f'Base model checkpoint not found: {base_model_path}')
-        
-        logging.info(f'Loading base model from: {base_model_path}')
-        base_checkpoint = torch.load(base_model_path, map_location=device)
-        model.load_state_dict(base_checkpoint.get('model_state_dict', base_checkpoint))
-        logging.info('Base model loaded successfully')
-        
-        # Load LoRA/DoRA weights if available
-        if lora_dora_path and os.path.exists(lora_dora_path):
-            logging.info(f'Loading LoRA/DoRA weights from: {lora_dora_path}')
-            lora_checkpoint = torch.load(lora_dora_path, map_location=device)
-            
-            if 'lora_dora_state_dict' in lora_checkpoint:
-                lora_dora_params = lora_checkpoint['lora_dora_state_dict']
-                model_state = model.state_dict()
-                
-                # Update only LoRA/DoRA parameters
-                loaded_params = 0
-                for name, param in lora_dora_params.items():
-                    if name in model_state:
-                        model_state[name] = param.to(device)
-                        loaded_params += 1
-                    else:
-                        logging.warning(f'LoRA/DoRA parameter {name} not found in model')
-                
-                model.load_state_dict(model_state)
-                logging.info(f'LoRA/DoRA weights loaded successfully: {loaded_params} parameters')
-            else:
-                logging.warning('LoRA/DoRA checkpoint does not contain lora_dora_state_dict')
-        else:
-            logging.warning(f'LoRA/DoRA weights not found at {lora_dora_path}, using base model only')
+    # Resolve checkpoint paths based on finetune mode
+    model_path, lora_dora_path = resolve_checkpoint_paths(checkpoint_path, finetune_mode)
     
+    # Verify checkpoint file exists
+    if not os.path.exists(model_path):
+        raise FileNotFoundError(
+            f'Model checkpoint not found: {model_path}\n'
+            f'Expected filename for {finetune_mode} mode: '
+            f'{"best_full_model.pth" if is_full_mode else "best_decoder_head.pth"}'
+        )
+    
+    # Load checkpoint
+    logging.info(f'Loading checkpoint from: {model_path}')
+    checkpoint = torch.load(model_path, map_location=device)
+    
+    # Verify checkpoint matches finetune mode
+    checkpoint_finetune_mode = checkpoint.get('finetune_mode', None)
+    if checkpoint_finetune_mode is not None and checkpoint_finetune_mode != finetune_mode:
+        raise ValueError(
+            f'Checkpoint finetune mode mismatch: checkpoint has "{checkpoint_finetune_mode}", '
+            f'but config specifies "{finetune_mode}"'
+        )
+    
+    model_state_dict = checkpoint.get('model_state_dict', checkpoint)
+    
+    if is_full_mode:
+        # Full mode: load entire model
+        model.load_state_dict(model_state_dict, strict=True)
+        logging.info('Full model loaded successfully')
     else:
-        # Full model mode: load single checkpoint
-        if os.path.isdir(checkpoint_path):
-            checkpoint_path = os.path.join(checkpoint_path, 'best_model.pth')
+        # Non-full mode: load only decoder and segmentation_head
+        model_state = model.state_dict()
+        loaded_params = 0
+        missing_params = []
         
-        if not os.path.exists(checkpoint_path):
-            raise FileNotFoundError(f'Checkpoint not found: {checkpoint_path}')
+        for name, param in model_state_dict.items():
+            if name.startswith('decoder.') or name.startswith('segmentation_head.'):
+                if name in model_state:
+                    model_state[name] = param.to(device)
+                    loaded_params += 1
+                else:
+                    missing_params.append(name)
+            elif not name.startswith('pfm.'):
+                # Allow loading other non-PFM parameters (e.g., if there are any)
+                if name in model_state:
+                    model_state[name] = param.to(device)
+                    loaded_params += 1
         
-        logging.info(f'Loading full model from: {checkpoint_path}')
-        checkpoint = torch.load(checkpoint_path, map_location=device)
+        if missing_params:
+            logging.warning(f'Some decoder/head parameters not found in model: {missing_params}')
         
-        # Check if this is a LoRA/DoRA-only checkpoint (shouldn't happen in full mode, but handle it)
-        if 'lora_dora_state_dict' in checkpoint:
-            logging.warning('Found LoRA/DoRA-only checkpoint in full model mode, loading LoRA/DoRA parameters only')
-            lora_dora_params = checkpoint['lora_dora_state_dict']
+        model.load_state_dict(model_state, strict=False)
+        logging.info(f'Decoder+head loaded successfully: {loaded_params} parameters')
+    
+    # Load LoRA/DoRA weights if in LoRA/DoRA mode
+    if is_lora_dora_mode and lora_dora_path and os.path.exists(lora_dora_path):
+        logging.info(f'Loading LoRA/DoRA weights from: {lora_dora_path}')
+        lora_checkpoint = torch.load(lora_dora_path, map_location=device)
+        
+        if 'lora_dora_state_dict' in lora_checkpoint:
+            lora_dora_params = lora_checkpoint['lora_dora_state_dict']
             model_state = model.state_dict()
             
+            # Update only LoRA/DoRA parameters
             loaded_params = 0
             for name, param in lora_dora_params.items():
                 if name in model_state:
                     model_state[name] = param.to(device)
                     loaded_params += 1
                 else:
-                    logging.warning(f'Parameter {name} not found in model')
+                    logging.warning(f'LoRA/DoRA parameter {name} not found in model')
             
-            model.load_state_dict(model_state)
-            logging.info(f'LoRA/DoRA checkpoint loaded: {loaded_params} parameters')
+            model.load_state_dict(model_state, strict=False)
+            logging.info(f'LoRA/DoRA weights loaded successfully: {loaded_params} parameters')
         else:
-            # Load full model checkpoint
-            model.load_state_dict(checkpoint.get('model_state_dict', checkpoint))
-            logging.info('Full model checkpoint loaded')
+            logging.warning('LoRA/DoRA checkpoint does not contain lora_dora_state_dict')
+    elif is_lora_dora_mode:
+        logging.warning(f'LoRA/DoRA weights not found at {lora_dora_path}, using base model only')
     
     model.eval()
     return model

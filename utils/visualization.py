@@ -190,8 +190,10 @@ def visualize_prediction(image: Union[torch.Tensor, np.ndarray],
     
     if save_path:
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
-        
-    plt.show()
+    
+    # 注释掉 plt.show() 以避免阻塞训练（在后台运行时不需要显示图像）
+    # plt.show()
+    plt.close()  # 关闭图形以释放内存
 
 
 def save_predictions(predictions_data: List[Dict[str, torch.Tensor]], 
@@ -284,8 +286,10 @@ def plot_training_history(train_losses: List[float], val_losses: List[float],
     
     if save_path:
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
-        
-    plt.show()
+    
+    # 注释掉 plt.show() 以避免阻塞训练（在后台运行时不需要显示图像）
+    # plt.show()
+    plt.close()  # 关闭图形以释放内存
 
 
 def plot_confusion_matrix(confusion_matrix: np.ndarray, 
@@ -325,8 +329,10 @@ def plot_confusion_matrix(confusion_matrix: np.ndarray,
     
     if save_path:
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
-        
-    plt.show()
+    
+    # 注释掉 plt.show() 以避免阻塞训练（在后台运行时不需要显示图像）
+    # plt.show()
+    plt.close()  # 关闭图形以释放内存
 
 
 def plot_class_metrics(metrics_dict: Dict[str, float], 
@@ -400,8 +406,10 @@ def plot_class_metrics(metrics_dict: Dict[str, float],
     
     if save_path:
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
-        
-    plt.show()
+    
+    # 注释掉 plt.show() 以避免阻塞训练（在后台运行时不需要显示图像）
+    # plt.show()
+    plt.close()  # 关闭图形以释放内存
 
 
 def create_interactive_training_dashboard(training_stats: Dict[str, List[float]],
@@ -491,7 +499,8 @@ def create_interactive_training_dashboard(training_stats: Dict[str, List[float]]
         fig.write_html(save_path)
         print(f"Interactive dashboard saved to: {save_path}")
     
-    fig.show()
+    # 注释掉 fig.show() 以避免阻塞训练（在后台运行时不需要显示图像）
+    # fig.show()
 
 
 def visualize_feature_maps(feature_maps: torch.Tensor, 
@@ -535,8 +544,10 @@ def visualize_feature_maps(feature_maps: torch.Tensor,
     
     if save_path:
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
-        
-    plt.show()
+    
+    # 注释掉 plt.show() 以避免阻塞训练（在后台运行时不需要显示图像）
+    # plt.show()
+    plt.close()  # 关闭图形以释放内存
 
 
 if __name__ == "__main__":
