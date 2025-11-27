@@ -1,6 +1,6 @@
 # Dataset configuration
 dataset:
-  json_file: "/mnt/net_sda/chenwm/PFM_Segmentation/dataset_json/TNBC.json"  # Path to the JSON configuration file
+  json_file: "/mnt/sdb/chenwm/PFM_Segmentation/dataset_json/TNBC.json"  # Path to the JSON configuration file
   num_classes: 2  # Number of classes; must match num_classes in the JSON file
   ignore_index: 255  # Index value to ignore during training
 
@@ -14,27 +14,27 @@ system:
 model:
   # Options: uni_v1, uni_v2, virchow_v1, virchow_v2, conch_v1_5, conch_v1, midnight12k, lunit_vits8, musk,PathOrchestra
   # Options: gigapath, phikon , patho3dmatrix-vision, phikon_v2, hoptimus_0, hoptimus_1, kaiko-vitl14, hibou_l
-  pfm_name: "hoptimus_1"  
+  pfm_name: "conch_v1"  
 
   # midnight12k/hoptimus_0/hoptimus_1/uni_v2/gigapath: 1536
   # virchow_v1/virchow_v2: 1280
-  # uni_v1/hibou_l/musk/phikon_v2/kaiko-vitl14/conch_v1/patho3dmatrix-vision/PathOrchestra: 1024
-  # conch_v1_5/phikon: 768
+  # uni_v1/hibou_l/musk/phikon_v2/kaiko-vitl14/patho3dmatrix-vision/PathOrchestra/conch_v1_5: 1024
+  # conch_v1/phikon: 768
   # lunit_vits8: 384
-  emb_dim: 1536 
+  emb_dim: 768 
   finetune_mode:
-    type: dora # Options: lora, full, frozen, dora
+    type: frozen # Options: lora, full, frozen, dora
     rank: 16 # only used when finetune_mode.type is lora or dora 
     alpha: 1.0 # only used when finetune_mode.type is lora or dora
   #Musk and hibou_l can only be loaded from huggingface.co,so we don't need to specify the path
-  pfm_weights_path: '/mnt/net_sda/chenwm/PFM_Segmentation/weight/H-optimus-0/pytorch_model.bin'  # Path to the PFM model weights
+  pfm_weights_path: '/mnt/sdb/chenwm/PFM_Segmentation/weight/conch_v1/pytorch_model.bin'  # Path to the PFM model weights
   num_classes: 2  # Must match num_classes in the JSON file
 
 # Training configuration
 training:
   batch_size: 8
-  epochs: 2
-  learning_rate: 0.01
+  epochs: 150
+  learning_rate: 0.001
   weight_decay: 0.0001
   use_amp: true  # Whether to use automatic mixed precision (AMP) for training
   accumulate_grad_batches: 1  # Number of batches to accumulate gradients over before performing an optimizer step
@@ -42,10 +42,9 @@ training:
   
   # Data augmentation
   augmentation:
-    # virchow_v1,virchow_v2,uni_v2,midnight12k,kaiko-vitl14,hibou_l: must be a multiple of 14 (token_size) 
-    # uni_v1,conch_v1_5,gigapath,conch_v1 ,phikon,phikon_v2,patho3dmatrix-vision,PathOrchestra: must be a multiple of 16 (token_size) 
-    # lunit_vits8: must be a multiple of 8 (token_size)
-    # special: H-optimus-1/H-optimus-0: 224
+    # virchow_v1,virchow_v2,uni_v2,midnight12k,kaiko-vitl14,hibou_l,hoptimus_0,hoptimus_1,: must be a multiple of 14 (token_size) 
+    # uni_v1,conch_v1_5,gigapath,conch_v1 ,phikon_v2,patho3dmatrix-vision,PathOrchestra: must be a multiple of 16 (token_size) 
+    # special: phikon/phikon_v2: 224
     # special: musk: 384
     RandomResizedCropSize: 224 
 
@@ -75,9 +74,9 @@ validation:
     ResizedSize: 224 
   
 logging:
-  log_dir: "/mnt/net_sda/chenwm/PFM_Segmentation/logs" 
+  log_dir: "/mnt/sdb/chenwm/PFM_Segmentation_Output/logs_frozen" 
   experiment_name: "test"
 
 visualization:
-  save_interval: 2  # Save visualization results every N epochs
+  save_interval: 10  # Save visualization results every N epochs
   num_vis_samples: 8  # Number of samples to visualize

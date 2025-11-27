@@ -37,6 +37,7 @@ from data.seg_dataset import get_dataset
 from utils.trainer import SegmentationTrainer
 from utils.visualization import plot_training_history
 from utils.logs import setup_logging
+from utils.yaml_utils import load_config_with_options
 
 
 
@@ -44,8 +45,10 @@ def parse_args():
     """Parse command line arguments."""
     parser = argparse.ArgumentParser(description='Training script for semantic segmentation')
     
-    parser.add_argument('--config', type=str, default='/mnt/net_sda/chenwm/PFM_Segmentation/configs/config.yaml',
+    parser.add_argument('--config', type=str, default='/mnt/sdb/chenwm/PFM_Segmentation/configs/test.yaml',
                        help='Path to configuration file')
+    parser.add_argument('--options',nargs='+',
+                       help='override some settings in the used config, the key-value pair in xxx=yyy format will be merged into the yaml config file')
     parser.add_argument('--resume', type=str, default=None,
                        help='Path to checkpoint to resume from')
     parser.add_argument('--device', type=str, default='',
@@ -185,7 +188,7 @@ def main():
     args = parse_args()
     
     # Load configuration
-    config = load_config(args.config)
+    config = load_config_with_options(args.config, args.options)
     
     # Set random seed
     seed = config['system'].get('seed', 42)
