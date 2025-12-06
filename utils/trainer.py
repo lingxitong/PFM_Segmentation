@@ -87,9 +87,8 @@ class SegmentationTrainer:
         self.val_losses = []
         self.val_mious = []
         
-        # LoRA/DoRA specific settings
+        # Finetune mode and checkpoint settings
         self.finetune_mode = config.get('model', {}).get('finetune_mode', {}).get('type', None)
-        self.best_lora_state_dict = None  # Store best LoRA/DoRA weights in memory
         self.best_epoch = 0  # Record the epoch of best weights
         self.best_checkpoint = None
 
@@ -330,41 +329,99 @@ class SegmentationTrainer:
         
         return avg_loss, metrics_dict
     
-    def _extract_lora_dora_params(self) -> Dict[str, torch.Tensor]:
+    def _extract_lora_and_decoder_head_params(self) -> Dict[str, torch.Tensor]:
         """
-        Extract LoRA/DoRA parameters from model.
+        Extract LoRA + decoder + segmentation_head parameters from model.
+        For lora finetune mode, combines LoRA adapter weights with decoder and head.
+        Uses state_dict() to include both parameters and buffers (e.g., BatchNorm running_mean/running_var).
         
         Returns:
-            Dict[str, torch.Tensor]: Dictionary containing only LoRA/DoRA parameters
+            Dict[str, torch.Tensor]: Dictionary containing LoRA + decoder + segmentation_head parameters and buffers
         """
-        lora_dora_params = {}
-        for name, param in self.model.named_parameters():
-            # Typically LoRA/DoRA parameters have 'lora' or 'dora' in their names
-            if 'lora' in name.lower() or 'dora' in name.lower():
-                lora_dora_params[name] = param.detach().cpu().clone()
-        return lora_dora_params
+        lora_decoder_head_params = {}
+        for name, tensor in self.model.state_dict().items():
+            # Extract lora parameters (lora_a, lora_b in pfm module) and decoder/segmentation_head
+            if ('lora_a' in name or 'lora_b' in name or 
+                name.startswith('decoder.') or name.startswith('segmentation_head.')):
+                lora_decoder_head_params[name] = tensor.detach().cpu().clone()
+        return lora_decoder_head_params
+    
+    def _extract_dora_and_decoder_head_params(self) -> Dict[str, torch.Tensor]:
+        """
+        Extract DoRA + decoder + segmentation_head parameters from model.
+        For dora finetune mode, combines DoRA adapter weights with decoder and head.
+        Uses state_dict() to include both parameters and buffers (e.g., BatchNorm running_mean/running_var).
+        
+        Returns:
+            Dict[str, torch.Tensor]: Dictionary containing DoRA + decoder + segmentation_head parameters and buffers
+        """
+        dora_decoder_head_params = {}
+        for name, tensor in self.model.state_dict().items():
+            # Extract dora parameters (lora_a, lora_b, m in pfm module) and decoder/segmentation_head
+            # DoRA uses lora_a, lora_b for low-rank adaptation and m for magnitude scaling
+            # Note: use name.endswith('.m') to avoid matching .mlp or other parameters containing 'm'
+            if ('lora_a' in name or 'lora_b' in name or name.endswith('.m') or 
+                name.startswith('decoder.') or name.startswith('segmentation_head.')):
+                dora_decoder_head_params[name] = tensor.detach().cpu().clone()
+        return dora_decoder_head_params
     
     def _extract_decoder_head_params(self) -> Dict[str, torch.Tensor]:
         """
         Extract decoder and segmentation_head parameters from model.
         Excludes PFM (pathology foundation model) parameters.
+        Uses state_dict() to include both parameters and buffers (e.g., BatchNorm running_mean/running_var).
         
         Returns:
-            Dict[str, torch.Tensor]: Dictionary containing only decoder and segmentation_head parameters
+            Dict[str, torch.Tensor]: Dictionary containing only decoder and segmentation_head parameters and buffers
         """
         decoder_head_params = {}
-        for name, param in self.model.named_parameters():
-            # Extract decoder and segmentation_head parameters, exclude pfm parameters
+        for name, tensor in self.model.state_dict().items():
+            # Extract decoder and segmentation_head parameters and buffers, exclude pfm parameters
             if name.startswith('decoder.') or name.startswith('segmentation_head.'):
-                decoder_head_params[name] = param.detach().cpu().clone()
+                decoder_head_params[name] = tensor.detach().cpu().clone()
         return decoder_head_params
+    
+    def _extract_cnn_adapter_params(self) -> Dict[str, torch.Tensor]:
+        """
+        Extract CNN adapter, decoder and segmentation_head parameters from model.
+        For cnn_adapter finetune mode.
+        Uses state_dict() to include both parameters and buffers (e.g., BatchNorm running_mean/running_var).
+        
+        Returns:
+            Dict[str, torch.Tensor]: Dictionary containing CNN adapter, decoder and segmentation_head parameters and buffers
+        """
+        cnn_adapter_params = {}
+        for name, tensor in self.model.state_dict().items():
+            # Extract cnn_adapter, decoder and segmentation_head parameters and buffers, exclude pfm parameters
+            if name.startswith('cnn_adapter.') or name.startswith('decoder.') or name.startswith('segmentation_head.'):
+                cnn_adapter_params[name] = tensor.detach().cpu().clone()
+        return cnn_adapter_params
+    
+    def _extract_transformer_adapter_params(self) -> Dict[str, torch.Tensor]:
+        """
+        Extract Transformer adapter, decoder and segmentation_head parameters from model.
+        For transformer_adapter finetune mode.
+        Uses state_dict() to include both parameters and buffers (e.g., BatchNorm running_mean/running_var).
+        
+        Returns:
+            Dict[str, torch.Tensor]: Dictionary containing transformer_adapter, decoder and segmentation_head parameters and buffers
+        """
+        transformer_adapter_params = {}
+        for name, tensor in self.model.state_dict().items():
+            # Extract transformer_adapter, decoder and segmentation_head parameters and buffers, exclude pfm parameters
+            if name.startswith('transformer_adapter.') or name.startswith('decoder.') or name.startswith('segmentation_head.'):
+                transformer_adapter_params[name] = tensor.detach().cpu().clone()
+        return transformer_adapter_params
     
     def save_checkpoint_in_memory(self, metrics: Dict[str, float], is_best: bool = False , only_best: bool = True):
         """
         Save model checkpoint.
-        For LoRA/DoRA mode, best weights are stored in memory first and saved to disk at the end.
-        For non-full modes (frozen, lora, dora), only decoder and segmentation_head are saved.
-        For full mode, entire model is saved.
+        For all modes, best weights are stored in memory first and saved to disk at the end.
+        For full mode: entire model is saved.
+        For cnn_adapter mode: CNN adapter + decoder + segmentation_head are saved.
+        For transformer_adapter mode: transformer_adapter + decoder + segmentation_head are saved.
+        For lora/dora mode: lora/dora + decoder + segmentation_head are saved together.
+        For frozen mode: only decoder and segmentation_head are saved.
         
         Args:
             metrics (Dict[str, float]): Current metrics
@@ -377,9 +434,23 @@ class SegmentationTrainer:
             if self.finetune_mode == 'full':
                 # Full mode: save entire model
                 model_sd = self._clone_state_dict(self.model.state_dict())
-            else:
-                # Non-full mode: save only decoder and segmentation_head
+            elif self.finetune_mode == 'cnn_adapter':
+                # CNN adapter mode: save cnn_adapter + decoder + segmentation_head
+                model_sd = self._extract_cnn_adapter_params()
+            elif self.finetune_mode == 'transformer_adapter':
+                # Transformer adapter mode: save transformer_adapter + decoder + segmentation_head
+                model_sd = self._extract_transformer_adapter_params()
+            elif self.finetune_mode == 'lora':
+                # LoRA mode: save lora + decoder + segmentation_head together
+                model_sd = self._extract_lora_and_decoder_head_params()
+            elif self.finetune_mode == 'dora':
+                # DoRA mode: save dora + decoder + segmentation_head together
+                model_sd = self._extract_dora_and_decoder_head_params()
+            elif self.finetune_mode == 'frozen':
+                # Frozen mode: save only decoder and segmentation_head
                 model_sd = self._extract_decoder_head_params()
+            else:
+                raise ValueError(f"Unknown finetune mode: {self.finetune_mode}")
             
             opt_sd = self._clone_state_dict(self.optimizer.state_dict())
             sch_sd = self._clone_state_dict(self.scheduler.state_dict()) if self.scheduler else None
@@ -410,29 +481,53 @@ class SegmentationTrainer:
                     f'New best full model state stored in memory - '
                     f'Epoch: {self.best_epoch}, {primary_metric_name}: {primary_metric:.4f}'
                 )
-            else:
+            elif self.finetune_mode == 'cnn_adapter':
+                self.logger.info(
+                    f'New best CNN adapter+decoder+head state stored in memory - '
+                    f'Epoch: {self.best_epoch}, {primary_metric_name}: {primary_metric:.4f}'
+                )
+            elif self.finetune_mode == 'transformer_adapter':
+                self.logger.info(
+                    f'New best Transformer adapter+decoder+head state stored in memory - '
+                    f'Epoch: {self.best_epoch}, {primary_metric_name}: {primary_metric:.4f}'
+                )
+            elif self.finetune_mode == 'lora':
+                self.logger.info(
+                    f'New best LoRA+decoder+head state stored in memory - '
+                    f'Epoch: {self.best_epoch}, {primary_metric_name}: {primary_metric:.4f}'
+                )
+            elif self.finetune_mode == 'dora':
+                self.logger.info(
+                    f'New best DoRA+decoder+head state stored in memory - '
+                    f'Epoch: {self.best_epoch}, {primary_metric_name}: {primary_metric:.4f}'
+                )
+            elif self.finetune_mode == 'frozen':
                 self.logger.info(
                     f'New best decoder+head state stored in memory - '
                     f'Epoch: {self.best_epoch}, {primary_metric_name}: {primary_metric:.4f}'
                 )
             
-            if self.finetune_mode in ['lora', 'dora']:
-                self.best_lora_state_dict = self._extract_lora_dora_params()
-                self.logger.info(
-                    f'New best LoRA/DoRA weights stored in memory - '
-                    f'Epoch: {self.best_epoch}, {primary_metric_name}: {primary_metric:.4f}'
-                )
         else:
-            #如果不是只保存最佳权重，则保存当前轮次的权重，并保存LoRA/DoRA权重
             if only_best:
                 self.logger.info("Skipping regular checkpoint save as only_best is True.")
                 return
             else:
+                # Save checkpoint for every epoch when not only_best mode
                 # Extract model state dict based on finetune mode
                 if self.finetune_mode == 'full':
                     model_sd = self.model.state_dict()
-                else:
+                elif self.finetune_mode == 'cnn_adapter':
+                    model_sd = self._extract_cnn_adapter_params()
+                elif self.finetune_mode == 'transformer_adapter':
+                    model_sd = self._extract_transformer_adapter_params()
+                elif self.finetune_mode == 'lora':
+                    model_sd = self._extract_lora_and_decoder_head_params()
+                elif self.finetune_mode == 'dora':
+                    model_sd = self._extract_dora_and_decoder_head_params()
+                elif self.finetune_mode == 'frozen':
                     model_sd = self._extract_decoder_head_params()
+                else:
+                    raise ValueError(f"Unknown finetune mode: {self.finetune_mode}")
                 
                 checkpoint = {
                     'epoch': self.current_epoch + 1,
@@ -454,61 +549,36 @@ class SegmentationTrainer:
                 )
                 torch.save(checkpoint, checkpoint_path)
                 self.logger.info(f'Checkpoint saved: {checkpoint_path}')
-                #Save the LoRA/DoRA weights accroding to the current_epoch
-                if self.finetune_mode in ['lora', 'dora']:
-                    lora_dora_path = os.path.join(self.checkpoint_dir, f'lora_dora_weights_epoch_{self.current_epoch + 1:03d}.pth')
-                    best_lora_state_dict = self._extract_lora_dora_params()
-                    lora_dora_checkpoint = {
-                        'epoch': self.current_epoch + 1,
-                        'lora_dora_state_dict': best_lora_state_dict,
-                        'best_miou': metrics.get('mIoU', 0.0),
-                        'config': self.config,
-                        'finetune_mode': self.finetune_mode,
-                        'train_losses': self.train_losses,
-                        'val_losses': self.val_losses,
-                        'val_mious': self.val_mious
-                    }
-                    torch.save(lora_dora_checkpoint, lora_dora_path)
-                    self.logger.info(f'LoRA/DoRA weights saved: {lora_dora_path}')
     
-    def save_best_lora_dora_weights(self):
-        """
-        Save the best LoRA/DoRA weights from memory to disk at the end of training.
-        This method should be called after training completes.
-        """
-        # Create checkpoint with LoRA/DoRA weights
-        lora_dora_checkpoint = {
-            'epoch': self.best_epoch,
-            'lora_dora_state_dict': self.best_lora_state_dict,
-            'best_miou': self.best_miou,
-            'config': self.config,
-            'finetune_mode': self.finetune_mode,
-            'train_losses': self.train_losses,
-            'val_losses': self.val_losses,
-            'val_mious': self.val_mious
-        }
-        
-        # Save to disk
-        best_path = os.path.join(self.checkpoint_dir, 'best_lora_dora_weights.pth')
-        torch.save(lora_dora_checkpoint, best_path)
-        self.logger.info(
-            f'Best LoRA/DoRA weights saved to disk - '
-            f'Epoch: {self.best_epoch}, mIoU: {self.best_miou:.4f}'
-        )
-        self.logger.info(f'lora_dora_checkpoint path: {best_path}')
-
     def save_best_full_model(self):
         """
         Save the best model checkpoint from memory to disk at the end of training.
         For full mode: saves entire model as 'best_full_model.pth'
-        For non-full modes: saves only decoder+head as 'best_decoder_head.pth'
+        For cnn_adapter mode: saves CNN adapter+decoder+head as 'best_cnn_adapter_and_decoder_head.pth'
+        For transformer_adapter mode: saves Transformer adapter+decoder+head as 'best_transformer_adapter_and_decoder_head.pth'
+        For lora/dora mode: saves LoRA/DoRA+decoder+head as 'best_lora_dora_and_decoder_head.pth'
+        For frozen mode: saves only decoder+head as 'best_decoder_head.pth'
         """
         if self.finetune_mode == 'full':
             best_path = os.path.join(self.checkpoint_dir, 'best_full_model.pth')
             model_type_str = 'full model'
-        else:
+        elif self.finetune_mode == 'cnn_adapter':
+            best_path = os.path.join(self.checkpoint_dir, 'best_cnn_adapter_and_decoder_head.pth')
+            model_type_str = 'CNN adapter+decoder+head'
+        elif self.finetune_mode == 'transformer_adapter':
+            best_path = os.path.join(self.checkpoint_dir, 'best_transformer_adapter_and_decoder_head.pth')
+            model_type_str = 'Transformer adapter+decoder+head'
+        elif self.finetune_mode == 'lora':
+            best_path = os.path.join(self.checkpoint_dir, 'best_lora_and_decoder_head.pth')
+            model_type_str = 'LoRA+decoder+head'
+        elif self.finetune_mode == 'dora':
+            best_path = os.path.join(self.checkpoint_dir, 'best_dora_and_decoder_head.pth')
+            model_type_str = 'DoRA+decoder+head'
+        elif self.finetune_mode == 'frozen':
             best_path = os.path.join(self.checkpoint_dir, 'best_decoder_head.pth')
             model_type_str = 'decoder+head'
+        else:
+            raise ValueError(f"Unknown finetune mode: {self.finetune_mode}")
         
         torch.save(self.best_checkpoint, best_path)
         primary_metric_name = 'mIoU' if 'mIoU' in self.best_checkpoint['metrics'] else 'mDice'
@@ -627,16 +697,13 @@ class SegmentationTrainer:
                     if metric_name != 'mIoU':
                         self.logger.info(f'{metric_name}: {metric_value:.4f}')
                 
+                self.save_checkpoint_in_memory(val_metrics, is_best=is_best, only_best = True)
             else:
                 self.logger.info(
                     f'Epoch {epoch + 1}/{self.epochs} - Train Loss: {train_loss:.4f}'
                 )
-            self.save_checkpoint_in_memory(val_metrics, is_best=is_best, only_best = True)
         
-        # Save best LoRA/DoRA weights from memory to disk
-        if self.finetune_mode in ['lora', 'dora']:
-            self.save_best_lora_dora_weights()
-        
+        # Save best model weights to disk
         self.save_best_full_model()
         
         total_time = time.time() - start_time

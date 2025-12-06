@@ -394,6 +394,8 @@ class WarmupScheduler:
 
 if __name__ == "__main__":
     # Test schedulers
+    import matplotlib
+    matplotlib.use('Agg')
     import matplotlib.pyplot as plt
     
     # Create dummy optimizer

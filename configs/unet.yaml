@@ -3,15 +3,15 @@
 
 # Dataset configuration
 dataset:
-  json_file: "/mnt/sdb/chenwm/PFM_Segmentation/dataset_json/CoNSeP.json"  # Path to the JSON configuration file
-  num_classes: 8  # Number of classes; must match num_classes in the JSON file
+  json_file: "/mnt/sdb/chenwm/PFM_Segmentation/dataset_json/BCSS.json"  # Path to the JSON configuration file
+  num_classes: 22  # Number of classes; must match num_classes in the JSON file
   ignore_index: 255  # Index value to ignore during training
 
 system:
   num_workers: 2  # Number of worker threads for data loading
   pin_memory: true  # Whether to use pin_memory to accelerate data loading
   seed: 42  
-  device: "cuda:0"  # Device to use, 'cuda' or 'cpu'
+  device: "cuda:7"  # Device to use, 'cuda' or 'cpu'
 
 # Model configuration for UNet
 model:
@@ -24,7 +24,7 @@ model:
   bilinear: true  # Whether to use bilinear upsampling (default: true)
   
   # Required for UNet
-  num_classes: 8  # Must match num_classes in the JSON file
+  num_classes: 22  # Must match num_classes in the JSON file
   
   # Note: For UNet, the following PFM-specific parameters are NOT required:
   # - pfm_weights_path (not needed for UNet)
@@ -33,9 +33,9 @@ model:
 
 # Training configuration
 training:
-  batch_size: 8
-  epochs: 50
-  learning_rate: 0.01
+  batch_size: 4
+  epochs: 150
+  learning_rate: 0.001
   weight_decay: 0.0001
   use_amp: true  # Whether to use automatic mixed precision (AMP) for training
   accumulate_grad_batches: 1  # Number of batches to accumulate gradients over before performing an optimizer step
@@ -43,7 +43,7 @@ training:
   
   # Data augmentation
   augmentation:
-    RandomResizedCropSize: 512  # Input image size for training (can be any size for UNet)
+    RandomResizedCropSize: 944  # Input image size for training (can be any size for UNet)
 
   # Optimizer settings
   optimizer: 
@@ -56,20 +56,20 @@ training:
     
   # Loss function
   loss:
-    type: "bce_with_logits"  # Options: cross_entropy, dice, ohem, iou, bce_with_logits
+    type: "cross_entropy"  # Options: cross_entropy, dice, ohem, iou, bce_with_logits
     
 # Validation configuration
 validation:
   eval_interval: 1  # Validate every N epochs
-  batch_size: 8
+  batch_size: 4
   augmentation:
-    ResizedSize: 512  # Input image size for validation (can be any size for UNet)
+    ResizedSize: 944  # Input image size for validation (can be any size for UNet)
   
 logging:
   log_dir: "/mnt/sdb/chenwm/PFM_Segmentation/logs_unet" 
-  experiment_name: "unet_test_CoNSeP"
+  experiment_name: "unet_test_BCSS_2"
 
 visualization:
-  save_interval: 2  # Save visualization results every N epochs
+  save_interval: 10  # Save visualization results every N epochs
   num_vis_samples: 8  # Number of samples to visualize
 

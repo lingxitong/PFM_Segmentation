@@ -211,7 +211,7 @@ def equip_model_with_dora(pfm_name, model, rank, alpha):
 
     # Only train Dora-specific parameters: lora_a, lora_b, and m
     for name, param in model.named_parameters():
-        if 'lora_a' in name or 'lora_b' in name or 'm' in name:
+        if 'lora_a' in name or 'lora_b' in name or name.endswith('.m'):
             param.requires_grad = True
 
     return model

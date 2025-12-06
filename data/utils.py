@@ -11,6 +11,8 @@ import numpy as np
 from typing import Dict, List, Optional, Tuple, Any, Callable
 import cv2
 from PIL import Image
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import seaborn as sns
 from collections import Counter

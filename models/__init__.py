@@ -8,6 +8,8 @@ for semantic segmentation tasks.
 from .pfm_seg_models import create_pfm_segmentation_model, create_segmentation_model
 from .unet import create_unet_model, UNet
 from .lora import equip_model_with_lora
+from .cnn_adapter import equip_model_with_cnn_adapter
+from .transformer_adapter import equip_model_with_transformer_adapter
 from .losses import (
     CrossEntropyLoss, DiceLoss, IoULoss, OHEMLoss,get_loss_function
 )
@@ -24,6 +26,8 @@ __all__ = [
     'create_unet_model',
     'UNet',
     'equip_model_with_lora',
+    'equip_model_with_cnn_adapter',
+    'equip_model_with_transformer_adapter',
     
     # Loss functions
     'CrossEntropyLoss',

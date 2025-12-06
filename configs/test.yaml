@@ -1,6 +1,6 @@
 # Dataset configuration
 dataset:
-  json_file: "/mnt/sdb/chenwm/PFM_Segmentation/dataset_json/TNBC.json"  # Path to the JSON configuration file
+  json_file: "/mnt/sdb/chenwm/PFM_Segmentation/dataset_json/GlaS.json"  # Path to the JSON configuration file
   num_classes: 2  # Number of classes; must match num_classes in the JSON file
   ignore_index: 255  # Index value to ignore during training
 
@@ -8,22 +8,22 @@ system:
   num_workers: 2  # Number of worker threads for data loading
   pin_memory: true  # Whether to use pin_memory to accelerate data loading
   seed: 42  
-  device: "cuda:0"  # Device to use, 'cuda' or 'cpu'
+  device: "cuda:5"  # Device to use, 'cuda' or 'cpu'
 
 # Model configuration
 model:
   # Options: uni_v1, uni_v2, virchow_v1, virchow_v2, conch_v1_5, conch_v1, midnight12k, lunit_vits8, musk,PathOrchestra
   # Options: gigapath, phikon , patho3dmatrix-vision, phikon_v2, hoptimus_0, hoptimus_1, kaiko-vitl14, hibou_l
-  pfm_name: "conch_v1"  
+  pfm_name: "uni_v1"  
 
   # midnight12k/hoptimus_0/hoptimus_1/uni_v2/gigapath: 1536
   # virchow_v1/virchow_v2: 1280
-  # uni_v1/hibou_l/musk/phikon_v2/kaiko-vitl14/patho3dmatrix-vision/PathOrchestra/conch_v1_5: 1024
+  # uni_v1/hibou_l/musk/phikon_v2/kaiko-vitl14/conch_v1_5/patho3dmatrix-vision/PathOrchestra: 1024
   # conch_v1/phikon: 768
   # lunit_vits8: 384
-  emb_dim: 768 
+  emb_dim: 1024 
   finetune_mode:
-    type: frozen # Options: lora, full, frozen, dora, cnn_adapter, transformer_adapter
+    type: dora # Options: lora, full, frozen, dora, cnn_adapter, transformer_adapter
     rank: 16 # only used when finetune_mode.type is lora or dora 
     alpha: 1.0 # only used when finetune_mode.type is lora or dora
   transformer_adapter:
@@ -40,13 +40,13 @@ model:
     width_factor: 1  # Width multiplier for CNN adapter (1 = 64 base channels)
     block_units: [3, 4, 9]  # Number of bottleneck units in each block
   #Musk and hibou_l can only be loaded from huggingface.co,so we don't need to specify the path
-  pfm_weights_path: '/mnt/sdb/chenwm/PFM_Segmentation/weight/conch_v1/pytorch_model.bin'  # Path to the PFM model weights
+  pfm_weights_path: '/mnt/sdb/chenwm/PFM_Segmentation/weight/UNI/pytorch_model.bin'  # Path to the PFM model weights
   num_classes: 2  # Must match num_classes in the JSON file
 
 # Training configuration
 training:
   batch_size: 8
-  epochs: 150
+  epochs: 1
   learning_rate: 0.001
   weight_decay: 0.0001
   use_amp: true  # Whether to use automatic mixed precision (AMP) for training
@@ -55,10 +55,10 @@ training:
   
   # Data augmentation
   augmentation:
-   # virchow_v1,virchow_v2,uni_v2,midnight12k,kaiko-vitl14,hibou_l,hoptimus_0,hoptimus_1,: must be a multiple of 14 (token_size) 
+    # virchow_v1,virchow_v2,uni_v2,midnight12k,kaiko-vitl14,hibou_l,hoptimus_0,hoptimus_1,: must be a multiple of 14 (token_size) 
     # uni_v1,conch_v1_5,gigapath,conch_v1 ,phikon_v2,patho3dmatrix-vision,PathOrchestra,phikon,phikon_v2: must be a multiple of 16 (token_size) 
     # special: musk: 384
-    RandomResizedCropSize: 224 
+    RandomResizedCropSize: 416 
 
   # Optimizer settings
   optimizer: 
@@ -78,16 +78,14 @@ validation:
   eval_interval: 1  # Validate every N epochs
   batch_size: 8
   augmentation:
-    # virchow_v1,virchow_v2,uni_v2,midnight12k,kaiko-vitl14,hibou_l: must be a multiple of 14 (token_size) 
-    # uni_v1,conch_v1_5,gigapath,conch_v1,phikon,phikon_v2,patho3dmatrix-vision,PathOrchestra: must be a multiple of 16 (token_size) 
-    # lunit_vits8: must be a multiple of 8 (token_size)
-    # special: H-optimus-1/H-optimus-0: 224
-    # specia:  musk: 384
-    ResizedSize: 224 
+    # virchow_v1,virchow_v2,uni_v2,midnight12k,kaiko-vitl14,hibou_l,hoptimus_0,hoptimus_1,: must be a multiple of 14 (token_size) 
+    # uni_v1,conch_v1_5,gigapath,conch_v1 ,phikon_v2,patho3dmatrix-vision,PathOrchestra,phikon,phikon_v2: must be a multiple of 16 (token_size) 
+    # special: musk: 384
+    ResizedSize: 416 
   
 logging:
-  log_dir: "/mnt/sdb/chenwm/PFM_Segmentation_Output/logs_frozen" 
-  experiment_name: "test"
+  log_dir: "/mnt/sdb/chenwm/PFM_Segmentation/logs" 
+  experiment_name: "test_12-07"
 
 visualization:
   save_interval: 10  # Save visualization results every N epochs
