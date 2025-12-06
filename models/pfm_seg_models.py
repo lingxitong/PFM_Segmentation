@@ -25,6 +25,8 @@ from scipy import ndimage
 from typing import Optional, Dict, Any, Tuple
 from .lora import equip_model_with_lora
 from .dora import equip_model_with_dora
+from .cnn_adapter import equip_model_with_cnn_adapter
+from .transformer_adapter import equip_model_with_transformer_adapter
 
 logger = logging.getLogger(__name__)
 
@@ -372,6 +374,7 @@ class PhikonWrapper(nn.Module):
     
     Phikon uses transformers library's ViTModel, which expects different input format.
     This wrapper converts the input tensor format and extracts features properly.
+    Supports dynamic image sizes via position encoding interpolation.
     """
     
     def __init__(self, vit_model: nn.Module):
@@ -398,8 +401,8 @@ class PhikonWrapper(nn.Module):
         # Transformers ViTModel expects pixel_values in format (B, C, H, W)
         # The model will handle normalization internally based on its config
         
-        # Get outputs from ViTModel
-        outputs = self.vit_model(pixel_values=x)
+        # Get outputs from ViTModel with interpolate_pos_encoding=True for dynamic image sizes
+        outputs = self.vit_model(pixel_values=x, interpolate_pos_encoding=True)
         # Extract last_hidden_state: (B, num_tokens, hidden_dim)
         features = outputs.last_hidden_state
         return features
@@ -861,12 +864,15 @@ def create_pfm_segmentation_model(model_config: Dict[str, Any]) -> PFMSegmentati
         if key not in model_config:
             raise ValueError(f"Missing required configuration key: {key}")
     
-    pfm_seg_model =  PFMSegmentationModel(
+    finetune_mode = model_config['finetune_mode'].get('type')
+    
+    # For all modes, first create the standard model
+    pfm_seg_model = PFMSegmentationModel(
         PFM_name=model_config['pfm_name'],
         PFM_weights_path=model_config['pfm_weights_path'],
         emb_dim=model_config['emb_dim'],
         num_classes=model_config.get('num_classes', 2))
-    finetune_mode = model_config['finetune_mode'].get('type')
+    
     if finetune_mode == 'frozen':
         for param in pfm_seg_model.pfm.parameters():
             param.requires_grad = False
@@ -882,6 +888,22 @@ def create_pfm_segmentation_model(model_config: Dict[str, Any]) -> PFMSegmentati
         for param in pfm_seg_model.pfm.parameters():
             param.requires_grad = False
         pfm_seg_model.pfm = equip_model_with_dora(model_config['pfm_name'], pfm_seg_model.pfm, rank=dora_rank, alpha=dora_alpha)
+    elif finetune_mode == 'cnn_adapter':
+        # Freeze PFM parameters first
+        for param in pfm_seg_model.pfm.parameters():
+            param.requires_grad = False
+        # Equip model with CNN adapter (adds cnn_adapter module and replaces decoder)
+        cnn_config = model_config.get('cnn_adapter', {})
+        pfm_seg_model = equip_model_with_cnn_adapter(pfm_seg_model, cnn_config)
+        logger.info("CNN Adapter mode: PFM frozen, training CNN adapter + decoder + segmentation head")
+    elif finetune_mode == 'transformer_adapter':
+        # Freeze PFM parameters first
+        for param in pfm_seg_model.pfm.parameters():
+            param.requires_grad = False
+        # Equip model with Transformer Adapter (adds vision blocks after PFM)
+        adapter_config = model_config.get('transformer_adapter', {})
+        pfm_seg_model = equip_model_with_transformer_adapter(pfm_seg_model, adapter_config)
+        logger.info("Transformer Adapter mode: PFM frozen, training Vision Blocks + decoder + segmentation head")
     elif finetune_mode == 'full':
         pass
     return pfm_seg_model
