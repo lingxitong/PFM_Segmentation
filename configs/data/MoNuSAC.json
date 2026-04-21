@@ -1,0 +1,847 @@
+{
+  "num_classes": 5,
+  "data": {
+    "train": [
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-UZ-A9PO-01Z-00-DX1_7.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-UZ-A9PO-01Z-00-DX1_7.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-EJ-5517-01Z-00-DX1-2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-EJ-5517-01Z-00-DX1-2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-69-A59K-01Z-00-DX1_002.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-69-A59K-01Z-00-DX1_002.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-EW-A6SD-01Z-00-DX1_4.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-EW-A6SD-01Z-00-DX1_4.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-EJ-5517-01Z-00-DX1-1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-EJ-5517-01Z-00-DX1-1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-EJ-5505-01Z-00-DX1-1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-EJ-5505-01Z-00-DX1-1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-B9-A44B-01Z-00-DX1_1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-B9-A44B-01Z-00-DX1_1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-G7-A8LD-01Z-00-DX1_3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-G7-A8LD-01Z-00-DX1_3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-V1-A9O9-01Z-00-DX1-2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-V1-A9O9-01Z-00-DX1-2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-J4-A67Q-01Z-00-DX1-1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-J4-A67Q-01Z-00-DX1-1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-B6-A0WZ-01Z-00-DX1_6.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-B6-A0WZ-01Z-00-DX1_6.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-J4-A67T-01Z-00-DX1-2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-J4-A67T-01Z-00-DX1-2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-L4-A4E5-01Z-00-DX1_2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-L4-A4E5-01Z-00-DX1_2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-55-1594-01Z-00-DX1_002.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-55-1594-01Z-00-DX1_002.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-EJ-5517-01Z-00-DX1-3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-EJ-5517-01Z-00-DX1-3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-55-1594-01Z-00-DX1_003.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-55-1594-01Z-00-DX1_003.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-69-A59K-01Z-00-DX1_001.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-69-A59K-01Z-00-DX1_001.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-MH-A560-01Z-00-DX2_4.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-MH-A560-01Z-00-DX2_4.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-EJ-5495-01Z-00-DX1-2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-EJ-5495-01Z-00-DX1-2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-B9-A8YI-01Z-00-DX1_2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-B9-A8YI-01Z-00-DX1_2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-G7-A8LD-01Z-00-DX1_6.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-G7-A8LD-01Z-00-DX1_6.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-A2-A0CV-01Z-00-DX1_3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-A2-A0CV-01Z-00-DX1_3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-YL-A9WY-01Z-00-DX1-3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-YL-A9WY-01Z-00-DX1-3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-EJ-5505-01Z-00-DX1-2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-EJ-5505-01Z-00-DX1-2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-EJ-5505-01Z-00-DX1-5.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-EJ-5505-01Z-00-DX1-5.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-A2-A0ES-01Z-00-DX1_3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-A2-A0ES-01Z-00-DX1_3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-F9-A97G-01Z-00-DX1_4.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-F9-A97G-01Z-00-DX1_4.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-G7-A8LD-01Z-00-DX1_1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-G7-A8LD-01Z-00-DX1_1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-86-7713-01Z-00-DX1_003.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-86-7713-01Z-00-DX1_003.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-E2-A154-01Z-00-DX1_8.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-E2-A154-01Z-00-DX1_8.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-A2-A0ES-01Z-00-DX1_1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-A2-A0ES-01Z-00-DX1_1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-KK-A59X-01Z-00-DX1-3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-KK-A59X-01Z-00-DX1-3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-G7-A8LD-01Z-00-DX1_2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-G7-A8LD-01Z-00-DX1_2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-A2-A0CV-01Z-00-DX1_1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-A2-A0CV-01Z-00-DX1_1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-YL-A9WY-01Z-00-DX1-1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-YL-A9WY-01Z-00-DX1-1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-5P-A9K0-01Z-00-DX1_3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-5P-A9K0-01Z-00-DX1_3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-A2-A0ES-01Z-00-DX1_2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-A2-A0ES-01Z-00-DX1_2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-UZ-A9PO-01Z-00-DX1_6.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-UZ-A9PO-01Z-00-DX1_6.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-V1-A9O9-01Z-00-DX1-5.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-V1-A9O9-01Z-00-DX1-5.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-EV-5903-01Z-00-DX1_1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-EV-5903-01Z-00-DX1_1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-V1-A8WL-01Z-00-DX1-3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-V1-A8WL-01Z-00-DX1-3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-73-4668-01Z-00-DX1_002.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-73-4668-01Z-00-DX1_002.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-EJ-5505-01Z-00-DX1-3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-EJ-5505-01Z-00-DX1-3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-YL-A9WY-01Z-00-DX1-2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-YL-A9WY-01Z-00-DX1-2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-UZ-A9PU-01Z-00-DX1_1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-UZ-A9PU-01Z-00-DX1_1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-P4-AAVK-01Z-00-DX1_1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-P4-AAVK-01Z-00-DX1_1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-UZ-A9PO-01Z-00-DX1_4.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-UZ-A9PO-01Z-00-DX1_4.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-J4-A67Q-01Z-00-DX1-4.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-J4-A67Q-01Z-00-DX1-4.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-E2-A154-01Z-00-DX1_6.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-E2-A154-01Z-00-DX1_6.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-E9-A22G-01Z-00-DX1_2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-E9-A22G-01Z-00-DX1_2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-BH-A18T-01Z-00-DX1_2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-BH-A18T-01Z-00-DX1_2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-G9-6499-01Z-00-DX1-1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-G9-6499-01Z-00-DX1-1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-69-A59K-01Z-00-DX1_004.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-69-A59K-01Z-00-DX1_004.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-BH-A18T-01Z-00-DX1_1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-BH-A18T-01Z-00-DX1_1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-SX-A7SR-01Z-00-DX1_2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-SX-A7SR-01Z-00-DX1_2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-L4-A4E5-01Z-00-DX1_3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-L4-A4E5-01Z-00-DX1_3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-UZ-A9PO-01Z-00-DX1_1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-UZ-A9PO-01Z-00-DX1_1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-X4-A8KQ-01Z-00-DX8-3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-X4-A8KQ-01Z-00-DX8-3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-78-7220-01Z-00-DX1_004.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-78-7220-01Z-00-DX1_004.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-A2-A0CV-01Z-00-DX1_2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-A2-A0CV-01Z-00-DX1_2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-X4-A8KQ-01Z-00-DX8-2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-X4-A8KQ-01Z-00-DX8-2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-EW-A6SD-01Z-00-DX1_5.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-EW-A6SD-01Z-00-DX1_5.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-EV-5903-01Z-00-DX1_4.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-EV-5903-01Z-00-DX1_4.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-73-4668-01Z-00-DX1_001.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-73-4668-01Z-00-DX1_001.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-E2-A154-01Z-00-DX1_5.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-E2-A154-01Z-00-DX1_5.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-MP-A4T7-01Z-00-DX1_3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-MP-A4T7-01Z-00-DX1_3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-55-1594-01Z-00-DX1_004.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-55-1594-01Z-00-DX1_004.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-P4-AAVK-01Z-00-DX1_6.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-P4-AAVK-01Z-00-DX1_6.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-UZ-A9PO-01Z-00-DX1_3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-UZ-A9PO-01Z-00-DX1_3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-86-7713-01Z-00-DX1_001.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-86-7713-01Z-00-DX1_001.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-G9-6342-01Z-00-DX1-1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-G9-6342-01Z-00-DX1-1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-EJ-5517-01Z-00-DX1-4.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-EJ-5517-01Z-00-DX1-4.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-E9-A22G-01Z-00-DX1_5.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-E9-A22G-01Z-00-DX1_5.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-BH-A18T-01Z-00-DX1_3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-BH-A18T-01Z-00-DX1_3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-EJ-5505-01Z-00-DX1-4.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-EJ-5505-01Z-00-DX1-4.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-E9-A22G-01Z-00-DX1_3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-E9-A22G-01Z-00-DX1_3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-V1-A9O9-01Z-00-DX1-1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-V1-A9O9-01Z-00-DX1-1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-DW-7841-01Z-00-DX1_1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-DW-7841-01Z-00-DX1_1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-55-1594-01Z-00-DX1_005.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-55-1594-01Z-00-DX1_005.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-YL-A9WY-01Z-00-DX1-5.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-YL-A9WY-01Z-00-DX1-5.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-MP-A4SY-01Z-00-DX1_3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-MP-A4SY-01Z-00-DX1_3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-KK-A6E0-01Z-00-DX1-1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-KK-A6E0-01Z-00-DX1-1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-E2-A154-01Z-00-DX1_3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-E2-A154-01Z-00-DX1_3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-E9-A22G-01Z-00-DX1_4.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-E9-A22G-01Z-00-DX1_4.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-J4-A67T-01Z-00-DX1-4.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-J4-A67T-01Z-00-DX1-4.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-B9-A44B-01Z-00-DX1_2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-B9-A44B-01Z-00-DX1_2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-J4-A67Q-01Z-00-DX1-3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-J4-A67Q-01Z-00-DX1-3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-E9-A22B-01Z-00-DX1_5.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-E9-A22B-01Z-00-DX1_5.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-G7-A8LD-01Z-00-DX1_10.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-G7-A8LD-01Z-00-DX1_10.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-E9-A22B-01Z-00-DX1_4.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-E9-A22B-01Z-00-DX1_4.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-E9-A22B-01Z-00-DX1_2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-E9-A22B-01Z-00-DX1_2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-G7-A8LD-01Z-00-DX1_7.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-G7-A8LD-01Z-00-DX1_7.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-MH-A560-01Z-00-DX2_2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-MH-A560-01Z-00-DX2_2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-E9-A22B-01Z-00-DX1_7.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-E9-A22B-01Z-00-DX1_7.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-UZ-A9PO-01Z-00-DX1_5.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-UZ-A9PO-01Z-00-DX1_5.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-B9-A8YI-01Z-00-DX1_5.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-B9-A8YI-01Z-00-DX1_5.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-V1-A8WL-01Z-00-DX1-1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-V1-A8WL-01Z-00-DX1-1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-EJ-5495-01Z-00-DX1-1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-EJ-5495-01Z-00-DX1-1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-69-7760-01Z-00-DX1_004.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-69-7760-01Z-00-DX1_004.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-DW-7841-01Z-00-DX1_2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-DW-7841-01Z-00-DX1_2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-KK-A6E0-01Z-00-DX1-4.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-KK-A6E0-01Z-00-DX1-4.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-KK-A6E0-01Z-00-DX1-2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-KK-A6E0-01Z-00-DX1-2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-E9-A22B-01Z-00-DX1_1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-E9-A22B-01Z-00-DX1_1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-EJ-5505-01Z-00-DX1-6.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-EJ-5505-01Z-00-DX1-6.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-MP-A4SY-01Z-00-DX1_2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-MP-A4SY-01Z-00-DX1_2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-KK-A7AW-01Z-00-DX1-1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-KK-A7AW-01Z-00-DX1-1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-MP-A4T7-01Z-00-DX1_1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-MP-A4T7-01Z-00-DX1_1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-E2-A154-01Z-00-DX1_4.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-E2-A154-01Z-00-DX1_4.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-V1-A9O9-01Z-00-DX1-3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-V1-A9O9-01Z-00-DX1-3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-V1-A9O9-01Z-00-DX1-4.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-V1-A9O9-01Z-00-DX1-4.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-KK-A59X-01Z-00-DX1-1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-KK-A59X-01Z-00-DX1-1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-B6-A0WZ-01Z-00-DX1_2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-B6-A0WZ-01Z-00-DX1_2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-J4-A67T-01Z-00-DX1-6.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-J4-A67T-01Z-00-DX1-6.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-F9-A97G-01Z-00-DX1_1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-F9-A97G-01Z-00-DX1_1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-MP-A4T7-01Z-00-DX1_4.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-MP-A4T7-01Z-00-DX1_4.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-MP-A4T7-01Z-00-DX1_2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-MP-A4T7-01Z-00-DX1_2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-E9-A22G-01Z-00-DX1_1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-E9-A22G-01Z-00-DX1_1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-P4-AAVK-01Z-00-DX1_4.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-P4-AAVK-01Z-00-DX1_4.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-55-1594-01Z-00-DX1_001.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-55-1594-01Z-00-DX1_001.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-86-8672-01Z-00-DX1_3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-86-8672-01Z-00-DX1_3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-78-7220-01Z-00-DX1_001.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-78-7220-01Z-00-DX1_001.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-E2-A154-01Z-00-DX1_2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-E2-A154-01Z-00-DX1_2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-B6-A0WZ-01Z-00-DX1_5.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-B6-A0WZ-01Z-00-DX1_5.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-F9-A97G-01Z-00-DX1_3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-F9-A97G-01Z-00-DX1_3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-E9-A22B-01Z-00-DX1_3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-E9-A22B-01Z-00-DX1_3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-MP-A4SY-01Z-00-DX1_4.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-MP-A4SY-01Z-00-DX1_4.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-BH-A18T-01Z-00-DX1_4.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-BH-A18T-01Z-00-DX1_4.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-E2-A154-01Z-00-DX1_1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-E2-A154-01Z-00-DX1_1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-D8-A1X5-01Z-00-DX2_4.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-D8-A1X5-01Z-00-DX2_4.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-MH-A560-01Z-00-DX2_3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-MH-A560-01Z-00-DX2_3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-BH-A18T-01Z-00-DX1_5.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-BH-A18T-01Z-00-DX1_5.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-F9-A97G-01Z-00-DX1_2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-F9-A97G-01Z-00-DX1_2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-5P-A9K0-01Z-00-DX1_2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-5P-A9K0-01Z-00-DX1_2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-78-7220-01Z-00-DX1_002.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-78-7220-01Z-00-DX1_002.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-B6-A0WZ-01Z-00-DX1_4.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-B6-A0WZ-01Z-00-DX1_4.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-86-7713-01Z-00-DX1_002.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-86-7713-01Z-00-DX1_002.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-G9-6342-01Z-00-DX1-2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-G9-6342-01Z-00-DX1-2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-MH-A560-01Z-00-DX2_1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-MH-A560-01Z-00-DX2_1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-69-A59K-01Z-00-DX1_003.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-69-A59K-01Z-00-DX1_003.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-G9-6499-01Z-00-DX1-5.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-G9-6499-01Z-00-DX1-5.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-MP-A4SY-01Z-00-DX1_1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-MP-A4SY-01Z-00-DX1_1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-L4-A4E5-01Z-00-DX1_1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-L4-A4E5-01Z-00-DX1_1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-J4-A67T-01Z-00-DX1-5.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-J4-A67T-01Z-00-DX1-5.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-E2-A154-01Z-00-DX1_7.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-E2-A154-01Z-00-DX1_7.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-G7-A8LD-01Z-00-DX1_4.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-G7-A8LD-01Z-00-DX1_4.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-J4-A67T-01Z-00-DX1-3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-J4-A67T-01Z-00-DX1-3.png"
+      }
+    ],
+    "val": [
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-V1-A8WL-01Z-00-DX1-2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-V1-A8WL-01Z-00-DX1-2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-X4-A8KQ-01Z-00-DX8-1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-X4-A8KQ-01Z-00-DX8-1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-BH-A18T-01Z-00-DX1_6.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-BH-A18T-01Z-00-DX1_6.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-KK-A59X-01Z-00-DX1-2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-KK-A59X-01Z-00-DX1-2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-J4-A67Q-01Z-00-DX1-2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-J4-A67Q-01Z-00-DX1-2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-A2-A0CV-01Z-00-DX1_5.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-A2-A0CV-01Z-00-DX1_5.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-G7-A8LD-01Z-00-DX1_8.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-G7-A8LD-01Z-00-DX1_8.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-EJ-5495-01Z-00-DX1-3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-EJ-5495-01Z-00-DX1-3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-B6-A0WZ-01Z-00-DX1_1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-B6-A0WZ-01Z-00-DX1_1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-S3-AA11-01Z-00-DX1_1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-S3-AA11-01Z-00-DX1_1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-S3-AA11-01Z-00-DX1_2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-S3-AA11-01Z-00-DX1_2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-KK-A6E0-01Z-00-DX1-3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-KK-A6E0-01Z-00-DX1-3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-73-4668-01Z-00-DX1_004.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-73-4668-01Z-00-DX1_004.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-A2-A0ES-01Z-00-DX1_4.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-A2-A0ES-01Z-00-DX1_4.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-EW-A6SD-01Z-00-DX1_2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-EW-A6SD-01Z-00-DX1_2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-DW-7841-01Z-00-DX1_3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-DW-7841-01Z-00-DX1_3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-P4-AAVK-01Z-00-DX1_2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-P4-AAVK-01Z-00-DX1_2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-P4-AAVK-01Z-00-DX1_5.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-P4-AAVK-01Z-00-DX1_5.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-S3-AA11-01Z-00-DX1_3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-S3-AA11-01Z-00-DX1_3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-73-4668-01Z-00-DX1_003.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-73-4668-01Z-00-DX1_003.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-G7-A8LD-01Z-00-DX1_9.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-G7-A8LD-01Z-00-DX1_9.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-S3-AA11-01Z-00-DX1_4.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-S3-AA11-01Z-00-DX1_4.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-G9-6499-01Z-00-DX1-2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-G9-6499-01Z-00-DX1-2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-EV-5903-01Z-00-DX1_3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-EV-5903-01Z-00-DX1_3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-D8-A1X5-01Z-00-DX2_1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-D8-A1X5-01Z-00-DX2_1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-E9-A22B-01Z-00-DX1_8.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-E9-A22B-01Z-00-DX1_8.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-69-7760-01Z-00-DX1_001.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-69-7760-01Z-00-DX1_001.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-69-7760-01Z-00-DX1_002.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-69-7760-01Z-00-DX1_002.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-B9-A44B-01Z-00-DX1_3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-B9-A44B-01Z-00-DX1_3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-A2-A0CV-01Z-00-DX1_4.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-A2-A0CV-01Z-00-DX1_4.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-69-7760-01Z-00-DX1_003.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-69-7760-01Z-00-DX1_003.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-86-8672-01Z-00-DX1_1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-86-8672-01Z-00-DX1_1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-G9-6499-01Z-00-DX1-3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-G9-6499-01Z-00-DX1-3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-86-7713-01Z-00-DX1_004.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-86-7713-01Z-00-DX1_004.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-B9-A8YI-01Z-00-DX1_1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-B9-A8YI-01Z-00-DX1_1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-78-7220-01Z-00-DX1_003.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-78-7220-01Z-00-DX1_003.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-EJ-5495-01Z-00-DX1-4.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-EJ-5495-01Z-00-DX1-4.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-UZ-A9PU-01Z-00-DX1_2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-UZ-A9PU-01Z-00-DX1_2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-UZ-A9PO-01Z-00-DX1_2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-UZ-A9PO-01Z-00-DX1_2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-S3-AA11-01Z-00-DX1_6.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-S3-AA11-01Z-00-DX1_6.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-G9-6499-01Z-00-DX1-4.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-G9-6499-01Z-00-DX1-4.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-P4-AAVK-01Z-00-DX1_3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-P4-AAVK-01Z-00-DX1_3.png"
+      }
+    ],
+    "test": [
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-B9-A8YI-01Z-00-DX1_3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-B9-A8YI-01Z-00-DX1_3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-S3-AA11-01Z-00-DX1_5.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-S3-AA11-01Z-00-DX1_5.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-B6-A0WZ-01Z-00-DX1_3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-B6-A0WZ-01Z-00-DX1_3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-KK-A6E0-01Z-00-DX1-5.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-KK-A6E0-01Z-00-DX1-5.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-B9-A8YI-01Z-00-DX1_4.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-B9-A8YI-01Z-00-DX1_4.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-D8-A1X5-01Z-00-DX2_3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-D8-A1X5-01Z-00-DX2_3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-5P-A9K0-01Z-00-DX1_1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-5P-A9K0-01Z-00-DX1_1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-P4-AAVK-01Z-00-DX1_7.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-P4-AAVK-01Z-00-DX1_7.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-J4-A67Q-01Z-00-DX1-5.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-J4-A67Q-01Z-00-DX1-5.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-J4-A67T-01Z-00-DX1-1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-J4-A67T-01Z-00-DX1-1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-E9-A22B-01Z-00-DX1_6.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-E9-A22B-01Z-00-DX1_6.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-EV-5903-01Z-00-DX1_2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-EV-5903-01Z-00-DX1_2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-YL-A9WY-01Z-00-DX1-4.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-YL-A9WY-01Z-00-DX1-4.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-EW-A6SD-01Z-00-DX1_3.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-EW-A6SD-01Z-00-DX1_3.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-EV-5903-01Z-00-DX1_5.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-EV-5903-01Z-00-DX1_5.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-SX-A7SR-01Z-00-DX1_1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-SX-A7SR-01Z-00-DX1_1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-EW-A6SD-01Z-00-DX1_1.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-EW-A6SD-01Z-00-DX1_1.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-A2-A0ES-01Z-00-DX1_5.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-A2-A0ES-01Z-00-DX1_5.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-D8-A1X5-01Z-00-DX2_2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-D8-A1X5-01Z-00-DX2_2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-86-8672-01Z-00-DX1_2.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-86-8672-01Z-00-DX1_2.png"
+      },
+      {
+        "image_path": "Data/MoNuSAC/images/TCGA-G7-A8LD-01Z-00-DX1_5.png",
+        "mask_path": "Data/MoNuSAC/masks/TCGA-G7-A8LD-01Z-00-DX1_5.png"
+      }
+    ]
+  }
+}

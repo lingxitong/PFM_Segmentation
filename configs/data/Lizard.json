@@ -1,0 +1,963 @@
+{
+  "num_classes": 7,
+  "data": {
+    "train": [
+      {
+        "image_path": "Data/Lizard/images/glas_26.png",
+        "mask_path": "Data/Lizard/masks/glas_26.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_4.png",
+        "mask_path": "Data/Lizard/masks/glas_4.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_25.png",
+        "mask_path": "Data/Lizard/masks/dpath_25.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_57.png",
+        "mask_path": "Data/Lizard/masks/crag_57.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_32.png",
+        "mask_path": "Data/Lizard/masks/crag_32.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_51.png",
+        "mask_path": "Data/Lizard/masks/glas_51.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_17.png",
+        "mask_path": "Data/Lizard/masks/glas_17.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_34.png",
+        "mask_path": "Data/Lizard/masks/crag_34.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_7.png",
+        "mask_path": "Data/Lizard/masks/glas_7.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/consep_5.png",
+        "mask_path": "Data/Lizard/masks/consep_5.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_39.png",
+        "mask_path": "Data/Lizard/masks/glas_39.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_2.png",
+        "mask_path": "Data/Lizard/masks/glas_2.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/pannuke_28.png",
+        "mask_path": "Data/Lizard/masks/pannuke_28.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_1.png",
+        "mask_path": "Data/Lizard/masks/crag_1.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/pannuke_6.png",
+        "mask_path": "Data/Lizard/masks/pannuke_6.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/pannuke_26.png",
+        "mask_path": "Data/Lizard/masks/pannuke_26.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_18.png",
+        "mask_path": "Data/Lizard/masks/glas_18.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_33.png",
+        "mask_path": "Data/Lizard/masks/glas_33.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_37.png",
+        "mask_path": "Data/Lizard/masks/glas_37.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_4.png",
+        "mask_path": "Data/Lizard/masks/dpath_4.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_36.png",
+        "mask_path": "Data/Lizard/masks/glas_36.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_4.png",
+        "mask_path": "Data/Lizard/masks/crag_4.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_40.png",
+        "mask_path": "Data/Lizard/masks/dpath_40.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_15.png",
+        "mask_path": "Data/Lizard/masks/dpath_15.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_41.png",
+        "mask_path": "Data/Lizard/masks/glas_41.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/consep_2.png",
+        "mask_path": "Data/Lizard/masks/consep_2.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_3.png",
+        "mask_path": "Data/Lizard/masks/dpath_3.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_8.png",
+        "mask_path": "Data/Lizard/masks/glas_8.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_23.png",
+        "mask_path": "Data/Lizard/masks/dpath_23.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_57.png",
+        "mask_path": "Data/Lizard/masks/dpath_57.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_44.png",
+        "mask_path": "Data/Lizard/masks/crag_44.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_56.png",
+        "mask_path": "Data/Lizard/masks/glas_56.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_13.png",
+        "mask_path": "Data/Lizard/masks/glas_13.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_29.png",
+        "mask_path": "Data/Lizard/masks/glas_29.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_60.png",
+        "mask_path": "Data/Lizard/masks/crag_60.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_61.png",
+        "mask_path": "Data/Lizard/masks/dpath_61.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_13.png",
+        "mask_path": "Data/Lizard/masks/dpath_13.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_24.png",
+        "mask_path": "Data/Lizard/masks/crag_24.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/consep_1.png",
+        "mask_path": "Data/Lizard/masks/consep_1.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_69.png",
+        "mask_path": "Data/Lizard/masks/dpath_69.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_63.png",
+        "mask_path": "Data/Lizard/masks/dpath_63.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/pannuke_23.png",
+        "mask_path": "Data/Lizard/masks/pannuke_23.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_43.png",
+        "mask_path": "Data/Lizard/masks/dpath_43.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_14.png",
+        "mask_path": "Data/Lizard/masks/crag_14.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_49.png",
+        "mask_path": "Data/Lizard/masks/dpath_49.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_19.png",
+        "mask_path": "Data/Lizard/masks/dpath_19.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_20.png",
+        "mask_path": "Data/Lizard/masks/crag_20.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_3.png",
+        "mask_path": "Data/Lizard/masks/glas_3.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_50.png",
+        "mask_path": "Data/Lizard/masks/crag_50.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_22.png",
+        "mask_path": "Data/Lizard/masks/dpath_22.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_17.png",
+        "mask_path": "Data/Lizard/masks/crag_17.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_17.png",
+        "mask_path": "Data/Lizard/masks/dpath_17.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_25.png",
+        "mask_path": "Data/Lizard/masks/glas_25.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_39.png",
+        "mask_path": "Data/Lizard/masks/dpath_39.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/consep_10.png",
+        "mask_path": "Data/Lizard/masks/consep_10.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_48.png",
+        "mask_path": "Data/Lizard/masks/dpath_48.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_16.png",
+        "mask_path": "Data/Lizard/masks/dpath_16.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_62.png",
+        "mask_path": "Data/Lizard/masks/dpath_62.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/pannuke_2.png",
+        "mask_path": "Data/Lizard/masks/pannuke_2.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_30.png",
+        "mask_path": "Data/Lizard/masks/dpath_30.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_31.png",
+        "mask_path": "Data/Lizard/masks/glas_31.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_66.png",
+        "mask_path": "Data/Lizard/masks/dpath_66.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_15.png",
+        "mask_path": "Data/Lizard/masks/crag_15.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_49.png",
+        "mask_path": "Data/Lizard/masks/crag_49.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_58.png",
+        "mask_path": "Data/Lizard/masks/crag_58.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_28.png",
+        "mask_path": "Data/Lizard/masks/crag_28.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_9.png",
+        "mask_path": "Data/Lizard/masks/crag_9.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_7.png",
+        "mask_path": "Data/Lizard/masks/crag_7.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_41.png",
+        "mask_path": "Data/Lizard/masks/dpath_41.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_38.png",
+        "mask_path": "Data/Lizard/masks/dpath_38.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/consep_12.png",
+        "mask_path": "Data/Lizard/masks/consep_12.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_5.png",
+        "mask_path": "Data/Lizard/masks/crag_5.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_2.png",
+        "mask_path": "Data/Lizard/masks/crag_2.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_29.png",
+        "mask_path": "Data/Lizard/masks/dpath_29.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_46.png",
+        "mask_path": "Data/Lizard/masks/dpath_46.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_21.png",
+        "mask_path": "Data/Lizard/masks/glas_21.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_8.png",
+        "mask_path": "Data/Lizard/masks/crag_8.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_19.png",
+        "mask_path": "Data/Lizard/masks/crag_19.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_65.png",
+        "mask_path": "Data/Lizard/masks/dpath_65.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/pannuke_9.png",
+        "mask_path": "Data/Lizard/masks/pannuke_9.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_51.png",
+        "mask_path": "Data/Lizard/masks/dpath_51.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_44.png",
+        "mask_path": "Data/Lizard/masks/dpath_44.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_22.png",
+        "mask_path": "Data/Lizard/masks/glas_22.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_53.png",
+        "mask_path": "Data/Lizard/masks/dpath_53.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_16.png",
+        "mask_path": "Data/Lizard/masks/glas_16.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_28.png",
+        "mask_path": "Data/Lizard/masks/glas_28.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_23.png",
+        "mask_path": "Data/Lizard/masks/glas_23.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_44.png",
+        "mask_path": "Data/Lizard/masks/glas_44.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_6.png",
+        "mask_path": "Data/Lizard/masks/crag_6.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_61.png",
+        "mask_path": "Data/Lizard/masks/crag_61.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_21.png",
+        "mask_path": "Data/Lizard/masks/dpath_21.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_34.png",
+        "mask_path": "Data/Lizard/masks/dpath_34.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_36.png",
+        "mask_path": "Data/Lizard/masks/crag_36.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_33.png",
+        "mask_path": "Data/Lizard/masks/dpath_33.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_61.png",
+        "mask_path": "Data/Lizard/masks/glas_61.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_42.png",
+        "mask_path": "Data/Lizard/masks/crag_42.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_27.png",
+        "mask_path": "Data/Lizard/masks/glas_27.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_53.png",
+        "mask_path": "Data/Lizard/masks/crag_53.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_33.png",
+        "mask_path": "Data/Lizard/masks/crag_33.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_30.png",
+        "mask_path": "Data/Lizard/masks/glas_30.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/consep_11.png",
+        "mask_path": "Data/Lizard/masks/consep_11.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_24.png",
+        "mask_path": "Data/Lizard/masks/dpath_24.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_36.png",
+        "mask_path": "Data/Lizard/masks/dpath_36.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_35.png",
+        "mask_path": "Data/Lizard/masks/glas_35.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_10.png",
+        "mask_path": "Data/Lizard/masks/crag_10.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_1.png",
+        "mask_path": "Data/Lizard/masks/dpath_1.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/consep_8.png",
+        "mask_path": "Data/Lizard/masks/consep_8.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_39.png",
+        "mask_path": "Data/Lizard/masks/crag_39.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_16.png",
+        "mask_path": "Data/Lizard/masks/crag_16.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_18.png",
+        "mask_path": "Data/Lizard/masks/crag_18.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_50.png",
+        "mask_path": "Data/Lizard/masks/glas_50.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/pannuke_8.png",
+        "mask_path": "Data/Lizard/masks/pannuke_8.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_11.png",
+        "mask_path": "Data/Lizard/masks/glas_11.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_45.png",
+        "mask_path": "Data/Lizard/masks/glas_45.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_43.png",
+        "mask_path": "Data/Lizard/masks/glas_43.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_41.png",
+        "mask_path": "Data/Lizard/masks/crag_41.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/pannuke_15.png",
+        "mask_path": "Data/Lizard/masks/pannuke_15.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/consep_13.png",
+        "mask_path": "Data/Lizard/masks/consep_13.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/consep_6.png",
+        "mask_path": "Data/Lizard/masks/consep_6.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_59.png",
+        "mask_path": "Data/Lizard/masks/dpath_59.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_11.png",
+        "mask_path": "Data/Lizard/masks/crag_11.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_54.png",
+        "mask_path": "Data/Lizard/masks/crag_54.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_25.png",
+        "mask_path": "Data/Lizard/masks/crag_25.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/consep_9.png",
+        "mask_path": "Data/Lizard/masks/consep_9.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_14.png",
+        "mask_path": "Data/Lizard/masks/dpath_14.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_27.png",
+        "mask_path": "Data/Lizard/masks/dpath_27.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_20.png",
+        "mask_path": "Data/Lizard/masks/glas_20.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_32.png",
+        "mask_path": "Data/Lizard/masks/glas_32.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/pannuke_17.png",
+        "mask_path": "Data/Lizard/masks/pannuke_17.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/consep_7.png",
+        "mask_path": "Data/Lizard/masks/consep_7.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_62.png",
+        "mask_path": "Data/Lizard/masks/crag_62.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/consep_15.png",
+        "mask_path": "Data/Lizard/masks/consep_15.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/pannuke_5.png",
+        "mask_path": "Data/Lizard/masks/pannuke_5.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_51.png",
+        "mask_path": "Data/Lizard/masks/crag_51.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_53.png",
+        "mask_path": "Data/Lizard/masks/glas_53.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_6.png",
+        "mask_path": "Data/Lizard/masks/glas_6.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_45.png",
+        "mask_path": "Data/Lizard/masks/dpath_45.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_38.png",
+        "mask_path": "Data/Lizard/masks/glas_38.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/consep_3.png",
+        "mask_path": "Data/Lizard/masks/consep_3.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_52.png",
+        "mask_path": "Data/Lizard/masks/glas_52.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_26.png",
+        "mask_path": "Data/Lizard/masks/dpath_26.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_28.png",
+        "mask_path": "Data/Lizard/masks/dpath_28.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_20.png",
+        "mask_path": "Data/Lizard/masks/dpath_20.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_52.png",
+        "mask_path": "Data/Lizard/masks/dpath_52.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/consep_4.png",
+        "mask_path": "Data/Lizard/masks/consep_4.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/pannuke_12.png",
+        "mask_path": "Data/Lizard/masks/pannuke_12.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_54.png",
+        "mask_path": "Data/Lizard/masks/dpath_54.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_40.png",
+        "mask_path": "Data/Lizard/masks/glas_40.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_55.png",
+        "mask_path": "Data/Lizard/masks/crag_55.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/pannuke_3.png",
+        "mask_path": "Data/Lizard/masks/pannuke_3.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_54.png",
+        "mask_path": "Data/Lizard/masks/glas_54.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_60.png",
+        "mask_path": "Data/Lizard/masks/dpath_60.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_6.png",
+        "mask_path": "Data/Lizard/masks/dpath_6.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_42.png",
+        "mask_path": "Data/Lizard/masks/dpath_42.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/pannuke_27.png",
+        "mask_path": "Data/Lizard/masks/pannuke_27.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_5.png",
+        "mask_path": "Data/Lizard/masks/dpath_5.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_47.png",
+        "mask_path": "Data/Lizard/masks/dpath_47.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/pannuke_1.png",
+        "mask_path": "Data/Lizard/masks/pannuke_1.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_12.png",
+        "mask_path": "Data/Lizard/masks/glas_12.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_46.png",
+        "mask_path": "Data/Lizard/masks/crag_46.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_31.png",
+        "mask_path": "Data/Lizard/masks/dpath_31.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_52.png",
+        "mask_path": "Data/Lizard/masks/crag_52.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_55.png",
+        "mask_path": "Data/Lizard/masks/dpath_55.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/pannuke_10.png",
+        "mask_path": "Data/Lizard/masks/pannuke_10.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_64.png",
+        "mask_path": "Data/Lizard/masks/crag_64.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/pannuke_11.png",
+        "mask_path": "Data/Lizard/masks/pannuke_11.png"
+      }
+    ],
+    "val": [
+      {
+        "image_path": "Data/Lizard/images/crag_63.png",
+        "mask_path": "Data/Lizard/masks/crag_63.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_40.png",
+        "mask_path": "Data/Lizard/masks/crag_40.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/pannuke_7.png",
+        "mask_path": "Data/Lizard/masks/pannuke_7.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_27.png",
+        "mask_path": "Data/Lizard/masks/crag_27.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_67.png",
+        "mask_path": "Data/Lizard/masks/dpath_67.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_7.png",
+        "mask_path": "Data/Lizard/masks/dpath_7.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_13.png",
+        "mask_path": "Data/Lizard/masks/crag_13.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_32.png",
+        "mask_path": "Data/Lizard/masks/dpath_32.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_59.png",
+        "mask_path": "Data/Lizard/masks/crag_59.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_45.png",
+        "mask_path": "Data/Lizard/masks/crag_45.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_46.png",
+        "mask_path": "Data/Lizard/masks/glas_46.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_9.png",
+        "mask_path": "Data/Lizard/masks/dpath_9.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_18.png",
+        "mask_path": "Data/Lizard/masks/dpath_18.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/pannuke_16.png",
+        "mask_path": "Data/Lizard/masks/pannuke_16.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/pannuke_20.png",
+        "mask_path": "Data/Lizard/masks/pannuke_20.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_24.png",
+        "mask_path": "Data/Lizard/masks/glas_24.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_12.png",
+        "mask_path": "Data/Lizard/masks/crag_12.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_58.png",
+        "mask_path": "Data/Lizard/masks/glas_58.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_49.png",
+        "mask_path": "Data/Lizard/masks/glas_49.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_10.png",
+        "mask_path": "Data/Lizard/masks/dpath_10.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_35.png",
+        "mask_path": "Data/Lizard/masks/crag_35.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_30.png",
+        "mask_path": "Data/Lizard/masks/crag_30.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_23.png",
+        "mask_path": "Data/Lizard/masks/crag_23.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_68.png",
+        "mask_path": "Data/Lizard/masks/dpath_68.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/pannuke_19.png",
+        "mask_path": "Data/Lizard/masks/pannuke_19.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_9.png",
+        "mask_path": "Data/Lizard/masks/glas_9.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_42.png",
+        "mask_path": "Data/Lizard/masks/glas_42.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_38.png",
+        "mask_path": "Data/Lizard/masks/crag_38.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_50.png",
+        "mask_path": "Data/Lizard/masks/dpath_50.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_3.png",
+        "mask_path": "Data/Lizard/masks/crag_3.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_56.png",
+        "mask_path": "Data/Lizard/masks/dpath_56.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_14.png",
+        "mask_path": "Data/Lizard/masks/glas_14.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_10.png",
+        "mask_path": "Data/Lizard/masks/glas_10.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_64.png",
+        "mask_path": "Data/Lizard/masks/dpath_64.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_2.png",
+        "mask_path": "Data/Lizard/masks/dpath_2.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_1.png",
+        "mask_path": "Data/Lizard/masks/glas_1.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_15.png",
+        "mask_path": "Data/Lizard/masks/glas_15.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_34.png",
+        "mask_path": "Data/Lizard/masks/glas_34.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/pannuke_18.png",
+        "mask_path": "Data/Lizard/masks/pannuke_18.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_8.png",
+        "mask_path": "Data/Lizard/masks/dpath_8.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_19.png",
+        "mask_path": "Data/Lizard/masks/glas_19.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_37.png",
+        "mask_path": "Data/Lizard/masks/dpath_37.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_12.png",
+        "mask_path": "Data/Lizard/masks/dpath_12.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/pannuke_25.png",
+        "mask_path": "Data/Lizard/masks/pannuke_25.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_35.png",
+        "mask_path": "Data/Lizard/masks/dpath_35.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_57.png",
+        "mask_path": "Data/Lizard/masks/glas_57.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/pannuke_4.png",
+        "mask_path": "Data/Lizard/masks/pannuke_4.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_47.png",
+        "mask_path": "Data/Lizard/masks/glas_47.png"
+      }
+    ],
+    "test": [
+      {
+        "image_path": "Data/Lizard/images/consep_14.png",
+        "mask_path": "Data/Lizard/masks/consep_14.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_55.png",
+        "mask_path": "Data/Lizard/masks/glas_55.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_48.png",
+        "mask_path": "Data/Lizard/masks/crag_48.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/pannuke_24.png",
+        "mask_path": "Data/Lizard/masks/pannuke_24.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_21.png",
+        "mask_path": "Data/Lizard/masks/crag_21.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_5.png",
+        "mask_path": "Data/Lizard/masks/glas_5.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_29.png",
+        "mask_path": "Data/Lizard/masks/crag_29.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_26.png",
+        "mask_path": "Data/Lizard/masks/crag_26.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_60.png",
+        "mask_path": "Data/Lizard/masks/glas_60.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_31.png",
+        "mask_path": "Data/Lizard/masks/crag_31.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/pannuke_22.png",
+        "mask_path": "Data/Lizard/masks/pannuke_22.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_48.png",
+        "mask_path": "Data/Lizard/masks/glas_48.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_43.png",
+        "mask_path": "Data/Lizard/masks/crag_43.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_22.png",
+        "mask_path": "Data/Lizard/masks/crag_22.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/pannuke_14.png",
+        "mask_path": "Data/Lizard/masks/pannuke_14.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_11.png",
+        "mask_path": "Data/Lizard/masks/dpath_11.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/dpath_58.png",
+        "mask_path": "Data/Lizard/masks/dpath_58.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/glas_59.png",
+        "mask_path": "Data/Lizard/masks/glas_59.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_37.png",
+        "mask_path": "Data/Lizard/masks/crag_37.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/pannuke_21.png",
+        "mask_path": "Data/Lizard/masks/pannuke_21.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/consep_16.png",
+        "mask_path": "Data/Lizard/masks/consep_16.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/pannuke_13.png",
+        "mask_path": "Data/Lizard/masks/pannuke_13.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_47.png",
+        "mask_path": "Data/Lizard/masks/crag_47.png"
+      },
+      {
+        "image_path": "Data/Lizard/images/crag_56.png",
+        "mask_path": "Data/Lizard/masks/crag_56.png"
+      }
+    ]
+  }
+}

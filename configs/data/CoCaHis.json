@@ -1,0 +1,339 @@
+{
+  "num_classes": 2,
+  "data": {
+    "train": [
+      {
+        "image_path": "Data/CoCaHis/images/sample_0058.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0058.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0067.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0067.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0005.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0005.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0018.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0018.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0069.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0069.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0057.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0057.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0054.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0054.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0060.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0060.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0004.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0004.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0013.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0013.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0078.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0078.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0076.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0076.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0077.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0077.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0035.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0035.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0068.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0068.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0020.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0020.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0009.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0009.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0046.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0046.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0079.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0079.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0041.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0041.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0016.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0016.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0002.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0002.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0003.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0003.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0039.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0039.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0047.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0047.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0006.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0006.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0025.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0025.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0071.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0071.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0051.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0051.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0061.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0061.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0037.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0037.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0023.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0023.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0021.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0021.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0017.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0017.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0014.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0014.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0075.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0075.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0056.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0056.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0070.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0070.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0011.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0011.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0043.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0043.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0073.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0073.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0066.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0066.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0042.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0042.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0032.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0032.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0040.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0040.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0049.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0049.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0022.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0022.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0029.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0029.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0026.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0026.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0044.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0044.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0053.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0053.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0074.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0074.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0028.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0028.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0062.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0062.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0045.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0045.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0052.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0052.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0080.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0080.png"
+      }
+    ],
+    "val": [
+      {
+        "image_path": "Data/CoCaHis/images/sample_0001.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0001.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0072.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0072.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0064.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0064.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0059.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0059.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0065.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0065.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0019.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0019.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0000.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0000.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0015.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0015.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0007.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0007.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0024.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0024.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0081.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0081.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0036.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0036.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0063.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0063.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0027.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0027.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0050.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0050.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0048.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0048.png"
+      }
+    ],
+    "test": [
+      {
+        "image_path": "Data/CoCaHis/images/sample_0033.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0033.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0038.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0038.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0030.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0030.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0010.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0010.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0055.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0055.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0012.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0012.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0008.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0008.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0031.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0031.png"
+      },
+      {
+        "image_path": "Data/CoCaHis/images/sample_0034.png",
+        "mask_path": "Data/CoCaHis/masks/sample_0034.png"
+      }
+    ]
+  }
+}

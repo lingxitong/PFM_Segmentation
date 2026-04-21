@@ -1,0 +1,671 @@
+{
+  "num_classes": 2,
+  "data": {
+    "train": [
+      {
+        "image_path": "Data/GlaS/images/testA_34.png",
+        "mask_path": "Data/GlaS/masks/testA_34.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_32.png",
+        "mask_path": "Data/GlaS/masks/train_32.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_77.png",
+        "mask_path": "Data/GlaS/masks/train_77.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testB_11.png",
+        "mask_path": "Data/GlaS/masks/testB_11.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_47.png",
+        "mask_path": "Data/GlaS/masks/train_47.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testB_9.png",
+        "mask_path": "Data/GlaS/masks/testB_9.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_24.png",
+        "mask_path": "Data/GlaS/masks/train_24.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_17.png",
+        "mask_path": "Data/GlaS/masks/train_17.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testB_1.png",
+        "mask_path": "Data/GlaS/masks/testB_1.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_22.png",
+        "mask_path": "Data/GlaS/masks/train_22.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_40.png",
+        "mask_path": "Data/GlaS/masks/train_40.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_74.png",
+        "mask_path": "Data/GlaS/masks/train_74.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_46.png",
+        "mask_path": "Data/GlaS/masks/train_46.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_6.png",
+        "mask_path": "Data/GlaS/masks/testA_6.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_61.png",
+        "mask_path": "Data/GlaS/masks/train_61.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_35.png",
+        "mask_path": "Data/GlaS/masks/testA_35.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testB_15.png",
+        "mask_path": "Data/GlaS/masks/testB_15.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_34.png",
+        "mask_path": "Data/GlaS/masks/train_34.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_39.png",
+        "mask_path": "Data/GlaS/masks/testA_39.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_59.png",
+        "mask_path": "Data/GlaS/masks/testA_59.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_82.png",
+        "mask_path": "Data/GlaS/masks/train_82.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_9.png",
+        "mask_path": "Data/GlaS/masks/testA_9.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_58.png",
+        "mask_path": "Data/GlaS/masks/testA_58.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_51.png",
+        "mask_path": "Data/GlaS/masks/testA_51.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_23.png",
+        "mask_path": "Data/GlaS/masks/testA_23.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testB_19.png",
+        "mask_path": "Data/GlaS/masks/testB_19.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_83.png",
+        "mask_path": "Data/GlaS/masks/train_83.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_19.png",
+        "mask_path": "Data/GlaS/masks/train_19.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_44.png",
+        "mask_path": "Data/GlaS/masks/testA_44.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_79.png",
+        "mask_path": "Data/GlaS/masks/train_79.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_53.png",
+        "mask_path": "Data/GlaS/masks/train_53.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_18.png",
+        "mask_path": "Data/GlaS/masks/testA_18.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_5.png",
+        "mask_path": "Data/GlaS/masks/train_5.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_67.png",
+        "mask_path": "Data/GlaS/masks/train_67.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_27.png",
+        "mask_path": "Data/GlaS/masks/testA_27.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_7.png",
+        "mask_path": "Data/GlaS/masks/train_7.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_4.png",
+        "mask_path": "Data/GlaS/masks/train_4.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_53.png",
+        "mask_path": "Data/GlaS/masks/testA_53.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_18.png",
+        "mask_path": "Data/GlaS/masks/train_18.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_16.png",
+        "mask_path": "Data/GlaS/masks/train_16.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_12.png",
+        "mask_path": "Data/GlaS/masks/testA_12.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_5.png",
+        "mask_path": "Data/GlaS/masks/testA_5.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_2.png",
+        "mask_path": "Data/GlaS/masks/train_2.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testB_3.png",
+        "mask_path": "Data/GlaS/masks/testB_3.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_80.png",
+        "mask_path": "Data/GlaS/masks/train_80.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_52.png",
+        "mask_path": "Data/GlaS/masks/testA_52.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_57.png",
+        "mask_path": "Data/GlaS/masks/testA_57.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_19.png",
+        "mask_path": "Data/GlaS/masks/testA_19.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_8.png",
+        "mask_path": "Data/GlaS/masks/testA_8.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_21.png",
+        "mask_path": "Data/GlaS/masks/train_21.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_10.png",
+        "mask_path": "Data/GlaS/masks/testA_10.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_58.png",
+        "mask_path": "Data/GlaS/masks/train_58.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_12.png",
+        "mask_path": "Data/GlaS/masks/train_12.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_75.png",
+        "mask_path": "Data/GlaS/masks/train_75.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_16.png",
+        "mask_path": "Data/GlaS/masks/testA_16.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_22.png",
+        "mask_path": "Data/GlaS/masks/testA_22.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_29.png",
+        "mask_path": "Data/GlaS/masks/train_29.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_60.png",
+        "mask_path": "Data/GlaS/masks/train_60.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_15.png",
+        "mask_path": "Data/GlaS/masks/testA_15.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_64.png",
+        "mask_path": "Data/GlaS/masks/train_64.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_37.png",
+        "mask_path": "Data/GlaS/masks/testA_37.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_23.png",
+        "mask_path": "Data/GlaS/masks/train_23.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_51.png",
+        "mask_path": "Data/GlaS/masks/train_51.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_15.png",
+        "mask_path": "Data/GlaS/masks/train_15.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testB_17.png",
+        "mask_path": "Data/GlaS/masks/testB_17.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_38.png",
+        "mask_path": "Data/GlaS/masks/train_38.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_28.png",
+        "mask_path": "Data/GlaS/masks/train_28.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_65.png",
+        "mask_path": "Data/GlaS/masks/train_65.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_20.png",
+        "mask_path": "Data/GlaS/masks/testA_20.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_26.png",
+        "mask_path": "Data/GlaS/masks/testA_26.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_42.png",
+        "mask_path": "Data/GlaS/masks/testA_42.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_4.png",
+        "mask_path": "Data/GlaS/masks/testA_4.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_43.png",
+        "mask_path": "Data/GlaS/masks/train_43.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_42.png",
+        "mask_path": "Data/GlaS/masks/train_42.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_11.png",
+        "mask_path": "Data/GlaS/masks/train_11.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_38.png",
+        "mask_path": "Data/GlaS/masks/testA_38.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_54.png",
+        "mask_path": "Data/GlaS/masks/train_54.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_70.png",
+        "mask_path": "Data/GlaS/masks/train_70.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_84.png",
+        "mask_path": "Data/GlaS/masks/train_84.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_6.png",
+        "mask_path": "Data/GlaS/masks/train_6.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_55.png",
+        "mask_path": "Data/GlaS/masks/train_55.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_60.png",
+        "mask_path": "Data/GlaS/masks/testA_60.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_29.png",
+        "mask_path": "Data/GlaS/masks/testA_29.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_31.png",
+        "mask_path": "Data/GlaS/masks/train_31.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_40.png",
+        "mask_path": "Data/GlaS/masks/testA_40.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_28.png",
+        "mask_path": "Data/GlaS/masks/testA_28.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_7.png",
+        "mask_path": "Data/GlaS/masks/testA_7.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testB_7.png",
+        "mask_path": "Data/GlaS/masks/testB_7.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_52.png",
+        "mask_path": "Data/GlaS/masks/train_52.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_1.png",
+        "mask_path": "Data/GlaS/masks/testA_1.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_50.png",
+        "mask_path": "Data/GlaS/masks/testA_50.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_71.png",
+        "mask_path": "Data/GlaS/masks/train_71.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_48.png",
+        "mask_path": "Data/GlaS/masks/train_48.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_54.png",
+        "mask_path": "Data/GlaS/masks/testA_54.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_36.png",
+        "mask_path": "Data/GlaS/masks/testA_36.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_30.png",
+        "mask_path": "Data/GlaS/masks/train_30.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_63.png",
+        "mask_path": "Data/GlaS/masks/train_63.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_25.png",
+        "mask_path": "Data/GlaS/masks/testA_25.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_3.png",
+        "mask_path": "Data/GlaS/masks/train_3.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_1.png",
+        "mask_path": "Data/GlaS/masks/train_1.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_56.png",
+        "mask_path": "Data/GlaS/masks/testA_56.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_33.png",
+        "mask_path": "Data/GlaS/masks/train_33.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_81.png",
+        "mask_path": "Data/GlaS/masks/train_81.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_10.png",
+        "mask_path": "Data/GlaS/masks/train_10.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_31.png",
+        "mask_path": "Data/GlaS/masks/testA_31.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_47.png",
+        "mask_path": "Data/GlaS/masks/testA_47.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_37.png",
+        "mask_path": "Data/GlaS/masks/train_37.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_21.png",
+        "mask_path": "Data/GlaS/masks/testA_21.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_14.png",
+        "mask_path": "Data/GlaS/masks/train_14.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_30.png",
+        "mask_path": "Data/GlaS/masks/testA_30.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_20.png",
+        "mask_path": "Data/GlaS/masks/train_20.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_24.png",
+        "mask_path": "Data/GlaS/masks/testA_24.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_68.png",
+        "mask_path": "Data/GlaS/masks/train_68.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_13.png",
+        "mask_path": "Data/GlaS/masks/testA_13.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_45.png",
+        "mask_path": "Data/GlaS/masks/testA_45.png"
+      }
+    ],
+    "val": [
+      {
+        "image_path": "Data/GlaS/images/train_25.png",
+        "mask_path": "Data/GlaS/masks/train_25.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_73.png",
+        "mask_path": "Data/GlaS/masks/train_73.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_3.png",
+        "mask_path": "Data/GlaS/masks/testA_3.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_17.png",
+        "mask_path": "Data/GlaS/masks/testA_17.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testB_20.png",
+        "mask_path": "Data/GlaS/masks/testB_20.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testB_6.png",
+        "mask_path": "Data/GlaS/masks/testB_6.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testB_12.png",
+        "mask_path": "Data/GlaS/masks/testB_12.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_85.png",
+        "mask_path": "Data/GlaS/masks/train_85.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testB_16.png",
+        "mask_path": "Data/GlaS/masks/testB_16.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_57.png",
+        "mask_path": "Data/GlaS/masks/train_57.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_2.png",
+        "mask_path": "Data/GlaS/masks/testA_2.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_39.png",
+        "mask_path": "Data/GlaS/masks/train_39.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_49.png",
+        "mask_path": "Data/GlaS/masks/train_49.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_35.png",
+        "mask_path": "Data/GlaS/masks/train_35.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_9.png",
+        "mask_path": "Data/GlaS/masks/train_9.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_8.png",
+        "mask_path": "Data/GlaS/masks/train_8.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_48.png",
+        "mask_path": "Data/GlaS/masks/testA_48.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_78.png",
+        "mask_path": "Data/GlaS/masks/train_78.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testB_4.png",
+        "mask_path": "Data/GlaS/masks/testB_4.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_44.png",
+        "mask_path": "Data/GlaS/masks/train_44.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testB_18.png",
+        "mask_path": "Data/GlaS/masks/testB_18.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_69.png",
+        "mask_path": "Data/GlaS/masks/train_69.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_41.png",
+        "mask_path": "Data/GlaS/masks/train_41.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_26.png",
+        "mask_path": "Data/GlaS/masks/train_26.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_41.png",
+        "mask_path": "Data/GlaS/masks/testA_41.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_56.png",
+        "mask_path": "Data/GlaS/masks/train_56.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_36.png",
+        "mask_path": "Data/GlaS/masks/train_36.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_76.png",
+        "mask_path": "Data/GlaS/masks/train_76.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_50.png",
+        "mask_path": "Data/GlaS/masks/train_50.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_46.png",
+        "mask_path": "Data/GlaS/masks/testA_46.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testB_14.png",
+        "mask_path": "Data/GlaS/masks/testB_14.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testB_2.png",
+        "mask_path": "Data/GlaS/masks/testB_2.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_66.png",
+        "mask_path": "Data/GlaS/masks/train_66.png"
+      }
+    ],
+    "test": [
+      {
+        "image_path": "Data/GlaS/images/testA_33.png",
+        "mask_path": "Data/GlaS/masks/testA_33.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_49.png",
+        "mask_path": "Data/GlaS/masks/testA_49.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_11.png",
+        "mask_path": "Data/GlaS/masks/testA_11.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_45.png",
+        "mask_path": "Data/GlaS/masks/train_45.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_27.png",
+        "mask_path": "Data/GlaS/masks/train_27.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_62.png",
+        "mask_path": "Data/GlaS/masks/train_62.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_32.png",
+        "mask_path": "Data/GlaS/masks/testA_32.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testB_13.png",
+        "mask_path": "Data/GlaS/masks/testB_13.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testB_10.png",
+        "mask_path": "Data/GlaS/masks/testB_10.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testB_5.png",
+        "mask_path": "Data/GlaS/masks/testB_5.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_43.png",
+        "mask_path": "Data/GlaS/masks/testA_43.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testB_8.png",
+        "mask_path": "Data/GlaS/masks/testB_8.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_13.png",
+        "mask_path": "Data/GlaS/masks/train_13.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_59.png",
+        "mask_path": "Data/GlaS/masks/train_59.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_14.png",
+        "mask_path": "Data/GlaS/masks/testA_14.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/train_72.png",
+        "mask_path": "Data/GlaS/masks/train_72.png"
+      },
+      {
+        "image_path": "Data/GlaS/images/testA_55.png",
+        "mask_path": "Data/GlaS/masks/testA_55.png"
+      }
+    ]
+  }
+}

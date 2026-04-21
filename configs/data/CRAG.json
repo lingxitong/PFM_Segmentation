@@ -1,0 +1,863 @@
+{
+  "num_classes": 2,
+  "data": {
+    "train": [
+      {
+        "image_path": "Data/CRAG/images/train_166.png",
+        "mask_path": "Data/CRAG/masks/train_166.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_93.png",
+        "mask_path": "Data/CRAG/masks/train_93.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_3.png",
+        "mask_path": "Data/CRAG/masks/test_3.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_70.png",
+        "mask_path": "Data/CRAG/masks/train_70.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_90.png",
+        "mask_path": "Data/CRAG/masks/train_90.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_91.png",
+        "mask_path": "Data/CRAG/masks/train_91.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_26.png",
+        "mask_path": "Data/CRAG/masks/train_26.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_168.png",
+        "mask_path": "Data/CRAG/masks/train_168.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_18.png",
+        "mask_path": "Data/CRAG/masks/train_18.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_132.png",
+        "mask_path": "Data/CRAG/masks/train_132.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_139.png",
+        "mask_path": "Data/CRAG/masks/train_139.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_14.png",
+        "mask_path": "Data/CRAG/masks/train_14.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_32.png",
+        "mask_path": "Data/CRAG/masks/train_32.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_129.png",
+        "mask_path": "Data/CRAG/masks/train_129.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_3.png",
+        "mask_path": "Data/CRAG/masks/train_3.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_9.png",
+        "mask_path": "Data/CRAG/masks/train_9.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_40.png",
+        "mask_path": "Data/CRAG/masks/train_40.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_173.png",
+        "mask_path": "Data/CRAG/masks/train_173.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_102.png",
+        "mask_path": "Data/CRAG/masks/train_102.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_12.png",
+        "mask_path": "Data/CRAG/masks/train_12.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_121.png",
+        "mask_path": "Data/CRAG/masks/train_121.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_45.png",
+        "mask_path": "Data/CRAG/masks/train_45.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_60.png",
+        "mask_path": "Data/CRAG/masks/train_60.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_40.png",
+        "mask_path": "Data/CRAG/masks/test_40.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_88.png",
+        "mask_path": "Data/CRAG/masks/train_88.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_29.png",
+        "mask_path": "Data/CRAG/masks/train_29.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_86.png",
+        "mask_path": "Data/CRAG/masks/train_86.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_66.png",
+        "mask_path": "Data/CRAG/masks/train_66.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_76.png",
+        "mask_path": "Data/CRAG/masks/train_76.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_25.png",
+        "mask_path": "Data/CRAG/masks/test_25.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_14.png",
+        "mask_path": "Data/CRAG/masks/test_14.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_165.png",
+        "mask_path": "Data/CRAG/masks/train_165.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_65.png",
+        "mask_path": "Data/CRAG/masks/train_65.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_20.png",
+        "mask_path": "Data/CRAG/masks/test_20.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_96.png",
+        "mask_path": "Data/CRAG/masks/train_96.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_24.png",
+        "mask_path": "Data/CRAG/masks/train_24.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_87.png",
+        "mask_path": "Data/CRAG/masks/train_87.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_82.png",
+        "mask_path": "Data/CRAG/masks/train_82.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_38.png",
+        "mask_path": "Data/CRAG/masks/train_38.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_2.png",
+        "mask_path": "Data/CRAG/masks/train_2.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_36.png",
+        "mask_path": "Data/CRAG/masks/test_36.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_4.png",
+        "mask_path": "Data/CRAG/masks/test_4.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_30.png",
+        "mask_path": "Data/CRAG/masks/train_30.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_80.png",
+        "mask_path": "Data/CRAG/masks/train_80.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_44.png",
+        "mask_path": "Data/CRAG/masks/train_44.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_151.png",
+        "mask_path": "Data/CRAG/masks/train_151.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_34.png",
+        "mask_path": "Data/CRAG/masks/test_34.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_107.png",
+        "mask_path": "Data/CRAG/masks/train_107.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_41.png",
+        "mask_path": "Data/CRAG/masks/train_41.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_106.png",
+        "mask_path": "Data/CRAG/masks/train_106.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_35.png",
+        "mask_path": "Data/CRAG/masks/test_35.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_55.png",
+        "mask_path": "Data/CRAG/masks/train_55.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_97.png",
+        "mask_path": "Data/CRAG/masks/train_97.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_74.png",
+        "mask_path": "Data/CRAG/masks/train_74.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_15.png",
+        "mask_path": "Data/CRAG/masks/train_15.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_59.png",
+        "mask_path": "Data/CRAG/masks/train_59.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_169.png",
+        "mask_path": "Data/CRAG/masks/train_169.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_20.png",
+        "mask_path": "Data/CRAG/masks/train_20.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_57.png",
+        "mask_path": "Data/CRAG/masks/train_57.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_101.png",
+        "mask_path": "Data/CRAG/masks/train_101.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_36.png",
+        "mask_path": "Data/CRAG/masks/train_36.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_8.png",
+        "mask_path": "Data/CRAG/masks/train_8.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_119.png",
+        "mask_path": "Data/CRAG/masks/train_119.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_73.png",
+        "mask_path": "Data/CRAG/masks/train_73.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_25.png",
+        "mask_path": "Data/CRAG/masks/train_25.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_103.png",
+        "mask_path": "Data/CRAG/masks/train_103.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_29.png",
+        "mask_path": "Data/CRAG/masks/test_29.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_10.png",
+        "mask_path": "Data/CRAG/masks/train_10.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_160.png",
+        "mask_path": "Data/CRAG/masks/train_160.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_133.png",
+        "mask_path": "Data/CRAG/masks/train_133.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_71.png",
+        "mask_path": "Data/CRAG/masks/train_71.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_68.png",
+        "mask_path": "Data/CRAG/masks/train_68.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_85.png",
+        "mask_path": "Data/CRAG/masks/train_85.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_31.png",
+        "mask_path": "Data/CRAG/masks/test_31.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_134.png",
+        "mask_path": "Data/CRAG/masks/train_134.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_140.png",
+        "mask_path": "Data/CRAG/masks/train_140.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_115.png",
+        "mask_path": "Data/CRAG/masks/train_115.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_67.png",
+        "mask_path": "Data/CRAG/masks/train_67.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_48.png",
+        "mask_path": "Data/CRAG/masks/train_48.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_24.png",
+        "mask_path": "Data/CRAG/masks/test_24.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_171.png",
+        "mask_path": "Data/CRAG/masks/train_171.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_31.png",
+        "mask_path": "Data/CRAG/masks/train_31.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_72.png",
+        "mask_path": "Data/CRAG/masks/train_72.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_33.png",
+        "mask_path": "Data/CRAG/masks/test_33.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_42.png",
+        "mask_path": "Data/CRAG/masks/train_42.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_52.png",
+        "mask_path": "Data/CRAG/masks/train_52.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_54.png",
+        "mask_path": "Data/CRAG/masks/train_54.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_75.png",
+        "mask_path": "Data/CRAG/masks/train_75.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_149.png",
+        "mask_path": "Data/CRAG/masks/train_149.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_111.png",
+        "mask_path": "Data/CRAG/masks/train_111.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_18.png",
+        "mask_path": "Data/CRAG/masks/test_18.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_39.png",
+        "mask_path": "Data/CRAG/masks/train_39.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_89.png",
+        "mask_path": "Data/CRAG/masks/train_89.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_164.png",
+        "mask_path": "Data/CRAG/masks/train_164.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_94.png",
+        "mask_path": "Data/CRAG/masks/train_94.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_58.png",
+        "mask_path": "Data/CRAG/masks/train_58.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_22.png",
+        "mask_path": "Data/CRAG/masks/train_22.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_28.png",
+        "mask_path": "Data/CRAG/masks/test_28.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_23.png",
+        "mask_path": "Data/CRAG/masks/train_23.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_27.png",
+        "mask_path": "Data/CRAG/masks/test_27.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_100.png",
+        "mask_path": "Data/CRAG/masks/train_100.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_11.png",
+        "mask_path": "Data/CRAG/masks/train_11.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_64.png",
+        "mask_path": "Data/CRAG/masks/train_64.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_7.png",
+        "mask_path": "Data/CRAG/masks/test_7.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_123.png",
+        "mask_path": "Data/CRAG/masks/train_123.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_148.png",
+        "mask_path": "Data/CRAG/masks/train_148.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_170.png",
+        "mask_path": "Data/CRAG/masks/train_170.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_92.png",
+        "mask_path": "Data/CRAG/masks/train_92.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_63.png",
+        "mask_path": "Data/CRAG/masks/train_63.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_19.png",
+        "mask_path": "Data/CRAG/masks/train_19.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_105.png",
+        "mask_path": "Data/CRAG/masks/train_105.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_137.png",
+        "mask_path": "Data/CRAG/masks/train_137.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_50.png",
+        "mask_path": "Data/CRAG/masks/train_50.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_114.png",
+        "mask_path": "Data/CRAG/masks/train_114.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_77.png",
+        "mask_path": "Data/CRAG/masks/train_77.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_147.png",
+        "mask_path": "Data/CRAG/masks/train_147.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_144.png",
+        "mask_path": "Data/CRAG/masks/train_144.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_7.png",
+        "mask_path": "Data/CRAG/masks/train_7.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_78.png",
+        "mask_path": "Data/CRAG/masks/train_78.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_104.png",
+        "mask_path": "Data/CRAG/masks/train_104.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_125.png",
+        "mask_path": "Data/CRAG/masks/train_125.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_167.png",
+        "mask_path": "Data/CRAG/masks/train_167.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_155.png",
+        "mask_path": "Data/CRAG/masks/train_155.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_10.png",
+        "mask_path": "Data/CRAG/masks/test_10.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_145.png",
+        "mask_path": "Data/CRAG/masks/train_145.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_157.png",
+        "mask_path": "Data/CRAG/masks/train_157.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_17.png",
+        "mask_path": "Data/CRAG/masks/test_17.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_122.png",
+        "mask_path": "Data/CRAG/masks/train_122.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_35.png",
+        "mask_path": "Data/CRAG/masks/train_35.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_17.png",
+        "mask_path": "Data/CRAG/masks/train_17.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_127.png",
+        "mask_path": "Data/CRAG/masks/train_127.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_51.png",
+        "mask_path": "Data/CRAG/masks/train_51.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_117.png",
+        "mask_path": "Data/CRAG/masks/train_117.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_84.png",
+        "mask_path": "Data/CRAG/masks/train_84.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_11.png",
+        "mask_path": "Data/CRAG/masks/test_11.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_13.png",
+        "mask_path": "Data/CRAG/masks/train_13.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_109.png",
+        "mask_path": "Data/CRAG/masks/train_109.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_16.png",
+        "mask_path": "Data/CRAG/masks/test_16.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_131.png",
+        "mask_path": "Data/CRAG/masks/train_131.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_141.png",
+        "mask_path": "Data/CRAG/masks/train_141.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_46.png",
+        "mask_path": "Data/CRAG/masks/train_46.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_110.png",
+        "mask_path": "Data/CRAG/masks/train_110.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_136.png",
+        "mask_path": "Data/CRAG/masks/train_136.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_154.png",
+        "mask_path": "Data/CRAG/masks/train_154.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_38.png",
+        "mask_path": "Data/CRAG/masks/test_38.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_79.png",
+        "mask_path": "Data/CRAG/masks/train_79.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_162.png",
+        "mask_path": "Data/CRAG/masks/train_162.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_113.png",
+        "mask_path": "Data/CRAG/masks/train_113.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_153.png",
+        "mask_path": "Data/CRAG/masks/train_153.png"
+      }
+    ],
+    "val": [
+      {
+        "image_path": "Data/CRAG/images/train_1.png",
+        "mask_path": "Data/CRAG/masks/train_1.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_16.png",
+        "mask_path": "Data/CRAG/masks/train_16.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_12.png",
+        "mask_path": "Data/CRAG/masks/test_12.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_19.png",
+        "mask_path": "Data/CRAG/masks/test_19.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_158.png",
+        "mask_path": "Data/CRAG/masks/train_158.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_120.png",
+        "mask_path": "Data/CRAG/masks/train_120.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_5.png",
+        "mask_path": "Data/CRAG/masks/test_5.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_163.png",
+        "mask_path": "Data/CRAG/masks/train_163.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_81.png",
+        "mask_path": "Data/CRAG/masks/train_81.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_28.png",
+        "mask_path": "Data/CRAG/masks/train_28.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_98.png",
+        "mask_path": "Data/CRAG/masks/train_98.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_15.png",
+        "mask_path": "Data/CRAG/masks/test_15.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_130.png",
+        "mask_path": "Data/CRAG/masks/train_130.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_33.png",
+        "mask_path": "Data/CRAG/masks/train_33.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_6.png",
+        "mask_path": "Data/CRAG/masks/test_6.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_135.png",
+        "mask_path": "Data/CRAG/masks/train_135.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_5.png",
+        "mask_path": "Data/CRAG/masks/train_5.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_56.png",
+        "mask_path": "Data/CRAG/masks/train_56.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_116.png",
+        "mask_path": "Data/CRAG/masks/train_116.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_142.png",
+        "mask_path": "Data/CRAG/masks/train_142.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_30.png",
+        "mask_path": "Data/CRAG/masks/test_30.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_13.png",
+        "mask_path": "Data/CRAG/masks/test_13.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_2.png",
+        "mask_path": "Data/CRAG/masks/test_2.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_83.png",
+        "mask_path": "Data/CRAG/masks/train_83.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_112.png",
+        "mask_path": "Data/CRAG/masks/train_112.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_156.png",
+        "mask_path": "Data/CRAG/masks/train_156.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_21.png",
+        "mask_path": "Data/CRAG/masks/train_21.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_37.png",
+        "mask_path": "Data/CRAG/masks/train_37.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_34.png",
+        "mask_path": "Data/CRAG/masks/train_34.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_69.png",
+        "mask_path": "Data/CRAG/masks/train_69.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_37.png",
+        "mask_path": "Data/CRAG/masks/test_37.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_128.png",
+        "mask_path": "Data/CRAG/masks/train_128.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_146.png",
+        "mask_path": "Data/CRAG/masks/train_146.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_138.png",
+        "mask_path": "Data/CRAG/masks/train_138.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_53.png",
+        "mask_path": "Data/CRAG/masks/train_53.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_99.png",
+        "mask_path": "Data/CRAG/masks/train_99.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_118.png",
+        "mask_path": "Data/CRAG/masks/train_118.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_23.png",
+        "mask_path": "Data/CRAG/masks/test_23.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_9.png",
+        "mask_path": "Data/CRAG/masks/test_9.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_43.png",
+        "mask_path": "Data/CRAG/masks/train_43.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_108.png",
+        "mask_path": "Data/CRAG/masks/train_108.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_49.png",
+        "mask_path": "Data/CRAG/masks/train_49.png"
+      }
+    ],
+    "test": [
+      {
+        "image_path": "Data/CRAG/images/train_126.png",
+        "mask_path": "Data/CRAG/masks/train_126.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_27.png",
+        "mask_path": "Data/CRAG/masks/train_27.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_1.png",
+        "mask_path": "Data/CRAG/masks/test_1.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_4.png",
+        "mask_path": "Data/CRAG/masks/train_4.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_161.png",
+        "mask_path": "Data/CRAG/masks/train_161.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_26.png",
+        "mask_path": "Data/CRAG/masks/test_26.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_61.png",
+        "mask_path": "Data/CRAG/masks/train_61.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_47.png",
+        "mask_path": "Data/CRAG/masks/train_47.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_32.png",
+        "mask_path": "Data/CRAG/masks/test_32.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_8.png",
+        "mask_path": "Data/CRAG/masks/test_8.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_22.png",
+        "mask_path": "Data/CRAG/masks/test_22.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_62.png",
+        "mask_path": "Data/CRAG/masks/train_62.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_124.png",
+        "mask_path": "Data/CRAG/masks/train_124.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_152.png",
+        "mask_path": "Data/CRAG/masks/train_152.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_6.png",
+        "mask_path": "Data/CRAG/masks/train_6.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_172.png",
+        "mask_path": "Data/CRAG/masks/train_172.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_95.png",
+        "mask_path": "Data/CRAG/masks/train_95.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_143.png",
+        "mask_path": "Data/CRAG/masks/train_143.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_39.png",
+        "mask_path": "Data/CRAG/masks/test_39.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_159.png",
+        "mask_path": "Data/CRAG/masks/train_159.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/test_21.png",
+        "mask_path": "Data/CRAG/masks/test_21.png"
+      },
+      {
+        "image_path": "Data/CRAG/images/train_150.png",
+        "mask_path": "Data/CRAG/masks/train_150.png"
+      }
+    ]
+  }
+}

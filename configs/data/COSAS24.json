@@ -1,0 +1,1451 @@
+{
+  "num_classes": 2,
+  "data": {
+    "train": [
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_ccad59274448.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_ccad59274448.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_3a13f2a2d8bc.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_3a13f2a2d8bc.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_c7259c8c393c.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_c7259c8c393c.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_72759e96cae5.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_72759e96cae5.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_c7300b53e4c6.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_c7300b53e4c6.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_cf687845a8d2.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_cf687845a8d2.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_70d8ecf5409d.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_70d8ecf5409d.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_36ae54ae6efe.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_36ae54ae6efe.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_819dbba1f608.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_819dbba1f608.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_489767618693.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_489767618693.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_dbd8acc4aea8.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_dbd8acc4aea8.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_b935633fd984.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_b935633fd984.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_3afc678824c2.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_3afc678824c2.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_6dff1537bc2b.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_6dff1537bc2b.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_d39576a256bc.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_d39576a256bc.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_272820482e5b.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_272820482e5b.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_7f71fa6eaa21.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_7f71fa6eaa21.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_9e3cf83a845b.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_9e3cf83a845b.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_2c935e3a83fd.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_2c935e3a83fd.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_7e639764fd34.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_7e639764fd34.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_93d4886472ac.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_93d4886472ac.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_34e3c8be54f2.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_34e3c8be54f2.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_ef73b3220477.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_ef73b3220477.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_00cee036e73c.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_00cee036e73c.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_de6c14ab23b9.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_de6c14ab23b9.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_bc74b1a79b4a.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_bc74b1a79b4a.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_b1ef73fb1037.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_b1ef73fb1037.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_030088ba5ecb.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_030088ba5ecb.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_a57db6175d18.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_a57db6175d18.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_fea6e3b1e919.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_fea6e3b1e919.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_94467db80e36.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_94467db80e36.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_4cc5e7bbdd77.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_4cc5e7bbdd77.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_475cc6a795b5.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_475cc6a795b5.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_d0b33d5d4887.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_d0b33d5d4887.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_730cc75bd5c4.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_730cc75bd5c4.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_25280c2135e5.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_25280c2135e5.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_5b8ed5234eef.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_5b8ed5234eef.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_95526d849e44.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_95526d849e44.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_65efd40aca69.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_65efd40aca69.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_10dde95ff215.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_10dde95ff215.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_77c2230eaa28.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_77c2230eaa28.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_326a1c18d2b2.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_326a1c18d2b2.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_84be811a0f35.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_84be811a0f35.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_e4d37a351e5c.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_e4d37a351e5c.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_4b484f28b1ce.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_4b484f28b1ce.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_ca50c96814d6.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_ca50c96814d6.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_812b04002afa.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_812b04002afa.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_3e34fffbd46d.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_3e34fffbd46d.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_8789edffd93a.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_8789edffd93a.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_2fd5f2979967.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_2fd5f2979967.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_91fba5a422dd.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_91fba5a422dd.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_0b4245a63ae1.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_0b4245a63ae1.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_7e2a89a7736c.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_7e2a89a7736c.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_11ad1f47ef31.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_11ad1f47ef31.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_e73813c911d0.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_e73813c911d0.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_216ffd97c6b0.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_216ffd97c6b0.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_edbe0a21af71.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_edbe0a21af71.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_a7cbe6867c85.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_a7cbe6867c85.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_258ad1272897.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_258ad1272897.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_871b3d6eb02c.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_871b3d6eb02c.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_4147a7d1e71c.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_4147a7d1e71c.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_262ebdc6d720.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_262ebdc6d720.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_f22efec664aa.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_f22efec664aa.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_3a868d2a16e1.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_3a868d2a16e1.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_450d59b723be.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_450d59b723be.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_44b4ea4befc1.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_44b4ea4befc1.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_b0c86264950b.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_b0c86264950b.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_2c3977c12c28.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_2c3977c12c28.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_67fb2c1bb578.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_67fb2c1bb578.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_e6f07b76beed.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_e6f07b76beed.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_106a2d8f5d05.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_106a2d8f5d05.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_655bb4c4079e.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_655bb4c4079e.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_e0e25c94928d.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_e0e25c94928d.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_d814996476c7.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_d814996476c7.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_251decc4674e.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_251decc4674e.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_27c1893b6ab4.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_27c1893b6ab4.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_3e18ab25d63b.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_3e18ab25d63b.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_d068d9b679a9.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_d068d9b679a9.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_d433ab4ef3e5.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_d433ab4ef3e5.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_b52a4555e95e.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_b52a4555e95e.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_d93ec2a8281b.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_d93ec2a8281b.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_18665777286c.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_18665777286c.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_a554d1c9f98d.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_a554d1c9f98d.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_3ab4e7ab76e2.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_3ab4e7ab76e2.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_ec64c8387f5a.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_ec64c8387f5a.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_81c86b118bdc.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_81c86b118bdc.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_7921fc49c454.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_7921fc49c454.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_569abd585da6.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_569abd585da6.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_6624d9bb12c4.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_6624d9bb12c4.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_cf10573dbe14.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_cf10573dbe14.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_cf490522aed1.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_cf490522aed1.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_ab1081b286e8.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_ab1081b286e8.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_4955bae37523.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_4955bae37523.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_2519e03e7a2c.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_2519e03e7a2c.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_e483b1a187d6.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_e483b1a187d6.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_c935bd02d41a.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_c935bd02d41a.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_a71b49a467d7.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_a71b49a467d7.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_b225cb0e5a20.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_b225cb0e5a20.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_5472f84db687.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_5472f84db687.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_70e2ecab6ba2.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_70e2ecab6ba2.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_f254907e1fcb.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_f254907e1fcb.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_36262085a980.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_36262085a980.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_09ad53a32c70.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_09ad53a32c70.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_d0c30bbb611c.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_d0c30bbb611c.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_2ce89b47ef02.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_2ce89b47ef02.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_b65873f8fa0f.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_b65873f8fa0f.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_e5382b435ec1.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_e5382b435ec1.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_1e5cda218b89.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_1e5cda218b89.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_4db419cce0c4.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_4db419cce0c4.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_d501434a316c.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_d501434a316c.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_f6d0e09052a8.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_f6d0e09052a8.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_07cb317e69f4.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_07cb317e69f4.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_4871816b5f69.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_4871816b5f69.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_b6c4f420e6b2.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_b6c4f420e6b2.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_f26e9d5ed79f.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_f26e9d5ed79f.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_351d2954d515.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_351d2954d515.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_5980a8317259.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_5980a8317259.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_26441cc24032.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_26441cc24032.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_c110e2e6b88d.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_c110e2e6b88d.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_bc001dec363d.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_bc001dec363d.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_f0d96349e79f.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_f0d96349e79f.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_2cefbd83c986.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_2cefbd83c986.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_cb1dff40f386.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_cb1dff40f386.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_7dc812d0749b.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_7dc812d0749b.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_b30c6869ee15.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_b30c6869ee15.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_6fa593aa09b9.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_6fa593aa09b9.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_37a915c1784a.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_37a915c1784a.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_27ba1145d650.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_27ba1145d650.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_cd060470ecae.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_cd060470ecae.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_64d404bbee3c.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_64d404bbee3c.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_14571cbe3412.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_14571cbe3412.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_2e957fdd2980.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_2e957fdd2980.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_213f82efd90a.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_213f82efd90a.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_73d5962c0ce5.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_73d5962c0ce5.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_d936fb4a7473.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_d936fb4a7473.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_63d2329339de.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_63d2329339de.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_8dd99de6daf7.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_8dd99de6daf7.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_47c0924fc0c2.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_47c0924fc0c2.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_edcb9b5132a9.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_edcb9b5132a9.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_63aefc9cd5ca.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_63aefc9cd5ca.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_b1df3736a70d.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_b1df3736a70d.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_f62043e7af20.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_f62043e7af20.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_b99fff65370d.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_b99fff65370d.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_e1c832925bec.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_e1c832925bec.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_c37edd40e1c8.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_c37edd40e1c8.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_ab604d27391b.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_ab604d27391b.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_813148448227.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_813148448227.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_f56fab9d00ea.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_f56fab9d00ea.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_7ccc293423e9.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_7ccc293423e9.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_9042a228ed92.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_9042a228ed92.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_75b0ae1f11fd.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_75b0ae1f11fd.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_fdb4bb307fcf.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_fdb4bb307fcf.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_eb72570719e9.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_eb72570719e9.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_722ab4e9eb3f.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_722ab4e9eb3f.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_bd649e639fa3.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_bd649e639fa3.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_aad32ebdae4a.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_aad32ebdae4a.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_bb87a78dd66e.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_bb87a78dd66e.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_2abb3f331560.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_2abb3f331560.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_ea7c8b423a7e.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_ea7c8b423a7e.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_bcc064b79890.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_bcc064b79890.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_afb96624fdb7.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_afb96624fdb7.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_9e56a4882a8c.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_9e56a4882a8c.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_4a251e57dcdb.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_4a251e57dcdb.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_a9ea5e1a07de.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_a9ea5e1a07de.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_7fab5451bc75.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_7fab5451bc75.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_b5326879ab4a.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_b5326879ab4a.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_6f7c87af44b3.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_6f7c87af44b3.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_e43d02d88128.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_e43d02d88128.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_7e768b266386.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_7e768b266386.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_a145481e3c6a.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_a145481e3c6a.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_aad00700a3d7.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_aad00700a3d7.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_463eb484735e.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_463eb484735e.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_eb8082ea1be0.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_eb8082ea1be0.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_cb20289d073a.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_cb20289d073a.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_c971bab323d7.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_c971bab323d7.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_d2ce18575cf2.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_d2ce18575cf2.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_2db770f0d096.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_2db770f0d096.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_20cca59d2096.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_20cca59d2096.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_559c9509d73f.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_559c9509d73f.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_8d01cd2d5b37.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_8d01cd2d5b37.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_1142e579dd1e.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_1142e579dd1e.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_81fc2b0e5f33.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_81fc2b0e5f33.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_d82e49b43f93.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_d82e49b43f93.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_8c2882df20cf.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_8c2882df20cf.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_7b72bc458f4b.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_7b72bc458f4b.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_2501ab0e9eee.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_2501ab0e9eee.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_18196b855112.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_18196b855112.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_13b480b0c266.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_13b480b0c266.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_188d89b5a510.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_188d89b5a510.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_66eeaee66d0b.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_66eeaee66d0b.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_562ef414f7d5.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_562ef414f7d5.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_c524a5e40aab.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_c524a5e40aab.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_6edf80b9a170.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_6edf80b9a170.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_77796587b643.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_77796587b643.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_9ac07e74b60f.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_9ac07e74b60f.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_27a40def59b7.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_27a40def59b7.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_24102b32aade.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_24102b32aade.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_db4b0298b346.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_db4b0298b346.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_c437a95bd8bb.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_c437a95bd8bb.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_e2129e738cbc.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_e2129e738cbc.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_1ffea5df80b4.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_1ffea5df80b4.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_6066d2b1dc4e.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_6066d2b1dc4e.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_b5cddc97229f.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_b5cddc97229f.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_8e5919ff6ccb.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_8e5919ff6ccb.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_3a87f424d622.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_3a87f424d622.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_a5ca7611a617.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_a5ca7611a617.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_bfcb59d2d898.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_bfcb59d2d898.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_b09a88bec5da.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_b09a88bec5da.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_c232cf4778dc.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_c232cf4778dc.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_47193c47708f.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_47193c47708f.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_656c0ac5ed08.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_656c0ac5ed08.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_aae0bad777e0.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_aae0bad777e0.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_3c09e4fe4a8f.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_3c09e4fe4a8f.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_bf9b8510b563.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_bf9b8510b563.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_400d9bff5c9f.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_400d9bff5c9f.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_883a9a9afe73.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_883a9a9afe73.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_9cdfd3a090ab.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_9cdfd3a090ab.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_b6599cf32ae5.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_b6599cf32ae5.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_6c22d3d25d96.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_6c22d3d25d96.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_4d152d7bca43.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_4d152d7bca43.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_27d2746c9436.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_27d2746c9436.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_9025afedb000.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_9025afedb000.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_094d99419f9b.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_094d99419f9b.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_77add108c8dc.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_77add108c8dc.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_05ff1626a341.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_05ff1626a341.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_f344d682c40c.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_f344d682c40c.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_38e38d88c9ad.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_38e38d88c9ad.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_4ce3c63aa206.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_4ce3c63aa206.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_40dc8ee38b01.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_40dc8ee38b01.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_a08de6512c0e.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_a08de6512c0e.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_c3fc46940a1f.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_c3fc46940a1f.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_a3f3d431392c.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_a3f3d431392c.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_d36169d9f17f.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_d36169d9f17f.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_87ad52714fe1.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_87ad52714fe1.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_b313fecb80b2.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_b313fecb80b2.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_e71abec2b551.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_e71abec2b551.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_50a43940bc83.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_50a43940bc83.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_85871ab65d9b.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_85871ab65d9b.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_7f7f2e075bc8.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_7f7f2e075bc8.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_76996b83f172.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_76996b83f172.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_a231904c096c.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_a231904c096c.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_7d761f8cb0e0.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_7d761f8cb0e0.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_a5222869522c.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_a5222869522c.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_e882c526b714.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_e882c526b714.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_579d78c9bc86.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_579d78c9bc86.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_efe5dd2b36ef.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_efe5dd2b36ef.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_e7d746662d68.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_e7d746662d68.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_f5be7d57da0a.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_f5be7d57da0a.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_545cba20388c.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_545cba20388c.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_7b011ec08b6c.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_7b011ec08b6c.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_4c8c5d88bb16.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_4c8c5d88bb16.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_ef8b345ea638.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_ef8b345ea638.png"
+      }
+    ],
+    "val": [
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_3f215291411f.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_3f215291411f.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_a2574a438e97.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_a2574a438e97.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_faa126738358.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_faa126738358.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_f30feabf5434.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_f30feabf5434.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_a08adbc94694.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_a08adbc94694.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_8633a07d43ac.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_8633a07d43ac.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_b612ad9a4ece.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_b612ad9a4ece.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_399739dd724b.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_399739dd724b.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_5091ebc9aa44.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_5091ebc9aa44.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_2d5d2691be91.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_2d5d2691be91.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_76d7b49d8869.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_76d7b49d8869.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_31fd137e0c0a.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_31fd137e0c0a.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_c20a15b7eabe.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_c20a15b7eabe.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_29943d9abe18.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_29943d9abe18.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_15ec7810cf87.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_15ec7810cf87.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_be57456a6920.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_be57456a6920.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_4be4260731eb.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_4be4260731eb.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_b42bbe0a4c75.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_b42bbe0a4c75.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_af114ade93af.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_af114ade93af.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_c5e470e44d95.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_c5e470e44d95.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_76d229f24cc4.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_76d229f24cc4.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_4db649a4fb9a.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_4db649a4fb9a.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_7875d03a468e.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_7875d03a468e.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_faaa798fb351.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_faaa798fb351.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_392cd499c3cc.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_392cd499c3cc.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_01529ba352bd.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_01529ba352bd.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_3cd3bb4d2d8e.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_3cd3bb4d2d8e.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_278220793687.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_278220793687.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_ec0cc6ba37d0.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_ec0cc6ba37d0.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_ec479ba3eb82.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_ec479ba3eb82.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_9f5a9e34a6db.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_9f5a9e34a6db.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_7de4b9a78205.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_7de4b9a78205.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_b069962882fe.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_b069962882fe.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_0ce9d08f22a4.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_0ce9d08f22a4.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_a8aeec12a475.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_a8aeec12a475.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_4c267bba895b.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_4c267bba895b.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_f74efec74718.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_f74efec74718.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_45bfa703090e.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_45bfa703090e.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_e4b92f82deb3.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_e4b92f82deb3.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_d14d7c8dc050.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_d14d7c8dc050.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_7fddb202fa46.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_7fddb202fa46.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_6cf84a9152ce.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_6cf84a9152ce.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_d977c937a739.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_d977c937a739.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_bae3d5e7867d.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_bae3d5e7867d.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_07ee2e8b037b.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_07ee2e8b037b.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_9bb1c4d5c841.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_9bb1c4d5c841.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_2d89117c7cef.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_2d89117c7cef.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_08b9738ffd0a.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_08b9738ffd0a.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_cc7868c28642.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_cc7868c28642.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_0297857fc788.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_0297857fc788.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_b59dbec94b90.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_b59dbec94b90.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_73f40c45109e.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_73f40c45109e.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_3e79c54219e6.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_3e79c54219e6.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_d39d6a2a15c9.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_d39d6a2a15c9.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_96a45ff82ee7.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_96a45ff82ee7.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_dfd88fe1361f.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_dfd88fe1361f.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_d2932e62680e.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_d2932e62680e.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_9231b176b904.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_9231b176b904.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_1c1eb3dde236.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_1c1eb3dde236.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_25bbc8d7d659.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_25bbc8d7d659.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_cc3933878ccb.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_cc3933878ccb.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_dd8325cb48fd.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_dd8325cb48fd.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_529cb4d3f25b.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_529cb4d3f25b.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_07d6810a54b4.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_07d6810a54b4.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_a6ca43798abe.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_a6ca43798abe.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_93dc61bc15f3.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_93dc61bc15f3.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_92edd20ea55e.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_92edd20ea55e.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_4b0afdb0e507.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_4b0afdb0e507.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_a231512ec6df.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_a231512ec6df.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_161bb9095fc4.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_161bb9095fc4.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_4e56eca22393.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_4e56eca22393.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_b29af0ed8e67.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_b29af0ed8e67.png"
+      }
+    ],
+    "test": [
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_c4b7f017b9ff.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_c4b7f017b9ff.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_1c7493217d62.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_1c7493217d62.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_d6d8ff652881.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_d6d8ff652881.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_2dd699c63e28.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_2dd699c63e28.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_bf9c120c65c8.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_bf9c120c65c8.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_ff2d0c2ff051.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_ff2d0c2ff051.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_edfb490b28c3.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_edfb490b28c3.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_5b69da8d428b.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_5b69da8d428b.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_a4995a05d4d8.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_a4995a05d4d8.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_a2e07411146b.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_a2e07411146b.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_92d7958310b8.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_92d7958310b8.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_ec2719775af6.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_ec2719775af6.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_2e471def0201.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_2e471def0201.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_77bb15bf781d.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_77bb15bf781d.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_75c5a5e0b22b.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_75c5a5e0b22b.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_94ff277ad60f.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_94ff277ad60f.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_e5d789b7749e.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_e5d789b7749e.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_64666d916fdf.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_64666d916fdf.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_776b52e09167.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_776b52e09167.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_c1780402030a.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_c1780402030a.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_2a2975eafbf9.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_2a2975eafbf9.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_937d89c6fce9.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_937d89c6fce9.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_28462a9c5d2c.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_28462a9c5d2c.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_a8955d758c50.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_a8955d758c50.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_f5f750dd926e.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_f5f750dd926e.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_1a7385773597.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_1a7385773597.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_7be616bd76b3.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_7be616bd76b3.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_pancreas_f042701eaf0d.png",
+        "mask_path": "Data/COSAS24/masks/task1_pancreas_f042701eaf0d.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_teksqray-600p_bbbb16ffedac.png",
+        "mask_path": "Data/COSAS24/masks/task2_teksqray-600p_bbbb16ffedac.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_colorectum_fb3d40932188.png",
+        "mask_path": "Data/COSAS24/masks/task1_colorectum_fb3d40932188.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_983f68f4d575.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_983f68f4d575.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_3d-1000_a609111f5d4c.png",
+        "mask_path": "Data/COSAS24/masks/task2_3d-1000_a609111f5d4c.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_e977ace7b289.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_e977ace7b289.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_5933d6adcbf6.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_5933d6adcbf6.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task1_stomach_f386f4b90f40.png",
+        "mask_path": "Data/COSAS24/masks/task1_stomach_f386f4b90f40.png"
+      },
+      {
+        "image_path": "Data/COSAS24/images/task2_kfbio-400_dd4657de7c43.png",
+        "mask_path": "Data/COSAS24/masks/task2_kfbio-400_dd4657de7c43.png"
+      }
+    ]
+  }
+}

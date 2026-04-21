@@ -1,0 +1,211 @@
+{
+  "num_classes": 2,
+  "data": {
+    "train": [
+      {
+        "image_path": "Data/TNBC/images/08_4.png",
+        "mask_path": "Data/TNBC/masks/08_4.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/04_8.png",
+        "mask_path": "Data/TNBC/masks/04_8.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/01_5.png",
+        "mask_path": "Data/TNBC/masks/01_5.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/09_3.png",
+        "mask_path": "Data/TNBC/masks/09_3.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/03_4.png",
+        "mask_path": "Data/TNBC/masks/03_4.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/10_2.png",
+        "mask_path": "Data/TNBC/masks/10_2.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/07_2.png",
+        "mask_path": "Data/TNBC/masks/07_2.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/04_2.png",
+        "mask_path": "Data/TNBC/masks/04_2.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/05_2.png",
+        "mask_path": "Data/TNBC/masks/05_2.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/01_7.png",
+        "mask_path": "Data/TNBC/masks/01_7.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/11_1.png",
+        "mask_path": "Data/TNBC/masks/11_1.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/04_6.png",
+        "mask_path": "Data/TNBC/masks/04_6.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/08_1.png",
+        "mask_path": "Data/TNBC/masks/08_1.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/05_1.png",
+        "mask_path": "Data/TNBC/masks/05_1.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/10_4.png",
+        "mask_path": "Data/TNBC/masks/10_4.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/07_1.png",
+        "mask_path": "Data/TNBC/masks/07_1.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/11_2.png",
+        "mask_path": "Data/TNBC/masks/11_2.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/11_3.png",
+        "mask_path": "Data/TNBC/masks/11_3.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/09_6.png",
+        "mask_path": "Data/TNBC/masks/09_6.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/06_3.png",
+        "mask_path": "Data/TNBC/masks/06_3.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/01_4.png",
+        "mask_path": "Data/TNBC/masks/01_4.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/01_1.png",
+        "mask_path": "Data/TNBC/masks/01_1.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/09_5.png",
+        "mask_path": "Data/TNBC/masks/09_5.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/04_5.png",
+        "mask_path": "Data/TNBC/masks/04_5.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/10_3.png",
+        "mask_path": "Data/TNBC/masks/10_3.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/04_4.png",
+        "mask_path": "Data/TNBC/masks/04_4.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/04_1.png",
+        "mask_path": "Data/TNBC/masks/04_1.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/08_2.png",
+        "mask_path": "Data/TNBC/masks/08_2.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/03_5.png",
+        "mask_path": "Data/TNBC/masks/03_5.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/03_3.png",
+        "mask_path": "Data/TNBC/masks/03_3.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/01_2.png",
+        "mask_path": "Data/TNBC/masks/01_2.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/02_3.png",
+        "mask_path": "Data/TNBC/masks/02_3.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/08_3.png",
+        "mask_path": "Data/TNBC/masks/08_3.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/10_1.png",
+        "mask_path": "Data/TNBC/masks/10_1.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/05_3.png",
+        "mask_path": "Data/TNBC/masks/05_3.png"
+      }
+    ],
+    "val": [
+      {
+        "image_path": "Data/TNBC/images/04_7.png",
+        "mask_path": "Data/TNBC/masks/04_7.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/07_3.png",
+        "mask_path": "Data/TNBC/masks/07_3.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/02_1.png",
+        "mask_path": "Data/TNBC/masks/02_1.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/05_4.png",
+        "mask_path": "Data/TNBC/masks/05_4.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/03_2.png",
+        "mask_path": "Data/TNBC/masks/03_2.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/04_3.png",
+        "mask_path": "Data/TNBC/masks/04_3.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/03_1.png",
+        "mask_path": "Data/TNBC/masks/03_1.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/01_3.png",
+        "mask_path": "Data/TNBC/masks/01_3.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/09_1.png",
+        "mask_path": "Data/TNBC/masks/09_1.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/09_2.png",
+        "mask_path": "Data/TNBC/masks/09_2.png"
+      }
+    ],
+    "test": [
+      {
+        "image_path": "Data/TNBC/images/02_2.png",
+        "mask_path": "Data/TNBC/masks/02_2.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/06_2.png",
+        "mask_path": "Data/TNBC/masks/06_2.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/01_6.png",
+        "mask_path": "Data/TNBC/masks/01_6.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/09_4.png",
+        "mask_path": "Data/TNBC/masks/09_4.png"
+      },
+      {
+        "image_path": "Data/TNBC/images/06_1.png",
+        "mask_path": "Data/TNBC/masks/06_1.png"
+      }
+    ]
+  }
+}

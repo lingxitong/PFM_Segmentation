@@ -28,11 +28,11 @@ from collections import defaultdict
 # ==========================================
 
 # 默认路径配置
-PROJECT_ROOT = "/mnt/sdb/chenwm/PFM_Segmentation"
+PROJECT_ROOT = "/Path/to/yours/PFM_Segmentation"
 DATASET_JSON_DIR = f"{PROJECT_ROOT}/dataset_json"
 SIZE_INFO_PATH = f"{PROJECT_ROOT}/dataset_json/dataset_size_info.json"
-OUTPUT_BASE_DIR = "/mnt/sdb/chenwm/PFM_Segmentation_Output/inference_bootstrap"
-TASK_LOG_DIR = "/mnt/sdb/chenwm/PFM_Segmentation_Output/task_logs_bootstrap"
+OUTPUT_BASE_DIR = "/Path/to/yours/PFM_Segmentation_Output/inference_bootstrap"
+TASK_LOG_DIR = "/Path/to/yours/PFM_Segmentation_Output/task_logs_bootstrap"
 
 # 虚拟环境配置
 CONDA_ENV_NAME = "pfm_seg"
@@ -90,7 +90,7 @@ def parse_args() -> argparse.Namespace:
         """
     )
     
-    parser.add_argument('--input_dir', type=str, default="/mnt/sdb/chenwm/PFM_Segmentation_Output/logs_frozen_01_11",
+    parser.add_argument('--input_dir', type=str, default="/Path/to/yours/PFM_Segmentation_Output/logs_frozen_01_11",
                         help='包含训练好模型文件夹的目录路径')
     parser.add_argument('--output_base_dir', type=str, default=OUTPUT_BASE_DIR,
                         help=f'推理结果输出的基础目录 (默认: {OUTPUT_BASE_DIR})')
