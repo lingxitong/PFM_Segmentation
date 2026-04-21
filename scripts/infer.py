@@ -45,16 +45,16 @@ def parse_args() -> argparse.Namespace:
     """Parse command line arguments for inference configuration."""
     parser = argparse.ArgumentParser(description='Semantic Segmentation Inference Script')
     parser.add_argument('--config', type=str, 
-                       default='/mnt/sdb/chenwm/PFM_Segmentation/configs/config.yaml',
+                       default='/Path/to/yours/PFM_Segmentation/configs/config.yaml',
                        help='Path to config YAML file')
     parser.add_argument('--checkpoint', type=str, 
-                       default='/mnt/sdb/chenwm/PFM_Segmentation_Output/logs_frozen_01_11/test/checkpoints/',
+                       default='/Path/to/yours/PFM_Segmentation_Output/logs_frozen_01_11/test/checkpoints/',
                        help='Path to model checkpoint file or checkpoint directory')
     parser.add_argument('--input_json', type=str, 
-                       default='/mnt/sdb/chenwm/PFM_Segmentation/dataset_json/TNBC.json',
+                       default='/Path/to/yours/configs/data/TNBC.json',
                        help='Path to JSON file containing input data')
     parser.add_argument('--output_dir', type=str, 
-                       default='/mnt/sdb/chenwm/PFM_Segmentation/inference_slidewindow',
+                       default='/Path/to/yours/PFM_Segmentation/inference_slidewindow',
                        help='Directory to save inference results')
     parser.add_argument('--device', type=str, default='cuda:6',
                        help='Device for inference (e.g., "cuda:0" or "cpu")')

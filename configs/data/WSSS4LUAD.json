@@ -1,0 +1,491 @@
+{
+  "num_classes": 4,
+  "data": {
+    "train": [
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000035.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000035.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000012.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000012.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000102.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000102.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000016.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000016.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000105.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000105.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000040.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000040.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000041.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000041.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000047.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000047.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000028.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000028.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000080.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000080.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000043.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000043.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000116.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000116.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000117.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000117.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000086.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000086.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000010.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000010.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000064.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000064.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000004.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000004.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000006.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000006.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000057.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000057.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000072.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000072.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000005.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000005.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000022.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000022.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000094.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000094.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000045.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000045.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000061.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000061.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000056.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000056.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000053.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000053.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000029.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000029.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000002.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000002.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000038.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000038.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000018.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000018.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000095.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000095.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000078.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000078.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000030.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000030.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000050.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000050.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000027.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000027.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000090.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000090.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000082.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000082.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000063.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000063.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000098.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000098.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000020.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000020.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000051.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000051.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000013.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000013.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000107.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000107.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000113.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000113.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000108.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000108.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000048.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000048.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000059.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000059.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000106.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000106.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000017.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000017.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000026.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000026.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000000.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000000.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000091.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000091.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000097.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000097.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000031.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000031.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000014.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000014.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000073.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000073.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000099.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000099.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000042.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000042.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000055.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000055.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000060.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000060.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000079.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000079.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000077.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000077.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000062.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000062.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000103.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000103.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000058.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000058.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000096.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000096.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000007.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000007.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000110.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000110.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000069.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000069.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000019.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000019.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000011.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000011.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000003.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000003.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000075.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000075.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000032.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000032.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000068.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000068.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000049.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000049.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000115.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000115.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000119.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000119.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000114.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000114.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000024.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000024.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000109.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000109.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000093.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000093.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000092.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000092.png"
+      }
+    ],
+    "val": [
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000036.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000036.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000088.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000088.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000100.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000100.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000015.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000015.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000104.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000104.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000101.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000101.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000071.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000071.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000037.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000037.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000083.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000083.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000039.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000039.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000052.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000052.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000025.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000025.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000087.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000087.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000085.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000085.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000008.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000008.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000067.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000067.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000044.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000044.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000081.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000081.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000084.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000084.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000021.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000021.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000033.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000033.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000054.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000054.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000111.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000111.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000074.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000074.png"
+      }
+    ],
+    "test": [
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000009.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000009.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000089.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000089.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000065.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000065.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000118.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000118.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000001.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000001.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000034.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000034.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000070.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000070.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000076.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000076.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000066.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000066.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000023.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000023.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000046.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000046.png"
+      },
+      {
+        "image_path": "Data/WSSS4LUAD/images/sample_000112.png",
+        "mask_path": "Data/WSSS4LUAD/masks/sample_000112.png"
+      }
+    ]
+  }
+}

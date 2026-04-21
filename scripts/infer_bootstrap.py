@@ -56,16 +56,16 @@ def parse_args() -> argparse.Namespace:
     """Parse command line arguments for bootstrap evaluation."""
     parser = argparse.ArgumentParser(description='Bootstrap Evaluation Script for Semantic Segmentation')
     parser.add_argument('--config', type=str, 
-                       default='/mnt/sdb/chenwm/PFM_Segmentation/configs/config.yaml',
+                       default='/Path/to/yours/PFM_Segmentation/configs/config.yaml',
                        help='Path to config YAML file')
     parser.add_argument('--checkpoint', type=str, 
-                       default='/mnt/sdb/chenwm/PFM_Segmentation_Output/logs_musk_frozen/cpm15/checkpoints/',
+                       default='/Path/to/yours/PFM_Segmentation_Output/logs_musk_frozen/cpm15/checkpoints/',
                        help='Path to model checkpoint file or checkpoint directory')
     parser.add_argument('--input_json', type=str, 
-                       default='/mnt/sdb/chenwm/PFM_Segmentation/dataset_json/cpm15.json',
+                       default='/Path/to/yours/configs/data/cpm15.json',
                        help='Path to JSON file containing input data')
     parser.add_argument('--output_dir', type=str, 
-                       default='/mnt/sdb/chenwm/PFM_Segmentation/inference_bootstrap_MUSK',
+                       default='/Path/to/yours/PFM_Segmentation/inference_bootstrap_MUSK',
                        help='Directory to save bootstrap evaluation results')
     parser.add_argument('--device', type=str, default='cuda:6',
                        help='Device for inference (e.g., "cuda:0" or "cpu")')

@@ -1,0 +1,178 @@
+{
+  "BCSS": {
+    "min_width": 1222,
+    "min_height": 957,
+    "min_size": 957,
+    "resize_14": 952,
+    "resize_16": 944,
+    "total_images": 151
+  },
+  "CoNIC2022": {
+    "min_width": 256,
+    "min_height": 256,
+    "min_size": 256,
+    "resize_14": 252,
+    "resize_16": 256,
+    "total_images": 4981
+  },
+  "CoNSeP": {
+    "min_width": 1000,
+    "min_height": 1000,
+    "min_size": 1000,
+    "resize_14": 994,
+    "resize_16": 992,
+    "total_images": 41
+  },
+  "cpm15": {
+    "min_width": 439,
+    "min_height": 392,
+    "min_size": 392,
+    "resize_14": 392,
+    "resize_16": 384,
+    "total_images": 15
+  },
+  "cpm17": {
+    "min_width": 500,
+    "min_height": 500,
+    "min_size": 500,
+    "resize_14": 490,
+    "resize_16": 496,
+    "total_images": 64
+  },
+  "Janowczyk": {
+    "min_width": 2000,
+    "min_height": 2000,
+    "min_size": 2000,
+    "resize_14": 994,
+    "resize_16": 992,
+    "total_images": 141
+  },
+  "kumar": {
+    "min_width": 1000,
+    "min_height": 1000,
+    "min_size": 1000,
+    "resize_14": 994,
+    "resize_16": 992,
+    "total_images": 30
+  },
+  "Lizard": {
+    "min_width": 500,
+    "min_height": 337,
+    "min_size": 337,
+    "resize_14": 336,
+    "resize_16": 336,
+    "total_images": 238
+  },
+  "MIDOG": {
+    "min_width": 6439,
+    "min_height": 4776,
+    "min_size": 4776,
+    "resize_14": 994,
+    "resize_16": 992,
+    "total_images": 405
+  },
+  "MoNuSAC": {
+    "min_width": 74,
+    "min_height": 81,
+    "min_size": 74,
+    "resize_14": 70,
+    "resize_16": 64,
+    "total_images": 209
+  },
+  "NuCLS": {
+    "min_width": 256,
+    "min_height": 256,
+    "min_size": 256,
+    "resize_14": 252,
+    "resize_16": 256,
+    "total_images": 1744
+  },
+  "PanNuke": {
+    "min_width": 256,
+    "min_height": 256,
+    "min_size": 256,
+    "resize_14": 252,
+    "resize_16": 256,
+    "total_images": 7901
+  },
+  "RINGS": {
+    "min_width": 1500,
+    "min_height": 1500,
+    "min_size": 1500,
+    "resize_14": 994,
+    "resize_16": 992,
+    "total_images": 1500
+  },
+  "SICAPv2": {
+    "min_width": 512,
+    "min_height": 512,
+    "min_size": 512,
+    "resize_14": 504,
+    "resize_16": 512,
+    "total_images": 18783
+  },
+  "TNBC": {
+    "min_width": 512,
+    "min_height": 512,
+    "min_size": 512,
+    "resize_14": 504,
+    "resize_16": 512,
+    "total_images": 50
+  },
+  "WSSS4LUAD": {
+    "min_width": 202,
+    "min_height": 206,
+    "min_size": 202,
+    "resize_14": 196,
+    "resize_16": 192,
+    "total_images": 120
+  },
+  "GlaS": {
+    "min_width": 567,
+    "min_height": 430,
+    "min_size": 430,
+    "resize_14": 420,
+    "resize_16": 416,
+    "total_images": 165
+  },
+  "CoCaHis": {
+    "min_width": 1388,
+    "min_height": 1037,
+    "min_size": 1037,
+    "resize_14": 994,
+    "resize_16": 992,
+    "total_images": 82
+  },
+  "CRAG": {
+    "min_width": 1319,
+    "min_height": 1516,
+    "min_size": 1319,
+    "resize_14": 994,
+    "resize_16": 992,
+    "total_images": 213
+  },
+  "EBHI": {
+    "min_width": 224,
+    "min_height": 224,
+    "min_size": 224,
+    "resize_14": 224,
+    "resize_16": 224,
+    "total_images": 2174
+  },
+  "COSAS24": {
+    "min_width": 1300,
+    "min_height": 1300,
+    "min_size": 1300,
+    "resize_14": 994,
+    "resize_16": 992,
+    "total_images": 360
+  },
+  "SegPath": {
+    "min_width": 984,
+    "min_height": 984,
+    "min_size": 984,
+    "resize_14": 980,
+    "resize_16": 976,
+    "total_images": 158687
+  }
+}

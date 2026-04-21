@@ -3,7 +3,7 @@
 
 # Dataset configuration
 dataset:
-  json_file: "/mnt/sdb/chenwm/PFM_Segmentation/dataset_json/cpm15.json"  # Path to the JSON configuration file
+  json_file: "/Path/to/yours/configs/data/cpm15.json"  # Path to the JSON configuration file
   num_classes: 2  # Number of classes; must match num_classes in the JSON file
   ignore_index: 255  # Index value to ignore during training
 
@@ -69,7 +69,7 @@ validation:
     ResizedSize: 384  # Input image size for validation (can be any size for UNet)
   
 logging:
-  log_dir: "/mnt/sdb/chenwm/PFM_Segmentation/logs_unet" 
+  log_dir: "/Path/to/yours/PFM_Segmentation/logs_unet" 
   experiment_name: "unet_test_BCSS_2"
 
 visualization:

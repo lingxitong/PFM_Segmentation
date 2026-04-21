@@ -1,0 +1,175 @@
+{
+  "num_classes": 8,
+  "data": {
+    "train": [
+      {
+        "image_path": "Data/CoNSeP/images/consep_Test_sample_000036.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Test_sample_000036.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Train_sample_000019.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Train_sample_000019.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Test_sample_000035.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Test_sample_000035.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Test_sample_000034.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Test_sample_000034.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Train_sample_000015.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Train_sample_000015.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Test_sample_000039.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Test_sample_000039.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Train_sample_000022.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Train_sample_000022.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Test_sample_000031.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Test_sample_000031.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Train_sample_000003.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Train_sample_000003.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Train_sample_000024.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Train_sample_000024.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Test_sample_000032.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Test_sample_000032.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Train_sample_000016.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Train_sample_000016.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Test_sample_000040.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Test_sample_000040.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Train_sample_000001.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Train_sample_000001.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Train_sample_000014.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Train_sample_000014.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Train_sample_000005.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Train_sample_000005.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Train_sample_000023.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Train_sample_000023.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Train_sample_000006.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Train_sample_000006.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Train_sample_000008.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Train_sample_000008.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Train_sample_000017.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Train_sample_000017.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Test_sample_000033.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Test_sample_000033.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Train_sample_000018.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Train_sample_000018.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Train_sample_000004.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Train_sample_000004.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Train_sample_000020.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Train_sample_000020.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Train_sample_000026.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Train_sample_000026.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Test_sample_000028.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Test_sample_000028.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Test_sample_000029.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Test_sample_000029.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Train_sample_000013.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Train_sample_000013.png"
+      }
+    ],
+    "val": [
+      {
+        "image_path": "Data/CoNSeP/images/consep_Train_sample_000012.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Train_sample_000012.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Train_sample_000025.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Train_sample_000025.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Train_sample_000010.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Train_sample_000010.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Train_sample_000011.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Train_sample_000011.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Train_sample_000021.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Train_sample_000021.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Test_sample_000027.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Test_sample_000027.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Test_sample_000038.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Test_sample_000038.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Train_sample_000009.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Train_sample_000009.png"
+      }
+    ],
+    "test": [
+      {
+        "image_path": "Data/CoNSeP/images/consep_Train_sample_000007.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Train_sample_000007.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Train_sample_000002.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Train_sample_000002.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Test_sample_000030.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Test_sample_000030.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Train_sample_000000.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Train_sample_000000.png"
+      },
+      {
+        "image_path": "Data/CoNSeP/images/consep_Test_sample_000037.png",
+        "mask_path": "Data/CoNSeP/masks/consep_Test_sample_000037.png"
+      }
+    ]
+  }
+}

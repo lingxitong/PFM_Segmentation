@@ -1,0 +1,71 @@
+{
+  "num_classes": 2,
+  "data": {
+    "train": [
+      {
+        "image_path": "Data/cpm15/processed_semantic_dataset/images/cpm15_semantic_sample_000013.png",
+        "mask_path": "Data/cpm15/processed_semantic_dataset/masks/cpm15_semantic_sample_000013.png"
+      },
+      {
+        "image_path": "Data/cpm15/processed_semantic_dataset/images/cpm15_semantic_sample_000002.png",
+        "mask_path": "Data/cpm15/processed_semantic_dataset/masks/cpm15_semantic_sample_000002.png"
+      },
+      {
+        "image_path": "Data/cpm15/processed_semantic_dataset/images/cpm15_semantic_sample_000006.png",
+        "mask_path": "Data/cpm15/processed_semantic_dataset/masks/cpm15_semantic_sample_000006.png"
+      },
+      {
+        "image_path": "Data/cpm15/processed_semantic_dataset/images/cpm15_semantic_sample_000000.png",
+        "mask_path": "Data/cpm15/processed_semantic_dataset/masks/cpm15_semantic_sample_000000.png"
+      },
+      {
+        "image_path": "Data/cpm15/processed_semantic_dataset/images/cpm15_semantic_sample_000011.png",
+        "mask_path": "Data/cpm15/processed_semantic_dataset/masks/cpm15_semantic_sample_000011.png"
+      },
+      {
+        "image_path": "Data/cpm15/processed_semantic_dataset/images/cpm15_semantic_sample_000014.png",
+        "mask_path": "Data/cpm15/processed_semantic_dataset/masks/cpm15_semantic_sample_000014.png"
+      },
+      {
+        "image_path": "Data/cpm15/processed_semantic_dataset/images/cpm15_semantic_sample_000001.png",
+        "mask_path": "Data/cpm15/processed_semantic_dataset/masks/cpm15_semantic_sample_000001.png"
+      },
+      {
+        "image_path": "Data/cpm15/processed_semantic_dataset/images/cpm15_semantic_sample_000003.png",
+        "mask_path": "Data/cpm15/processed_semantic_dataset/masks/cpm15_semantic_sample_000003.png"
+      },
+      {
+        "image_path": "Data/cpm15/processed_semantic_dataset/images/cpm15_semantic_sample_000009.png",
+        "mask_path": "Data/cpm15/processed_semantic_dataset/masks/cpm15_semantic_sample_000009.png"
+      },
+      {
+        "image_path": "Data/cpm15/processed_semantic_dataset/images/cpm15_semantic_sample_000010.png",
+        "mask_path": "Data/cpm15/processed_semantic_dataset/masks/cpm15_semantic_sample_000010.png"
+      }
+    ],
+    "val": [
+      {
+        "image_path": "Data/cpm15/processed_semantic_dataset/images/cpm15_semantic_sample_000008.png",
+        "mask_path": "Data/cpm15/processed_semantic_dataset/masks/cpm15_semantic_sample_000008.png"
+      },
+      {
+        "image_path": "Data/cpm15/processed_semantic_dataset/images/cpm15_semantic_sample_000007.png",
+        "mask_path": "Data/cpm15/processed_semantic_dataset/masks/cpm15_semantic_sample_000007.png"
+      },
+      {
+        "image_path": "Data/cpm15/processed_semantic_dataset/images/cpm15_semantic_sample_000005.png",
+        "mask_path": "Data/cpm15/processed_semantic_dataset/masks/cpm15_semantic_sample_000005.png"
+      }
+    ],
+    "test": [
+      {
+        "image_path": "Data/cpm15/processed_semantic_dataset/images/cpm15_semantic_sample_000004.png",
+        "mask_path": "Data/cpm15/processed_semantic_dataset/masks/cpm15_semantic_sample_000004.png"
+      },
+      {
+        "image_path": "Data/cpm15/processed_semantic_dataset/images/cpm15_semantic_sample_000012.png",
+        "mask_path": "Data/cpm15/processed_semantic_dataset/masks/cpm15_semantic_sample_000012.png"
+      }
+    ]
+  }
+}

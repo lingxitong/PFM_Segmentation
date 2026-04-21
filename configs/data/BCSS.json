@@ -1,0 +1,615 @@
+{
+  "num_classes": 22,
+  "data": {
+    "train": [
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-OL-A5RW-DX1_xmin5772_ymin6839_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-OL-A5RW-DX1_xmin5772_ymin6839_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AN-A0XU-DX1_xmin26118_ymin18441_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AN-A0XU-DX1_xmin26118_ymin18441_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A2-A3XY-DX1_xmin76297_ymin35510_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A2-A3XY-DX1_xmin76297_ymin35510_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AQ-A04J-DX1_xmin64631_ymin12074_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AQ-A04J-DX1_xmin64631_ymin12074_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-C8-A26X-DX1_xmin8990_ymin27544_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-C8-A26X-DX1_xmin8990_ymin27544_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AR-A0TU-DX1_xmin88352_ymin23098_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AR-A0TU-DX1_xmin88352_ymin23098_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AR-A2LH-DX1_xmin78480_ymin42305_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AR-A2LH-DX1_xmin78480_ymin42305_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AN-A0AT-DX1_xmin31171_ymin35756_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AN-A0AT-DX1_xmin31171_ymin35756_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-E2-A158-DX1_xmin56083_ymin25872_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-E2-A158-DX1_xmin56083_ymin25872_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AO-A0J4-DX1_xmin17194_ymin10629_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AO-A0J4-DX1_xmin17194_ymin10629_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-E2-A573-DX1_xmin59666_ymin56141_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-E2-A573-DX1_xmin59666_ymin56141_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-E2-A1AZ-DX1_xmin50286_ymin17075_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-E2-A1AZ-DX1_xmin50286_ymin17075_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A7-A26F-DX1_xmin72969_ymin11489_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A7-A26F-DX1_xmin72969_ymin11489_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-LL-A441-DX1_xmin82006_ymin43121_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-LL-A441-DX1_xmin82006_ymin43121_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AR-A2LR-DX1_xmin46540_ymin31961_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AR-A2LR-DX1_xmin46540_ymin31961_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AO-A0J2-DX1_xmin33561_ymin14515_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AO-A0J2-DX1_xmin33561_ymin14515_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-EW-A3U0-DX1_xmin113512_ymin48566_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-EW-A3U0-DX1_xmin113512_ymin48566_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A7-A6VY-DX1_xmin7308_ymin29955_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A7-A6VY-DX1_xmin7308_ymin29955_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-D8-A1XK-DX1_xmin26340_ymin50273_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-D8-A1XK-DX1_xmin26340_ymin50273_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A2-A3XX-DX1_xmin69942_ymin41560_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A2-A3XX-DX1_xmin69942_ymin41560_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AC-A2QJ-DX1_xmin36620_ymin8672_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AC-A2QJ-DX1_xmin36620_ymin8672_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-BH-A0AV-DX1_xmin77937_ymin57165_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-BH-A0AV-DX1_xmin77937_ymin57165_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-C8-A1HJ-DX1_xmin46412_ymin17174_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-C8-A1HJ-DX1_xmin46412_ymin17174_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-S3-AA10-DX1_xmin43039_ymin23986_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-S3-AA10-DX1_xmin43039_ymin23986_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A2-A0D0-DX1_xmin68482_ymin39071_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A2-A0D0-DX1_xmin68482_ymin39071_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AR-A1AY-DX1_xmin62652_ymin27061_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AR-A1AY-DX1_xmin62652_ymin27061_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-E2-A1LI-DX1_xmin44715_ymin18434_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-E2-A1LI-DX1_xmin44715_ymin18434_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-D8-A13Z-DX1_xmin30985_ymin49337_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-D8-A13Z-DX1_xmin30985_ymin49337_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-E2-A150-DX1_xmin42083_ymin62113_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-E2-A150-DX1_xmin42083_ymin62113_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A2-A0ST-DX1_xmin109446_ymin18274_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A2-A0ST-DX1_xmin109446_ymin18274_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-EW-A1PB-DX1_xmin57214_ymin25940_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-EW-A1PB-DX1_xmin57214_ymin25940_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-GM-A2DH-DX1_xmin50963_ymin56303_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-GM-A2DH-DX1_xmin50963_ymin56303_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A7-A26I-DX1_xmin9689_ymin25668_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A7-A26I-DX1_xmin9689_ymin25668_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-BH-A0B3-DX1_xmin82526_ymin42184_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-BH-A0B3-DX1_xmin82526_ymin42184_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A2-A0T2-DX1_xmin63557_ymin56751_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A2-A0T2-DX1_xmin63557_ymin56751_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-D8-A1JF-DX1_xmin24865_ymin52345_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-D8-A1JF-DX1_xmin24865_ymin52345_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-E2-A14R-DX1_xmin7751_ymin59308_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-E2-A14R-DX1_xmin7751_ymin59308_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-D8-A1JL-DX1_xmin39765_ymin24835_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-D8-A1JL-DX1_xmin39765_ymin24835_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-E2-A1LL-DX1_xmin5783_ymin22777_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-E2-A1LL-DX1_xmin5783_ymin22777_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-D8-A142-DX1_xmin62151_ymin41337_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-D8-A142-DX1_xmin62151_ymin41337_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-EW-A1P7-DX1_xmin9808_ymin46395_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-EW-A1P7-DX1_xmin9808_ymin46395_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AO-A124-DX1_xmin16436_ymin1748_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AO-A124-DX1_xmin16436_ymin1748_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-D8-A143-DX1_xmin52429_ymin19478_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-D8-A143-DX1_xmin52429_ymin19478_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-E2-A14N-DX1_xmin21383_ymin66838_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-E2-A14N-DX1_xmin21383_ymin66838_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-C8-A26Y-DX1_xmin29748_ymin36769_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-C8-A26Y-DX1_xmin29748_ymin36769_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AO-A128-DX1_xmin11924_ymin4831_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AO-A128-DX1_xmin11924_ymin4831_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-E2-A1LK-DX1_xmin75611_ymin27593_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-E2-A1LK-DX1_xmin75611_ymin27593_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A1-A0SP-DX1_xmin6798_ymin53719_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A1-A0SP-DX1_xmin6798_ymin53719_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A2-A1G6-DX1_xmin57706_ymin69514_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A2-A1G6-DX1_xmin57706_ymin69514_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A2-A0SX-DX1_xmin53791_ymin56683_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A2-A0SX-DX1_xmin53791_ymin56683_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-E2-A1L7-DX1_xmin51554_ymin15424_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-E2-A1L7-DX1_xmin51554_ymin15424_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-GM-A3XL-DX1_xmin29910_ymin15820_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-GM-A3XL-DX1_xmin29910_ymin15820_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-E2-A574-DX1_xmin54962_ymin47475_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-E2-A574-DX1_xmin54962_ymin47475_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AR-A1AR-DX1_xmin12708_ymin29100_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AR-A1AR-DX1_xmin12708_ymin29100_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A7-A4SE-DX1_xmin50530_ymin11318_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A7-A4SE-DX1_xmin50530_ymin11318_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-OL-A66P-DX1_xmin30143_ymin20310_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-OL-A66P-DX1_xmin30143_ymin20310_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-OL-A97C-DX1_xmin68058_ymin32495_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-OL-A97C-DX1_xmin68058_ymin32495_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-D8-A1XQ-DX1_xmin61261_ymin33317_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-D8-A1XQ-DX1_xmin61261_ymin33317_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A2-A04P-DX1_xmin104246_ymin48517_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A2-A04P-DX1_xmin104246_ymin48517_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AN-A0AR-DX1_xmin8468_ymin21166_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AN-A0AR-DX1_xmin8468_ymin21166_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A8-A08R-DX1_xmin14220_ymin13782_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A8-A08R-DX1_xmin14220_ymin13782_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-C8-A12V-DX1_xmin11056_ymin54401_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-C8-A12V-DX1_xmin11056_ymin54401_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-OL-A5D6-DX1_xmin115108_ymin40554_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-OL-A5D6-DX1_xmin115108_ymin40554_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A2-A3XT-DX1_xmin83566_ymin29931_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A2-A3XT-DX1_xmin83566_ymin29931_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-BH-A1FC-DX1_xmin52216_ymin33355_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-BH-A1FC-DX1_xmin52216_ymin33355_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AN-A0G0-DX1_xmin32741_ymin14546_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AN-A0G0-DX1_xmin32741_ymin14546_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-BH-A0E6-DX1_xmin54786_ymin20002_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-BH-A0E6-DX1_xmin54786_ymin20002_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A7-A5ZV-DX1_xmin103009_ymin26581_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A7-A5ZV-DX1_xmin103009_ymin26581_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A2-A0YE-DX1_xmin59206_ymin33505_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A2-A0YE-DX1_xmin59206_ymin33505_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A7-A6VW-DX1_xmin69350_ymin15716_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A7-A6VW-DX1_xmin69350_ymin15716_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-BH-A1EW-DX1_xmin66752_ymin42706_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-BH-A1EW-DX1_xmin66752_ymin42706_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A7-A26G-DX1_xmin77919_ymin10728_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A7-A26G-DX1_xmin77919_ymin10728_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A2-A0CM-DX1_xmin18562_ymin56852_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A2-A0CM-DX1_xmin18562_ymin56852_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A2-A04T-DX1_xmin72145_ymin39078_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A2-A04T-DX1_xmin72145_ymin39078_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-EW-A1P4-DX1_xmin17256_ymin35430_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-EW-A1P4-DX1_xmin17256_ymin35430_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-C8-A3M7-DX1_xmin41677_ymin66930_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-C8-A3M7-DX1_xmin41677_ymin66930_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-C8-A131-DX1_xmin43049_ymin10894_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-C8-A131-DX1_xmin43049_ymin10894_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-E2-A1LS-DX1_xmin39247_ymin47756_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-E2-A1LS-DX1_xmin39247_ymin47756_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-C8-A27B-DX1_xmin52632_ymin11349_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-C8-A27B-DX1_xmin52632_ymin11349_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AO-A129-DX1_xmin37502_ymin12501_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AO-A129-DX1_xmin37502_ymin12501_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-GM-A2DB-DX1_xmin50586_ymin43110_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-GM-A2DB-DX1_xmin50586_ymin43110_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-BH-A0BG-DX1_xmin64019_ymin24975_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-BH-A0BG-DX1_xmin64019_ymin24975_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-BH-A18G-DX1_xmin16831_ymin497_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-BH-A18G-DX1_xmin16831_ymin497_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AO-A03U-DX1_xmin17362_ymin25363_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AO-A03U-DX1_xmin17362_ymin25363_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-LL-A73Y-DX1_xmin68117_ymin49445_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-LL-A73Y-DX1_xmin68117_ymin49445_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AN-A0AL-DX1_xmin15698_ymin29806_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AN-A0AL-DX1_xmin15698_ymin29806_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AO-A1KR-DX1_xmin19591_ymin37667_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AO-A1KR-DX1_xmin19591_ymin37667_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-EW-A1PH-DX1_xmin3455_ymin52049_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-EW-A1PH-DX1_xmin3455_ymin52049_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AC-A6IW-DX1_xmin15387_ymin6222_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AC-A6IW-DX1_xmin15387_ymin6222_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A7-A6VV-DX1_xmin48674_ymin37475_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A7-A6VV-DX1_xmin48674_ymin37475_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A7-A0DA-DX1_xmin43731_ymin18175_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A7-A0DA-DX1_xmin43731_ymin18175_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-EW-A1P1-DX1_xmin50567_ymin38988_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-EW-A1P1-DX1_xmin50567_ymin38988_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-BH-A0E0-DX1_xmin16640_ymin43761_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-BH-A0E0-DX1_xmin16640_ymin43761_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-LL-A740-DX1_xmin39436_ymin24080_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-LL-A740-DX1_xmin39436_ymin24080_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-BH-A0B9-DX1_xmin62727_ymin56697_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-BH-A0B9-DX1_xmin62727_ymin56697_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AR-A0TS-DX1_xmin118843_ymin22812_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AR-A0TS-DX1_xmin118843_ymin22812_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-S3-AA15-DX1_xmin55486_ymin28926_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-S3-AA15-DX1_xmin55486_ymin28926_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-BH-A18V-DX1_xmin50030_ymin48454_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-BH-A18V-DX1_xmin50030_ymin48454_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-GI-A2C9-DX1_xmin20882_ymin11843_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-GI-A2C9-DX1_xmin20882_ymin11843_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A2-A0YM-DX1_xmin44520_ymin66915_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A2-A0YM-DX1_xmin44520_ymin66915_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-OL-A66I-DX1_xmin38433_ymin22957_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-OL-A66I-DX1_xmin38433_ymin22957_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A2-A3XS-DX1_xmin21421_ymin37486_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A2-A3XS-DX1_xmin21421_ymin37486_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-HN-A2NL-DX1_xmin11931_ymin5764_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-HN-A2NL-DX1_xmin11931_ymin5764_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-EW-A6SB-DX1_xmin34625_ymin56578_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-EW-A6SB-DX1_xmin34625_ymin56578_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-D8-A1JG-DX1_xmin15677_ymin69205_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-D8-A1JG-DX1_xmin15677_ymin69205_MPP-0.2500.png"
+      }
+    ],
+    "val": [
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AR-A5QQ-DX1_xmin107130_ymin49863_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AR-A5QQ-DX1_xmin107130_ymin49863_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A7-A0CE-DX1_xmin58461_ymin18750_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A7-A0CE-DX1_xmin58461_ymin18750_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-EW-A1OV-DX1_xmin126026_ymin65132_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-EW-A1OV-DX1_xmin126026_ymin65132_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A8-A09X-DX1_xmin55379_ymin38394_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A8-A09X-DX1_xmin55379_ymin38394_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-LL-A5YO-DX1_xmin36631_ymin44396_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-LL-A5YO-DX1_xmin36631_ymin44396_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-E2-A14X-DX1_xmin88836_ymin66393_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-E2-A14X-DX1_xmin88836_ymin66393_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-D8-A27M-DX1_xmin54473_ymin16109_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-D8-A27M-DX1_xmin54473_ymin16109_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-EW-A1P8-DX1_xmin15520_ymin26381_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-EW-A1P8-DX1_xmin15520_ymin26381_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AR-A1AI-DX1_xmin38671_ymin10616_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AR-A1AI-DX1_xmin38671_ymin10616_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AC-A2BK-DX1_xmin15426_ymin8344_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AC-A2BK-DX1_xmin15426_ymin8344_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A2-A0D2-DX1_xmin96887_ymin22299_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A2-A0D2-DX1_xmin96887_ymin22299_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AC-A7VC-DX1_xmin20658_ymin22410_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AC-A7VC-DX1_xmin20658_ymin22410_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-OL-A5D7-DX1_xmin114443_ymin22490_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-OL-A5D7-DX1_xmin114443_ymin22490_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-D8-A147-DX1_xmin66394_ymin19298_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-D8-A147-DX1_xmin66394_ymin19298_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AC-A2QH-DX1_xmin42173_ymin16859_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AC-A2QH-DX1_xmin42173_ymin16859_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A2-A3XU-DX1_xmin33329_ymin26157_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A2-A3XU-DX1_xmin33329_ymin26157_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AR-A256-DX1_xmin41577_ymin17076_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AR-A256-DX1_xmin41577_ymin17076_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-BH-A0RX-DX1_xmin69099_ymin22327_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-BH-A0RX-DX1_xmin69099_ymin22327_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-GM-A2DF-DX1_xmin50637_ymin43774_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-GM-A2DF-DX1_xmin50637_ymin43774_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A2-A04Q-DX1_xmin20868_ymin17804_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A2-A04Q-DX1_xmin20868_ymin17804_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-E2-A1B6-DX1_xmin16266_ymin50634_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-E2-A1B6-DX1_xmin16266_ymin50634_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-E2-A159-DX1_xmin38620_ymin28700_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-E2-A159-DX1_xmin38620_ymin28700_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-E2-A1LH-DX1_xmin22770_ymin24149_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-E2-A1LH-DX1_xmin22770_ymin24149_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-EW-A1OW-DX1_xmin36101_ymin49680_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-EW-A1OW-DX1_xmin36101_ymin49680_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-BH-A0BW-DX1_xmin42346_ymin30843_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-BH-A0BW-DX1_xmin42346_ymin30843_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A8-A07O-DX1_xmin11777_ymin16227_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A8-A07O-DX1_xmin11777_ymin16227_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AR-A1AQ-DX1_xmin18171_ymin38296_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AR-A1AQ-DX1_xmin18171_ymin38296_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A1-A0SK-DX1_xmin45749_ymin25055_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A1-A0SK-DX1_xmin45749_ymin25055_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-OL-A6VO-DX1_xmin88416_ymin188485_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-OL-A6VO-DX1_xmin88416_ymin188485_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-GM-A2DD-DX1_xmin47260_ymin22408_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-GM-A2DD-DX1_xmin47260_ymin22408_MPP-0.2500.png"
+      }
+    ],
+    "test": [
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-D8-A27H-DX1_xmin8738_ymin8063_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-D8-A27H-DX1_xmin8738_ymin8063_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-BH-A0BL-DX1_xmin25219_ymin42847_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-BH-A0BL-DX1_xmin25219_ymin42847_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-E9-A5FL-DX1_xmin45595_ymin47283_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-E9-A5FL-DX1_xmin45595_ymin47283_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-D8-A27F-DX1_xmin98787_ymin6725_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-D8-A27F-DX1_xmin98787_ymin6725_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-BH-A1F6-DX1_xmin53806_ymin49901_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-BH-A1F6-DX1_xmin53806_ymin49901_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AR-A0U1-DX1_xmin63681_ymin24922_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AR-A0U1-DX1_xmin63681_ymin24922_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AQ-A54N-DX1_xmin32440_ymin26558_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AQ-A54N-DX1_xmin32440_ymin26558_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-BH-A42U-DX1_xmin72053_ymin88645_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-BH-A42U-DX1_xmin72053_ymin88645_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A7-A4SD-DX1_xmin53807_ymin11871_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A7-A4SD-DX1_xmin53807_ymin11871_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AO-A12F-DX1_xmin16484_ymin29374_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AO-A12F-DX1_xmin16484_ymin29374_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-BH-A0WA-DX1_xmin56581_ymin24774_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-BH-A0WA-DX1_xmin56581_ymin24774_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-GM-A2DI-DX1_xmin22802_ymin51060_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-GM-A2DI-DX1_xmin22802_ymin51060_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AR-A0U4-DX1_xmin41141_ymin69786_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AR-A0U4-DX1_xmin41141_ymin69786_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-AO-A0J6-DX1_xmin40548_ymin11135_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-AO-A0J6-DX1_xmin40548_ymin11135_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A2-A0T0-DX1_xmin72865_ymin59458_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A2-A0T0-DX1_xmin72865_ymin59458_MPP-0.2500.png"
+      },
+      {
+        "image_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/images/TCGA-A8-A07C-DX1_xmin23538_ymin17397_MPP-0.2500.png",
+        "mask_path": "Data/BCSS/0_Public-data-Amgad2019_0.25MPP/masks/TCGA-A8-A07C-DX1_xmin23538_ymin17397_MPP-0.2500.png"
+      }
+    ]
+  }
+}

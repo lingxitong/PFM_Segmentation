@@ -45,7 +45,7 @@ def parse_args():
     """Parse command line arguments."""
     parser = argparse.ArgumentParser(description='Training script for semantic segmentation')
     
-    parser.add_argument('--config', type=str, default='/mnt/sdb/chenwm/PFM_Segmentation/configs/config.yaml',
+    parser.add_argument('--config', type=str, default='/Path/to/yours/PFM_Segmentation/configs/config.yaml',
                        help='Path to configuration file')
     parser.add_argument('--options',nargs='+',
                        help='override some settings in the used config, the key-value pair in xxx=yyy format will be merged into the yaml config file')

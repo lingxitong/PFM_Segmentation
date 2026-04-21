@@ -1,0 +1,575 @@
+{
+  "num_classes": 2,
+  "data": {
+    "train": [
+      {
+        "image_path": "Data/Janowczyk/images/12908_500_f00021.png",
+        "mask_path": "Data/Janowczyk/masks/12908_500_f00021.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/9036_500_f00002.png",
+        "mask_path": "Data/Janowczyk/masks/9036_500_f00002.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/25614_500_f00007.png",
+        "mask_path": "Data/Janowczyk/masks/25614_500_f00007.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12881_500_f00070.png",
+        "mask_path": "Data/Janowczyk/masks/12881_500_f00070.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/9382_500_f00029.png",
+        "mask_path": "Data/Janowczyk/masks/9382_500_f00029.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/8918_500_f00037.png",
+        "mask_path": "Data/Janowczyk/masks/8918_500_f00037.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/10302_500_f00579.png",
+        "mask_path": "Data/Janowczyk/masks/10302_500_f00579.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/15473_500_f00021.png",
+        "mask_path": "Data/Janowczyk/masks/15473_500_f00021.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/17116_500_f00152.png",
+        "mask_path": "Data/Janowczyk/masks/17116_500_f00152.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/25617_500_f00004.png",
+        "mask_path": "Data/Janowczyk/masks/25617_500_f00004.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/14081_500_f00046.png",
+        "mask_path": "Data/Janowczyk/masks/14081_500_f00046.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12750_500_f00003.png",
+        "mask_path": "Data/Janowczyk/masks/12750_500_f00003.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/13106_500_f00047.png",
+        "mask_path": "Data/Janowczyk/masks/13106_500_f00047.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/17710_500_f00012.png",
+        "mask_path": "Data/Janowczyk/masks/17710_500_f00012.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/25740_500_f00179.png",
+        "mask_path": "Data/Janowczyk/masks/25740_500_f00179.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/8951_500_f00082.png",
+        "mask_path": "Data/Janowczyk/masks/8951_500_f00082.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/25293_500_f00009.png",
+        "mask_path": "Data/Janowczyk/masks/25293_500_f00009.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/8974_500_f00015.png",
+        "mask_path": "Data/Janowczyk/masks/8974_500_f00015.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12882_500_f00257.png",
+        "mask_path": "Data/Janowczyk/masks/12882_500_f00257.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/8913_500_f00003.png",
+        "mask_path": "Data/Janowczyk/masks/8913_500_f00003.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12820_500_f00120.png",
+        "mask_path": "Data/Janowczyk/masks/12820_500_f00120.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/16532_500_f00021.png",
+        "mask_path": "Data/Janowczyk/masks/16532_500_f00021.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12947_500_f00008.png",
+        "mask_path": "Data/Janowczyk/masks/12947_500_f00008.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/16554_500_f00206.png",
+        "mask_path": "Data/Janowczyk/masks/16554_500_f00206.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/8865_500_f00003.png",
+        "mask_path": "Data/Janowczyk/masks/8865_500_f00003.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/13459_500_f00020.png",
+        "mask_path": "Data/Janowczyk/masks/13459_500_f00020.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/13689_500_f00011.png",
+        "mask_path": "Data/Janowczyk/masks/13689_500_f00011.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/14153_500_f00019.png",
+        "mask_path": "Data/Janowczyk/masks/14153_500_f00019.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/17894_500_f00049.png",
+        "mask_path": "Data/Janowczyk/masks/17894_500_f00049.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/13694_500_f00304.png",
+        "mask_path": "Data/Janowczyk/masks/13694_500_f00304.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/13460_500_f00010.png",
+        "mask_path": "Data/Janowczyk/masks/13460_500_f00010.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/9261_500_f00020.png",
+        "mask_path": "Data/Janowczyk/masks/9261_500_f00020.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12626_500_f00043.png",
+        "mask_path": "Data/Janowczyk/masks/12626_500_f00043.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/14306_500_f00012.png",
+        "mask_path": "Data/Janowczyk/masks/14306_500_f00012.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/9022_500_f00027.png",
+        "mask_path": "Data/Janowczyk/masks/9022_500_f00027.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12911_500_f00082.png",
+        "mask_path": "Data/Janowczyk/masks/12911_500_f00082.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/17557_500_f00021.png",
+        "mask_path": "Data/Janowczyk/masks/17557_500_f00021.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/8867_500_f00018.png",
+        "mask_path": "Data/Janowczyk/masks/8867_500_f00018.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/14305_500_f00048.png",
+        "mask_path": "Data/Janowczyk/masks/14305_500_f00048.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12818_500_f00507.png",
+        "mask_path": "Data/Janowczyk/masks/12818_500_f00507.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/8915_500_f00032.png",
+        "mask_path": "Data/Janowczyk/masks/8915_500_f00032.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/13401_500_f00047.png",
+        "mask_path": "Data/Janowczyk/masks/13401_500_f00047.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/13459_500_f00001.png",
+        "mask_path": "Data/Janowczyk/masks/13459_500_f00001.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/13019_500_f00028.png",
+        "mask_path": "Data/Janowczyk/masks/13019_500_f00028.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12752_500_f00057.png",
+        "mask_path": "Data/Janowczyk/masks/12752_500_f00057.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12949_500_f00056.png",
+        "mask_path": "Data/Janowczyk/masks/12949_500_f00056.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/10279_500_f00182.png",
+        "mask_path": "Data/Janowczyk/masks/10279_500_f00182.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/9081_500_f00076.png",
+        "mask_path": "Data/Janowczyk/masks/9081_500_f00076.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/10256_500_f00001.png",
+        "mask_path": "Data/Janowczyk/masks/10256_500_f00001.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/25741_500_f00051.png",
+        "mask_path": "Data/Janowczyk/masks/25741_500_f00051.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/13402_500_f00080.png",
+        "mask_path": "Data/Janowczyk/masks/13402_500_f00080.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/25612_500_f00064.png",
+        "mask_path": "Data/Janowczyk/masks/25612_500_f00064.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/9344_500_f00111.png",
+        "mask_path": "Data/Janowczyk/masks/9344_500_f00111.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/17558_500_f00037.png",
+        "mask_path": "Data/Janowczyk/masks/17558_500_f00037.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/9023_500_f00029.png",
+        "mask_path": "Data/Janowczyk/masks/9023_500_f00029.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12948_500_f00140.png",
+        "mask_path": "Data/Janowczyk/masks/12948_500_f00140.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/14304_500_f00008.png",
+        "mask_path": "Data/Janowczyk/masks/14304_500_f00008.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/10307_500_f00025.png",
+        "mask_path": "Data/Janowczyk/masks/10307_500_f00025.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12242_500_f00021.png",
+        "mask_path": "Data/Janowczyk/masks/12242_500_f00021.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/13024_500_f00010.png",
+        "mask_path": "Data/Janowczyk/masks/13024_500_f00010.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/14210_500_f00009.png",
+        "mask_path": "Data/Janowczyk/masks/14210_500_f00009.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12811_500_f00068.png",
+        "mask_path": "Data/Janowczyk/masks/12811_500_f00068.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12906_500_f00500.png",
+        "mask_path": "Data/Janowczyk/masks/12906_500_f00500.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/8916_500_f00013.png",
+        "mask_path": "Data/Janowczyk/masks/8916_500_f00013.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12826_500_f00030.png",
+        "mask_path": "Data/Janowczyk/masks/12826_500_f00030.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12891_500_f00028.png",
+        "mask_path": "Data/Janowczyk/masks/12891_500_f00028.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/14213_500_f00011.png",
+        "mask_path": "Data/Janowczyk/masks/14213_500_f00011.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/10261_500_f00020.png",
+        "mask_path": "Data/Janowczyk/masks/10261_500_f00020.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/25289_500_f00054.png",
+        "mask_path": "Data/Janowczyk/masks/25289_500_f00054.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/8914_500_f00021.png",
+        "mask_path": "Data/Janowczyk/masks/8914_500_f00021.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/25279_500_f00110.png",
+        "mask_path": "Data/Janowczyk/masks/25279_500_f00110.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12930_500_f00001.png",
+        "mask_path": "Data/Janowczyk/masks/12930_500_f00001.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/13458_500_f00014.png",
+        "mask_path": "Data/Janowczyk/masks/13458_500_f00014.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/8980_500_f00062.png",
+        "mask_path": "Data/Janowczyk/masks/8980_500_f00062.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12909_500_f00032.png",
+        "mask_path": "Data/Janowczyk/masks/12909_500_f00032.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/25744_500_f00077.png",
+        "mask_path": "Data/Janowczyk/masks/25744_500_f00077.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12932_500_f00040.png",
+        "mask_path": "Data/Janowczyk/masks/12932_500_f00040.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12905_500_f00001.png",
+        "mask_path": "Data/Janowczyk/masks/12905_500_f00001.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/9126_500_f00183.png",
+        "mask_path": "Data/Janowczyk/masks/9126_500_f00183.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/17113_500_f00039.png",
+        "mask_path": "Data/Janowczyk/masks/17113_500_f00039.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12875_500_f00051.png",
+        "mask_path": "Data/Janowczyk/masks/12875_500_f00051.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/8917_500_f00073.png",
+        "mask_path": "Data/Janowczyk/masks/8917_500_f00073.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/9173_500_f00034.png",
+        "mask_path": "Data/Janowczyk/masks/9173_500_f00034.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12929_500_f00041.png",
+        "mask_path": "Data/Janowczyk/masks/12929_500_f00041.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/13616_500_f00087.png",
+        "mask_path": "Data/Janowczyk/masks/13616_500_f00087.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12934_500_f00098.png",
+        "mask_path": "Data/Janowczyk/masks/12934_500_f00098.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/17642_500_f00001.png",
+        "mask_path": "Data/Janowczyk/masks/17642_500_f00001.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/9320_500_f00113.png",
+        "mask_path": "Data/Janowczyk/masks/9320_500_f00113.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/17077_500_f00106.png",
+        "mask_path": "Data/Janowczyk/masks/17077_500_f00106.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/14154_500_f00029.png",
+        "mask_path": "Data/Janowczyk/masks/14154_500_f00029.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/13693_500_f00052.png",
+        "mask_path": "Data/Janowczyk/masks/13693_500_f00052.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/13591_500_f00006.png",
+        "mask_path": "Data/Janowczyk/masks/13591_500_f00006.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/9257_500_f00006.png",
+        "mask_path": "Data/Janowczyk/masks/9257_500_f00006.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/10256_500_f00020.png",
+        "mask_path": "Data/Janowczyk/masks/10256_500_f00020.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/8975_500_f00346.png",
+        "mask_path": "Data/Janowczyk/masks/8975_500_f00346.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/9228_500_f00023.png",
+        "mask_path": "Data/Janowczyk/masks/9228_500_f00023.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/14082_500_f00006.png",
+        "mask_path": "Data/Janowczyk/masks/14082_500_f00006.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/10260_500_f00032.png",
+        "mask_path": "Data/Janowczyk/masks/10260_500_f00032.png"
+      }
+    ],
+    "val": [
+      {
+        "image_path": "Data/Janowczyk/images/12821_500_f00066.png",
+        "mask_path": "Data/Janowczyk/masks/12821_500_f00066.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/13688_500_f00001.png",
+        "mask_path": "Data/Janowczyk/masks/13688_500_f00001.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/9037_500_f00012.png",
+        "mask_path": "Data/Janowczyk/masks/9037_500_f00012.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/14192_500_f00042.png",
+        "mask_path": "Data/Janowczyk/masks/14192_500_f00042.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12951_500_f00099.png",
+        "mask_path": "Data/Janowczyk/masks/12951_500_f00099.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/13025_500_f00096.png",
+        "mask_path": "Data/Janowczyk/masks/13025_500_f00096.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/16555_500_f00028.png",
+        "mask_path": "Data/Janowczyk/masks/16555_500_f00028.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/14079_500_f00138.png",
+        "mask_path": "Data/Janowczyk/masks/14079_500_f00138.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/17565_500_f00029.png",
+        "mask_path": "Data/Janowczyk/masks/17565_500_f00029.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/9073_500_f00014.png",
+        "mask_path": "Data/Janowczyk/masks/9073_500_f00014.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/9124_500_f00141.png",
+        "mask_path": "Data/Janowczyk/masks/9124_500_f00141.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/13461_500_f00004.png",
+        "mask_path": "Data/Janowczyk/masks/13461_500_f00004.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/9261_500_f00001.png",
+        "mask_path": "Data/Janowczyk/masks/9261_500_f00001.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/9024_500_f00015.png",
+        "mask_path": "Data/Janowczyk/masks/9024_500_f00015.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/10261_500_f00001.png",
+        "mask_path": "Data/Janowczyk/masks/10261_500_f00001.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/13687_500_f00001.png",
+        "mask_path": "Data/Janowczyk/masks/13687_500_f00001.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12884_500_f00092.png",
+        "mask_path": "Data/Janowczyk/masks/12884_500_f00092.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/17643_500_f00010.png",
+        "mask_path": "Data/Janowczyk/masks/17643_500_f00010.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/15633_500_f00677.png",
+        "mask_path": "Data/Janowczyk/masks/15633_500_f00677.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/8959_500_f00002.png",
+        "mask_path": "Data/Janowczyk/masks/8959_500_f00002.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12880_500_f00448.png",
+        "mask_path": "Data/Janowczyk/masks/12880_500_f00448.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/10282_500_f00040.png",
+        "mask_path": "Data/Janowczyk/masks/10282_500_f00040.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12907_500_f00023.png",
+        "mask_path": "Data/Janowczyk/masks/12907_500_f00023.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/9256_500_f00216.png",
+        "mask_path": "Data/Janowczyk/masks/9256_500_f00216.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/10262_500_f00357.png",
+        "mask_path": "Data/Janowczyk/masks/10262_500_f00357.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/10301_500_f00010.png",
+        "mask_path": "Data/Janowczyk/masks/10301_500_f00010.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/13403_500_f00035.png",
+        "mask_path": "Data/Janowczyk/masks/13403_500_f00035.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12751_500_f00028.png",
+        "mask_path": "Data/Janowczyk/masks/12751_500_f00028.png"
+      }
+    ],
+    "test": [
+      {
+        "image_path": "Data/Janowczyk/images/16533_500_f00007.png",
+        "mask_path": "Data/Janowczyk/masks/16533_500_f00007.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/16552_500_f00028.png",
+        "mask_path": "Data/Janowczyk/masks/16552_500_f00028.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/10264_500_f00318.png",
+        "mask_path": "Data/Janowczyk/masks/10264_500_f00318.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/10273_500_f00020.png",
+        "mask_path": "Data/Janowczyk/masks/10273_500_f00020.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/15902_500_f00111.png",
+        "mask_path": "Data/Janowczyk/masks/15902_500_f00111.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/25605_500_f00112.png",
+        "mask_path": "Data/Janowczyk/masks/25605_500_f00112.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12822_500_f00011.png",
+        "mask_path": "Data/Janowczyk/masks/12822_500_f00011.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12749_500_f00174.png",
+        "mask_path": "Data/Janowczyk/masks/12749_500_f00174.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/16661_500_f00001.png",
+        "mask_path": "Data/Janowczyk/masks/16661_500_f00001.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12871_500_f00003.png",
+        "mask_path": "Data/Janowczyk/masks/12871_500_f00003.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/12931_500_f00057.png",
+        "mask_path": "Data/Janowczyk/masks/12931_500_f00057.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/17887_500_f00018.png",
+        "mask_path": "Data/Janowczyk/masks/17887_500_f00018.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/17079_500_f00061.png",
+        "mask_path": "Data/Janowczyk/masks/17079_500_f00061.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/13617_500_f00023.png",
+        "mask_path": "Data/Janowczyk/masks/13617_500_f00023.png"
+      },
+      {
+        "image_path": "Data/Janowczyk/images/17117_500_f00048.png",
+        "mask_path": "Data/Janowczyk/masks/17117_500_f00048.png"
+      }
+    ]
+  }
+}
