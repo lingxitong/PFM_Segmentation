@@ -1,22 +1,5 @@
 # 🩺 To What Extent Do Token-Level Representations from Pathology Foundation Models Improve Dense Prediction?
 
-**Weiming Chen\*<sup>1</sup>, Xitong Ling\*<sup>1</sup>, Xidong Wang<sup>2</sup>, Zhenyang Cai<sup>2</sup>, Yijia Guo<sup>3</sup>, Mingxi Fu<sup>1</sup>, Ziyi Zeng<sup>2</sup>, Minxi Ouyang<sup>1</sup>, Jiawen Li<sup>1</sup>, Yizhi Wang<sup>1</sup>, Tian Guan<sup>1</sup>, Benyou Wang<sup>#2</sup>, Yonghong He<sup>#1</sup>**
-
-<sub>\* Equal contribution&emsp;# Corresponding authors</sub>
-
-<sup>1</sup>Tsinghua University, Shenzhen &bull; <sup>2</sup>CUHK, Shenzhen &bull; <sup>3</sup>Peking University, Beijing
-
-<p align="center">
-  <a href='https://arxiv.org/abs/2602.03887'>
-  <img src='https://img.shields.io/badge/Arxiv-2602.03887-A42C25?style=flat&logo=arXiv&logoColor=A42C25'></a> 
-  <a href='https://m4a1tastegood.github.io/PFM-DenseBench'>
-  <img src='https://img.shields.io/badge/Project-Page-%23df5b46?style=flat&logo=Google%20chrome&logoColor=%23df5b46'></a> 
-  <a href='https://github.com/lingxitong/PFM_Segmentation'>
-  <img src='https://img.shields.io/badge/GitHub-Code-black?style=flat&logo=github&logoColor=white'></a> 
-  <a href="" target='_blank'>
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=lingxitong.PFM_Segmentation&left_color=gray&right_color=%2342b983"></a> 
-</p>
-
 ---
 
 A comprehensive semantic segmentation framework based on Pathology Foundation Models (PFMs), designed specifically for pathological image analysis, supporting multiple state-of-the-art pathology foundation models with complete training, inference, and evaluation capabilities.
@@ -362,32 +345,11 @@ output_dir/
 | PathOrchestra | 307M | 1024 | 16×16 | [AI4Pathology/PathOrchestra](https://huggingface.co/AI4Pathology/PathOrchestra) |
 | patho3dmatrix-vision | 307M | 1024 | 16×16 | - |
 
-## 📖 Citation
-
-If you find this work useful, please consider citing:
-
-```bibtex
-@misc{chen2026extenttokenlevelrepresentationspathology,
-  title={To What Extent Do Token-Level Representations from Pathology Foundation Models Improve Dense Prediction?},
-  author={Weiming Chen and Xitong Ling and Xidong Wang and Zhenyang Cai and Yijia Guo and Mingxi Fu and Ziyi Zeng and Minxi Ouyang and Jiawen Li and Yizhi Wang and Tian Guan and Benyou Wang and Yonghong He},
-  year={2026},
-  eprint={2602.03887},
-  archivePrefix={arXiv},
-  primaryClass={eess.IV},
-  url={https://arxiv.org/abs/2602.03887},
-}
-```
 
 
 ## 🤝 Contributing
 
 Welcome to submit issues and feature requests! Please check the contribution guidelines for more information.
-
-## 📞 Contact
-
-If you have questions or suggestions, please contact us through:
-- Submit GitHub Issue
-- Send email to: [lingxt23@mails.tsinghua.edu.cn] or [cwm25@mails.tsinghua.edu.cn]
 
 
 ---
