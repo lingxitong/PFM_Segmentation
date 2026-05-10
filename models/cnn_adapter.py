@@ -6,8 +6,6 @@ The CNN adapter extracts multi-scale features before the ViT encoder and provide
 skip connections to the decoder for better segmentation performance.
 
 Reference: TransUNet (https://arxiv.org/abs/2102.04306)
-
-Author: @chenwm
 """
 
 import math

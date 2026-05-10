@@ -1,5 +1,13 @@
 # 🩺 To What Extent Do Token-Level Representations from Pathology Foundation Models Improve Dense Prediction?
 
+**Anonymous authors** (double-blind submission)
+
+<sub>Affiliations withheld for peer review.</sub>
+
+<p align="center">
+  <em>External links to non-anonymous versions of this work (preprints, prior repositories, project pages) are omitted for anonymity.</em>
+</p>
+
 ---
 
 A comprehensive semantic segmentation framework based on Pathology Foundation Models (PFMs), designed specifically for pathological image analysis, supporting multiple state-of-the-art pathology foundation models with complete training, inference, and evaluation capabilities.
@@ -344,12 +352,6 @@ output_dir/
 | Hibou | - | 1024 | 14×14 | [histai/hibou-L](https://huggingface.co/histai/hibou-L) |
 | PathOrchestra | 307M | 1024 | 16×16 | [AI4Pathology/PathOrchestra](https://huggingface.co/AI4Pathology/PathOrchestra) |
 | patho3dmatrix-vision | 307M | 1024 | 16×16 | - |
-
-
-
-## 🤝 Contributing
-
-Welcome to submit issues and feature requests! Please check the contribution guidelines for more information.
 
 
 ---

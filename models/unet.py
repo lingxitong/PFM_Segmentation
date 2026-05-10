@@ -4,7 +4,6 @@ UNet Model for Semantic Segmentation
 This module implements a standard UNet architecture for semantic segmentation tasks.
 UNet is a popular encoder-decoder architecture with skip connections.
 
-Author: @Toby
 Function: UNet segmentation model
 """
 

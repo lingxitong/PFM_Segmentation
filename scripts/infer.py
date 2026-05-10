@@ -9,7 +9,6 @@ Features:
 - Handles both resizing and sliding window approaches
 - Includes visualization utilities for predictions
 
-Author: @Toby
 Function: Inference for semantic segmentation models
 """
 

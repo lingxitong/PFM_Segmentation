@@ -5,7 +5,6 @@ Training Script for Semantic Segmentation
 This script provides a complete training pipeline for semantic segmentation models
 with support for various datasets, augmentations, loss functions, and optimization techniques.
 
-Author: @Toby
 Function: Train a semantic segmentation model using a configuration file.
 """
 import warnings

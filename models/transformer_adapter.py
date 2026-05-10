@@ -11,8 +11,6 @@ The strategy:
 3. Train only: Vision Blocks + Decoder + Segmentation Head
 
 Reference: DINOv2 Vision Transformer architecture
-
-Author: @chenwm
 """
 
 import math

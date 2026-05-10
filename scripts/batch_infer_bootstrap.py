@@ -7,8 +7,6 @@ bootstrap inference (infer_bootstrap.py) for each one.
 
 Folder naming convention: {dataset_name}__{model_name}__seed{seed_number}
 Example: BCSS__uni_v1__seed2025
-
-Author: @chenwm
 """
 
 import os

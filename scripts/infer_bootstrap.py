@@ -10,7 +10,6 @@ Features:
 - Computes per-sample confusion matrices for efficient bootstrap
 - Calculates mean and 95% CI for all metrics
 
-Author: @chenwm
 Function: Bootstrap evaluation for semantic segmentation models
 """
 

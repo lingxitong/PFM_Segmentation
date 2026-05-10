@@ -6,7 +6,6 @@ This module integrates multiple pathology foundation models including
 H-Optimus-0/1, MUSK, Midnight-12k, and Kaiko (vits8/vits16/vitb8/vitb16/vitl14)"
 for segmentation tasks.
 
-Author: @Toby and @chenwm
 Function: Segmentation models using PFMs (pathology foundation models)
 """
 
