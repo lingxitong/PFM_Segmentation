@@ -3,7 +3,7 @@ Pathology Foundation Models (PFM) for Semantic Segmentation
 
 This module integrates multiple pathology foundation models including
 "Gigapath, UNI v1/v2, Virchow v1/v2, Conch V1/V1.5, patho3dmatrix-vision, Phikon, Phikon-v2,
-H-Optimus-0/1, MUSK, Midnight-12k, and Kaiko (vits8/vits16/vitb8/vitb16/vitl14)"
+H-Optimus-0/1, H0-mini, GenBio-PathFM, MUSK, Midnight-12k, and Kaiko (vits8/vits16/vitb8/vitb16/vitl14)"
 for segmentation tasks.
 
 Author: @Toby and @chenwm
@@ -252,6 +252,40 @@ def get_PFM_model(PFM_name: str, PFM_weights_path: str) -> nn.Module:
                 f"Failed to download HOptimus-1 model, make sure that you were granted access and that you correctly registered your token"
             )
 
+    elif PFM_name == 'h0_mini':
+        # H0-mini: ViT-Base/14 distilled from H-Optimus-0 (Owkin & Bioptimus)
+        # Patch tokens: 768-d; prefix tokens: CLS + 4 registers (num_prefix_tokens=5)
+        h0_mini_kwargs = {
+            "mlp_layer": timm.layers.SwiGLUPacked,
+            "act_layer": torch.nn.SiLU,
+            "dynamic_img_size": True,
+        }
+        if PFM_weights_path:
+            try:
+                model = timm.create_model(
+                    "hf-hub:bioptimus/H0-mini",
+                    pretrained=False,
+                    checkpoint_path=PFM_weights_path,
+                    **h0_mini_kwargs,
+                )
+            except Exception:
+                raise Exception(
+                    f"Failed to create H0-mini model from local checkpoint at '{PFM_weights_path}'. "
+                    "You can download the required weights from: https://huggingface.co/bioptimus/H0-mini."
+                )
+        else:
+            try:
+                model = timm.create_model(
+                    "hf-hub:bioptimus/H0-mini",
+                    pretrained=True,
+                    **h0_mini_kwargs,
+                )
+            except Exception:
+                raise Exception(
+                    "Failed to download H0-mini model. Make sure you were granted access "
+                    "and that you correctly registered your Hugging Face token."
+                )
+
     elif PFM_name.startswith('kaiko-'):
         # Kaiko model family: vits8, vits16, vitb8, vitb16, vitl14
         # Map model names to their timm identifiers and image sizes
@@ -362,6 +396,50 @@ def get_PFM_model(PFM_name: str, PFM_weights_path: str) -> nn.Module:
             **pathOrchestra_config
         )
 
+    elif PFM_name == 'genbio_pathfm':
+        # GenBio-PathFM: 1.1B ViT with per-channel RGB encoding (JEDI training).
+        # Patch tokens: [B, N, 4608] via forward_with_patches; patch_size=16.
+        # Ref: https://github.com/genbio-ai/genbio-pathfm
+        from transformers import AutoModel
+        import os
+        try:
+            if PFM_weights_path:
+                load_path = PFM_weights_path
+                # Allow pointing to a weight file inside a local HF snapshot
+                if os.path.isfile(load_path):
+                    if load_path.endswith(('.pth', '.pt')):
+                        try:
+                            from genbio_pathfm.model import GenBio_PathFM_Inference
+                            model = GenBio_PathFM_Inference(load_path, device="cpu")
+                        except ImportError:
+                            load_path = os.path.dirname(load_path)
+                            model = AutoModel.from_pretrained(
+                                load_path, trust_remote_code=True, local_files_only=True
+                            )
+                    else:
+                        load_path = os.path.dirname(load_path)
+                        model = AutoModel.from_pretrained(
+                            load_path, trust_remote_code=True, local_files_only=True
+                        )
+                else:
+                    model = AutoModel.from_pretrained(
+                        load_path, trust_remote_code=True, local_files_only=True
+                    )
+            else:
+                model = AutoModel.from_pretrained(
+                    "genbio-ai/genbio-pathfm", trust_remote_code=True
+                )
+        except Exception:
+            raise Exception(
+                f"Failed to load GenBio-PathFM from "
+                f"'{PFM_weights_path or 'genbio-ai/genbio-pathfm'}'. "
+                "Download weights from https://huggingface.co/genbio-ai/genbio-pathfm "
+                "(requires `transformers` with `trust_remote_code=True`). "
+                "For a local `.pth` checkpoint, also "
+                "`pip install git+https://github.com/genbio-ai/genbio-pathfm.git`."
+            )
+        model = GenBioPathFMWrapper(model)
+
     else:
         raise ValueError(f"Unsupported PFM model: {PFM_name}")
 
@@ -417,6 +495,53 @@ class PhikonWrapper(nn.Module):
         Returns:
             torch.Tensor: Features of shape (B, num_tokens, hidden_dim)
         """
+        return self.forward(x)
+
+
+class GenBioPathFMWrapper(nn.Module):
+    """
+    Wrapper for GenBio-PathFM to expose patch tokens for dense prediction.
+
+    Official ``forward`` returns concatenated CLS features ``[B, 4608]``.
+    ``forward_with_patches`` returns ``(cls [B, 4608], patches [B, N, 4608])``,
+    where patch tokens already exclude CLS and storage tokens.
+    See: https://github.com/genbio-ai/genbio-pathfm
+    """
+
+    def __init__(self, genbio_model: nn.Module):
+        super(GenBioPathFMWrapper, self).__init__()
+        self.genbio_model = genbio_model
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        """
+        Return patch-token features for segmentation.
+
+        Args:
+            x (torch.Tensor): Input images of shape (B, C, H, W)
+
+        Returns:
+            torch.Tensor: Patch tokens of shape (B, num_patches, 4608)
+        """
+        if not hasattr(self.genbio_model, 'forward_with_patches'):
+            raise RuntimeError(
+                "GenBio-PathFM model does not expose forward_with_patches; "
+                "please use transformers AutoModel with trust_remote_code=True "
+                "or install genbio-pathfm."
+            )
+        _, patch_features = self.genbio_model.forward_with_patches(x)
+        if patch_features is None or not isinstance(patch_features, torch.Tensor):
+            raise RuntimeError(
+                "GenBio-PathFM forward_with_patches returned invalid patch features"
+            )
+        if patch_features.ndim != 3:
+            raise RuntimeError(
+                "Expected GenBio-PathFM patch features with shape (B, N, C), "
+                f"got {tuple(patch_features.shape)}"
+            )
+        return patch_features
+
+    def forward_features(self, x: torch.Tensor) -> torch.Tensor:
+        """Alias for forward (patch tokens)."""
         return self.forward(x)
 
 
@@ -706,9 +831,17 @@ class PFMSegmentationModel(nn.Module):
         self.PFM_name = PFM_name
         self.decoder_channels = (256, 128, 64, 16)
         
-        # Create decoder
-        if PFM_name == 'virchow_v2' or PFM_name == 'virchow_v1' or PFM_name == 'uni_v2' or PFM_name=='midnight12k' or PFM_name=='hoptimus_0' or PFM_name=='hoptimus_1' or PFM_name=='hibou_l' or PFM_name.startswith('kaiko-'):
-            self.decoder = DecoderCup(emb_dim, self.decoder_channels, is_virchow_v2_or_is_virchow_v1_or_uni_v2_or_midnight_or_hoptimus_or_hibou_or_kaiko = True)
+        # Create decoder (patch_size=14 models need adjusted final upsampling scale)
+        patch14_models = {
+            'virchow_v1', 'virchow_v2', 'uni_v2', 'midnight12k',
+            'hoptimus_0', 'hoptimus_1', 'h0_mini', 'hibou_l',
+        }
+        if PFM_name in patch14_models or PFM_name.startswith('kaiko-'):
+            self.decoder = DecoderCup(
+                emb_dim,
+                self.decoder_channels,
+                is_virchow_v2_or_is_virchow_v1_or_uni_v2_or_midnight_or_hoptimus_or_hibou_or_kaiko=True,
+            )
         elif PFM_name=='lunit_vits8':
             self.decoder = DecoderCup(emb_dim, self.decoder_channels, is_lunit=True)
         else:
@@ -770,9 +903,12 @@ class PFMSegmentationModel(nn.Module):
         elif self.PFM_name.startswith('kaiko-'):
             # Kaiko models (vits8, vits16, vitb8, vitb16, vitl14): standard ViT - skip CLS token
             features = self.pfm.forward_features(x)[:, 5:, :]  # size: (B, num_patches, hidden)
-        elif self.PFM_name == 'hoptimus_0' or self.PFM_name == 'hoptimus_1':
-            # H-Optimus-0/1: ViT-Giant models - skip CLS token, keep patch tokens
+        elif self.PFM_name in ('hoptimus_0', 'hoptimus_1', 'h0_mini'):
+            # H-Optimus-0/1 / H0-mini: skip CLS + 4 register tokens, keep patch tokens
             features = self.pfm.forward_features(x)[:, 5:, :]  # size: (B, num_patches, hidden)
+        elif self.PFM_name == 'genbio_pathfm':
+            # GenBio-PathFM: wrapper returns patch tokens only [B, N, 4608]
+            features = self.pfm.forward_features(x)
         elif self.PFM_name == 'patho3dmatrix-vision':
             # Skip CLS token - standard ViT with forward_features
             features = self.pfm.forward_features(x)[:, 1:, :]
@@ -830,8 +966,10 @@ class PFMSegmentationModel(nn.Module):
                 features = self.pfm.forward_features(x)[:, 1:, :]  # Skip CLS token
             elif self.PFM_name.startswith('kaiko-'):
                 features = self.pfm.forward_features(x)[:, 5:, :]  # Skip CLS token
-            elif self.PFM_name == 'hoptimus_0' or self.PFM_name == 'hoptimus_1':
-                features = self.pfm.forward_features(x)[:, 5:, :]  # Skip CLS token
+            elif self.PFM_name in ('hoptimus_0', 'hoptimus_1', 'h0_mini'):
+                features = self.pfm.forward_features(x)[:, 5:, :]  # Skip CLS + register tokens
+            elif self.PFM_name == 'genbio_pathfm':
+                features = self.pfm.forward_features(x)  # Patch tokens only
             elif self.PFM_name == 'patho3dmatrix-vision':
                 features = self.pfm.forward_features(x)[:, 1:, :]
             elif self.PFM_name == 'uni_v2':
@@ -865,6 +1003,13 @@ def create_pfm_segmentation_model(model_config: Dict[str, Any]) -> PFMSegmentati
             raise ValueError(f"Missing required configuration key: {key}")
     
     finetune_mode = model_config['finetune_mode'].get('type')
+    
+    # GenBio-PathFM uses a custom SelfAttention (not timm Attention); LoRA/DoRA are unsupported
+    if model_config['pfm_name'] == 'genbio_pathfm' and finetune_mode in ('lora', 'dora'):
+        raise ValueError(
+            "genbio_pathfm does not support LoRA/DoRA (custom attention modules). "
+            "Use finetune_mode.type: frozen, full, cnn_adapter, or transformer_adapter."
+        )
     
     # For all modes, first create the standard model
     pfm_seg_model = PFMSegmentationModel(

@@ -23,7 +23,7 @@ A comprehensive semantic segmentation framework based on Pathology Foundation Mo
 
 ## 🌟 Features
 
-- 🧬 **Support for SOTA Pathology Foundation Models**: uni_v1, uni_v2, virchow_v1, virchow_v2, conch_v1_5, conch_v1, midnight12k, lunit_vits8, musk, PathOrchestra, gigapath, phikon, patho3dmatrix-vision, phikon_v2, hoptimus_0, hoptimus_1, kaiko-vitl14, hibou_l
+- 🧬 **Support for SOTA Pathology Foundation Models**: uni_v1, uni_v2, virchow_v1, virchow_v2, conch_v1_5, conch_v1, midnight12k, lunit_vits8, musk, PathOrchestra, gigapath, phikon, patho3dmatrix-vision, phikon_v2, hoptimus_0, hoptimus_1, h0_mini, genbio_pathfm, kaiko-vitl14, hibou_l
 - 🔧 **Flexible Fine-tuning Strategies**: LoRA, DoRA, full parameter fine-tuning, frozen backbone, CNN adapter, Transformer adapter
 - 📊 **Complete Training Pipeline**: Mixed precision training, learning rate scheduling, gradient accumulation
 - 🎯 **Advanced Data Augmentation**: Integrated 10+ advanced data augmentations including spatial, color, and noise transformations
@@ -32,11 +32,26 @@ A comprehensive semantic segmentation framework based on Pathology Foundation Mo
 
 ## 📋 Table of Contents
 
+- [Datasets (Download & Preprocess)](#-datasets-download--preprocess)
 - [Dataset Format](#-dataset-format)
 - [Configuration File Details](#-configuration-file-details)
 - [Training Script Usage](#-training-script-usage)
 - [Inference Script Usage](#-inference-script-usage)
 - [Pathology Foundation Models Details](#-pathology-foundation-models-details)
+
+## 📦 Datasets (Download & Preprocess)
+
+See [`data/DATASETS.md`](data/DATASETS.md) for dataset **download links** and the matching preprocess scripts (BCSS, CoCaHis, CONIC2022, CoNSeP, COSAS24, CPM15, CPM17, CRAG, EBHI, GlaS, Janowczyk, MoNuSeg/Kumar, Lizard, NuCLS, PanNuke, RINGS, TNBC, WSSS4LUAD, etc.).
+
+After downloading the raw data, run the scripts in [`data/preprocess_datasets/`](data/preprocess_datasets/) to produce a unified `images/` + `masks/` layout, then create a dataset JSON as described below:
+
+```bash
+# Example: edit input/output paths in the script, then run
+python data/preprocess_datasets/CPM15.py
+python data/preprocess_datasets/GlaS.py
+```
+
+The dataset-to-script mapping is listed in [`data/DATASETS.md`](data/DATASETS.md).
 
 ## 📁 Dataset Format
 
@@ -114,6 +129,8 @@ model:
   # - "phikon_v2"    : Phikon-v2 model (1024 dim)
   # - "hoptimus_0"   : H-Optimus-0 model (1536 dim)
   # - "hoptimus_1"   : H-Optimus-1 model (1536 dim)
+  # - "h0_mini"      : H0-mini model (768 dim)
+  # - "genbio_pathfm": GenBio-PathFM model (4608 dim)
   # - "gigapath"     : Gigapath model (1536 dim)
   # - "midnight12k"  : Midnight-12k model (1536 dim)
   # - "kaiko-vitl14" : Kaiko-ViT-L14 model (1024 dim)
@@ -127,10 +144,11 @@ model:
   # === Model Parameter Configuration ===
   emb_dim: 1024                         # Embedding dimension, must match selected PFM model
   # Corresponding embedding dimensions for each model:
+  # genbio_pathfm: 4608
   # midnight12k/hoptimus_0/hoptimus_1/uni_v2/gigapath: 1536
   # virchow_v1/virchow_v2: 1280
   # uni_v1/hibou_l/musk/phikon_v2/kaiko-vitl14/patho3dmatrix-vision/PathOrchestra/conch_v1_5: 1024
-  # conch_v1/phikon: 768
+  # conch_v1/phikon/h0_mini: 768
   # lunit_vits8: 384
   
   pfm_weights_path: '/path/to/pytorch_model.bin'  # Path to pre-trained weights file
@@ -171,8 +189,8 @@ training:
   augmentation:
     RandomResizedCropSize: 512     # Random crop size
     # Note: Different PFM models have input size requirements
-    # virchow_v1,virchow_v2,uni_v2,midnight12k,kaiko-vitl14,hibou_l,hoptimus_0,hoptimus_1: must be a multiple of 14 (token_size) 
-    # uni_v1,conch_v1_5,gigapath,conch_v1,phikon,phikon_v2,patho3dmatrix-vision,PathOrchestra: must be a multiple of 16 (token_size) 
+    # virchow_v1,virchow_v2,uni_v2,midnight12k,kaiko-vitl14,hibou_l,hoptimus_0,hoptimus_1,h0_mini: must be a multiple of 14 (token_size) 
+    # uni_v1,conch_v1_5,gigapath,conch_v1,phikon,phikon_v2,patho3dmatrix-vision,PathOrchestra,genbio_pathfm: must be a multiple of 16 (token_size) 
     # lunit_vits8: must be a multiple of 8 (token_size)
     # special: musk: 384
   
@@ -201,8 +219,8 @@ validation:
   augmentation:
     ResizedSize: 512      # Image size during validation
     # Note: Different PFM models have input size requirements
-    # virchow_v1,virchow_v2,uni_v2,midnight12k,kaiko-vitl14,hibou_l,hoptimus_0,hoptimus_1: must be a multiple of 14 (token_size) 
-    # uni_v1,conch_v1_5,gigapath,conch_v1,phikon,phikon_v2,patho3dmatrix-vision,PathOrchestra: must be a multiple of 16 (token_size) 
+    # virchow_v1,virchow_v2,uni_v2,midnight12k,kaiko-vitl14,hibou_l,hoptimus_0,hoptimus_1,h0_mini: must be a multiple of 14 (token_size) 
+    # uni_v1,conch_v1_5,gigapath,conch_v1,phikon,phikon_v2,patho3dmatrix-vision,PathOrchestra,genbio_pathfm: must be a multiple of 16 (token_size) 
     # lunit_vits8: must be a multiple of 8 (token_size)
     # special: musk: 384
 ```
@@ -354,6 +372,8 @@ output_dir/
 | Prov-Gigapath | 1.1B | 1536 | 16×16 | [prov-gigapath/prov-gigapath](https://huggingface.co/prov-gigapath/prov-gigapath) |
 | H-Optimus-0 | 1.1B | 1536 | 14×14 | [bioptimus/H-optimus-0](https://huggingface.co/bioptimus/H-optimus-0) |
 | H-Optimus-1 | 1.1B | 1536 | 14×14 | [bioptimus/H-optimus-1](https://huggingface.co/bioptimus/H-optimus-1) |
+| H0-mini | 86M | 768 | 14×14 | [bioptimus/H0-mini](https://huggingface.co/bioptimus/H0-mini) |
+| GenBio-PathFM | 1.1B | 4608 | 16×16 | [genbio-ai/genbio-pathfm](https://huggingface.co/genbio-ai/genbio-pathfm) |
 | MUSK | - | 1024 | 32×32 | [xiangjx/musk](https://huggingface.co/xiangjx/musk) |
 | Midnight-12k | - | 1536 | 14×14 | [kaiko-ai/midnight](https://huggingface.co/kaiko-ai/midnight) |
 | Kaiko | Various | 384/768/1024 | Various (8×8 or 16×16 or 14×14) | [1aurent/kaikoai-models-66636c99d8e1e34bc6dcf795](https://huggingface.co/collections/1aurent/kaikoai-models) |

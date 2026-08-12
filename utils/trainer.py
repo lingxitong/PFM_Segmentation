@@ -597,7 +597,7 @@ class SegmentationTrainer:
         Args:
             checkpoint_path (str): Path to checkpoint file
         """
-        #有bug
+        # has a bug
         print(f'error, this function is not implemented yet')
         # if not os.path.exists(checkpoint_path):
         #     self.logger.warning(f'Checkpoint not found: {checkpoint_path}')

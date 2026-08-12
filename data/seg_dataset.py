@@ -155,7 +155,7 @@ class JSONSegmentationDataset(Dataset):
             mask = Image.open(item['mask_path'])
             if mask.mode != 'L':
                 mask = mask.convert('L')
-            # 确保掩码尺寸与图像一致
+            # Ensure the mask size matches the image
             if mask.size != image.size:
                 print(f"Warning: Resizing mask to match image size for {item['mask_path']}")
                 print(f"Image size: {image.size}, Mask size: {mask.size}")

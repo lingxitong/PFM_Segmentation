@@ -58,9 +58,14 @@ def get_model_normalization(pfm_name: str) -> Tuple[List[float], List[float]]:
         # Phikon uses ImageNet normalization
         mean = [0.485, 0.456, 0.406]
         std = [0.229, 0.224, 0.225]
-    elif pfm_name == 'hoptimus_0' or pfm_name == 'hoptimus_1':
-        mean=(0.707223, 0.578729, 0.703617)
-        std=(0.211883, 0.230117, 0.177517)
+    elif pfm_name in ('hoptimus_0', 'hoptimus_1', 'h0_mini'):
+        # H-Optimus family / H0-mini share the same histology-specific normalization
+        mean = (0.707223, 0.578729, 0.703617)
+        std = (0.211883, 0.230117, 0.177517)
+    elif pfm_name == 'genbio_pathfm':
+        # GenBio-PathFM official preprocessing
+        mean = (0.697, 0.575, 0.728)
+        std = (0.188, 0.240, 0.187)
     elif pfm_name == 'musk':
         mean = [0.485, 0.456, 0.406]
         std = [0.229, 0.224, 0.225]

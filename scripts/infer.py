@@ -418,7 +418,7 @@ def resizeMode_inference(model: torch.nn.Module, dataloader: torch.utils.data.Da
             images = batch['image'].to(device)
             image_paths = batch['image_path']
             label_paths = batch['label_path']
-            # Get resize后的尺寸 (H, W)
+            # Get resized size (H, W)
             _, _, H, W = images.shape
             # Forward pass with optional mixed precision
             if use_amp:
@@ -427,16 +427,16 @@ def resizeMode_inference(model: torch.nn.Module, dataloader: torch.utils.data.Da
             else:
                 preds = model(images)['out']
             
-            # Process predictions - 直接使用resize后的尺寸，不缩放回原图
+            # Process predictions - use the resized size directly without scaling back to the original image
             pred_masks = [torch.argmax(pred, dim=0).cpu().numpy() for pred in preds]
             _pred_masks = [torch.tensor(mask) for mask in pred_masks]
             if None not in label_paths:
-                # 使用dataloader中已经resize好的标签，确保与训练时一致
-                # 注意：dataloader返回的label已经是resize后的尺寸
+                # Use labels already resized by the dataloader to stay consistent with training
+                # Note: labels returned by the dataloader are already at the resized size
                 labels = batch['label'].to(device)  # [B, H, W]
                 seg_metrics.update(torch.stack(_pred_masks, dim=0).to(device), labels)
 
-            # Save results - 在resize模式下，需要resize原始图像和标签到预测尺寸
+            # Save results - in resize mode, resize the original image and labels to the prediction size
             postprocess(image_paths, pred_masks, label_paths, preds_dir, overlap_dir, palette, resize_to_pred_size=True)
     return seg_metrics.compute()
 
