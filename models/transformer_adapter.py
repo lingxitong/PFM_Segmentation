@@ -310,6 +310,8 @@ PFM_SKIP_TOKENS = {
     'patho3dmatrix-vision': 1,  # CLS only
     'hoptimus_0': 5,         # CLS + 4 register tokens
     'hoptimus_1': 5,         # CLS + 4 register tokens
+    'h0_mini': 5,            # CLS + 4 register tokens
+    'genbio_pathfm': 0,      # Wrapper already returns patch tokens only
     'kaiko-vits8': 5,        # CLS + 4 register tokens
     'kaiko-vits16': 5,       # CLS + 4 register tokens
     'kaiko-vitb8': 5,        # CLS + 4 register tokens
@@ -497,9 +499,12 @@ def equip_model_with_transformer_adapter(
         elif self.PFM_name.startswith('kaiko-'):
             # Kaiko models: standard timm ViT with register tokens
             features = self.pfm.forward_features(x)  # (B, N+5, dim)
-        elif self.PFM_name == 'hoptimus_0' or self.PFM_name == 'hoptimus_1':
-            # H-Optimus: standard timm ViT with register tokens
+        elif self.PFM_name in ('hoptimus_0', 'hoptimus_1', 'h0_mini'):
+            # H-Optimus / H0-mini: standard timm ViT with register tokens
             features = self.pfm.forward_features(x)  # (B, N+5, dim)
+        elif self.PFM_name == 'genbio_pathfm':
+            # GenBio-PathFM: wrapper returns patch tokens only
+            features = self.pfm.forward_features(x)  # (B, N, dim)
         elif self.PFM_name == 'patho3dmatrix-vision':
             # Patho3DMatrix: standard timm ViT
             features = self.pfm.forward_features(x)  # (B, N+1, dim)

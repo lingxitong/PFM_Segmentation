@@ -38,6 +38,8 @@ PFM_PATCH_SIZE = {
     'patho3dmatrix-vision': 16,
     'hoptimus_0': 14,
     'hoptimus_1': 14,
+    'h0_mini': 14,
+    'genbio_pathfm': 16,
     'kaiko-vits8': 8,
     'kaiko-vits16': 16,
     'kaiko-vitb8': 8,
@@ -408,7 +410,7 @@ def _get_position_embeddings(model: nn.Module, pfm_name: str, num_patches: int, 
         elif pfm_name == 'conch_v1_5':
             if hasattr(model.pfm.trunk, 'pos_embed'):
                 pos_embed = model.pfm.trunk.pos_embed
-        elif pfm_name in ['hoptimus_0', 'hoptimus_1', 'uni_v2', 'patho3dmatrix-vision', 'PathOrchestra']:
+        elif pfm_name in ['hoptimus_0', 'hoptimus_1', 'h0_mini', 'uni_v2', 'patho3dmatrix-vision', 'PathOrchestra']:
             if hasattr(model.pfm, 'pos_embed'):
                 pos_embed = model.pfm.pos_embed
         elif pfm_name.startswith('kaiko-') or pfm_name == 'lunit_vits8':
@@ -426,6 +428,9 @@ def _get_position_embeddings(model: nn.Module, pfm_name: str, num_patches: int, 
         elif pfm_name == 'musk':
             # MUSK uses BEiT3 which has its own position encoding mechanism
             # Position embeddings are handled internally in the encoder
+            return None
+        elif pfm_name == 'genbio_pathfm':
+            # GenBio-PathFM uses RoPE; no absolute position embeddings to extract
             return None
         else:
             # Default: try to find pos_embed directly
@@ -547,9 +552,12 @@ def equip_model_with_cnn_adapter(model: nn.Module, cnn_config: dict) -> nn.Modul
         elif self.PFM_name.startswith('kaiko-'):
             # Kaiko models (vits8, vits16, vitb8, vitb16, vitl14): standard ViT - skip CLS token
             features = self.pfm.forward_features(x)[:, 5:, :]
-        elif self.PFM_name == 'hoptimus_0' or self.PFM_name == 'hoptimus_1':
-            # H-Optimus-0/1: ViT-Giant models - skip CLS token, keep patch tokens
+        elif self.PFM_name in ('hoptimus_0', 'hoptimus_1', 'h0_mini'):
+            # H-Optimus-0/1 / H0-mini: skip CLS + register tokens, keep patch tokens
             features = self.pfm.forward_features(x)[:, 5:, :]
+        elif self.PFM_name == 'genbio_pathfm':
+            # GenBio-PathFM: wrapper returns patch tokens only
+            features = self.pfm.forward_features(x)
         elif self.PFM_name == 'patho3dmatrix-vision':
             # Skip CLS token - standard ViT with forward_features
             features = self.pfm.forward_features(x)[:, 1:, :]

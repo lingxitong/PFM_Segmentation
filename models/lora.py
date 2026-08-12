@@ -144,7 +144,9 @@ def equip_model_with_lora(pfm_name, model, rank, alpha):
             if hasattr(src_attn, 'k_norm') and hasattr(dst_lora_attn, 'k_norm') and isinstance(dst_lora_attn.k_norm, nn.LayerNorm):
                 dst_lora_attn.k_norm.load_state_dict(src_attn.k_norm.state_dict())
 
-    if pfm_name in ['uni_v1', 'uni_v2', 'virchow_v2', 'gigapath','virchow_v1','phikon','phikon_v2','hibou_l','musk','lunit_vits8','midnight12k','hoptimus_0','hoptimus_1','patho3dmatrix-vision','kaiko-vitl14','conch_v1']:
+    if pfm_name in ['uni_v1', 'uni_v2', 'virchow_v2', 'gigapath', 'virchow_v1', 'phikon', 'phikon_v2',
+                    'hibou_l', 'musk', 'lunit_vits8', 'midnight12k', 'hoptimus_0', 'hoptimus_1',
+                    'h0_mini', 'patho3dmatrix-vision', 'kaiko-vitl14', 'conch_v1']:
         for name, module in model.named_modules():
             if isinstance(module, timm.models.vision_transformer.Attention):
                 lora_attn = LoRA_Attention(

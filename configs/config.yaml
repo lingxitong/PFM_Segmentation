@@ -12,14 +12,15 @@ system:
 
 # Model configuration
 model:
-  # Options: uni_v1, uni_v2, virchow_v1, virchow_v2, conch_v1_5, conch_v1, midnight12k, lunit_vits8, musk,PathOrchestra
-  # Options: gigapath, phikon , patho3dmatrix-vision, phikon_v2, hoptimus_0, hoptimus_1, kaiko-vitl14, hibou_l
+  # Options: uni_v1, uni_v2, virchow_v1, virchow_v2, conch_v1_5, conch_v1, midnight12k, lunit_vits8, musk, PathOrchestra
+  # Options: gigapath, phikon, patho3dmatrix-vision, phikon_v2, hoptimus_0, hoptimus_1, h0_mini, genbio_pathfm, kaiko-vitl14, hibou_l
   pfm_name: "musk"  
 
+  # genbio_pathfm: 4608
   # midnight12k/hoptimus_0/hoptimus_1/uni_v2/gigapath: 1536
   # virchow_v1/virchow_v2: 1280
   # uni_v1/hibou_l/musk/phikon_v2/kaiko-vitl14/patho3dmatrix-vision/PathOrchestra/conch_v1_5: 1024
-  # conch_v1/phikon: 768
+  # conch_v1/phikon/h0_mini: 768
   # lunit_vits8: 384
   emb_dim: 1024 
   finetune_mode:
@@ -27,13 +28,13 @@ model:
     rank: 16 # only used when finetune_mode.type is lora or dora 
     alpha: 16 # only used when finetune_mode.type is lora or dora
   transformer_adapter:
-    depth: 2              # Vision Blocks 的数量 (默认: 2)
-    mlp_ratio: 4.0        # MLP 隐藏层维度与嵌入维度的比率 (默认: 4.0)
-    drop_rate: 0.0        # Dropout 率 (默认: 0.0)
-    attn_drop_rate: 0.0   # Attention Dropout 率 (默认: 0.0)
-    drop_path_rate: 0.1   # 随机深度率 (默认: 0.1)
-    init_values: 1.0e-5   # LayerScale 初始值 (默认: 1e-5)
-    qk_norm: false        # 是否使用 QK 归一化 (默认: false)
+    depth: 2              # Number of Vision Blocks (default: 2)
+    mlp_ratio: 4.0        # MLP hidden dim / embedding dim ratio (default: 4.0)
+    drop_rate: 0.0        # Dropout rate (default: 0.0)
+    attn_drop_rate: 0.0   # Attention dropout rate (default: 0.0)
+    drop_path_rate: 0.1   # Stochastic depth rate (default: 0.1)
+    init_values: 1.0e-5   # LayerScale init value (default: 1e-5)
+    qk_norm: false        # Whether to use QK normalization (default: false)
   # CNN Adapter settings (only used when finetune_mode.type is cnn_adapter)
   # Reference: TransUNet ResNetV2 architecture
   cnn_adapter:
@@ -55,8 +56,8 @@ training:
   
   # Data augmentation
   augmentation:
-   # virchow_v1,virchow_v2,uni_v2,midnight12k,kaiko-vitl14,hibou_l,hoptimus_0,hoptimus_1,: must be a multiple of 14 (token_size) 
-    # uni_v1,conch_v1_5,gigapath,conch_v1 ,phikon_v2,patho3dmatrix-vision,PathOrchestra,phikon,phikon_v2: must be a multiple of 16 (token_size) 
+   # virchow_v1,virchow_v2,uni_v2,midnight12k,kaiko-vitl14,hibou_l,hoptimus_0,hoptimus_1,h0_mini: must be a multiple of 14 (token_size) 
+    # uni_v1,conch_v1_5,gigapath,conch_v1 ,phikon_v2,patho3dmatrix-vision,PathOrchestra,phikon,phikon_v2,genbio_pathfm: must be a multiple of 16 (token_size) 
     # special: musk: 384
     RandomResizedCropSize: 384 
 
@@ -78,8 +79,8 @@ validation:
   eval_interval: 1  # Validate every N epochs
   batch_size: 8
   augmentation:
-    # virchow_v1,virchow_v2,uni_v2,midnight12k,kaiko-vitl14,hibou_l,hoptimus_0,hoptimus_1,: must be a multiple of 14 (token_size) 
-    # uni_v1,conch_v1_5,gigapath,conch_v1 ,phikon_v2,patho3dmatrix-vision,PathOrchestra,phikon,phikon_v2: must be a multiple of 16 (token_size) 
+    # virchow_v1,virchow_v2,uni_v2,midnight12k,kaiko-vitl14,hibou_l,hoptimus_0,hoptimus_1,h0_mini: must be a multiple of 14 (token_size) 
+    # uni_v1,conch_v1_5,gigapath,conch_v1 ,phikon_v2,patho3dmatrix-vision,PathOrchestra,phikon,phikon_v2,genbio_pathfm: must be a multiple of 16 (token_size) 
     # special: musk: 384
     ResizedSize: 384 
   

@@ -38,6 +38,8 @@ PFM_PATCH_SIZE = {
     'patho3dmatrix-vision': 16,
     'hoptimus_0': 14,
     'hoptimus_1': 14,
+    'h0_mini': 14,
+    'genbio_pathfm': 16,
     'kaiko-vits8': 8,
     'kaiko-vits16': 16,
     'kaiko-vitb8': 8,
@@ -408,7 +410,7 @@ def _get_position_embeddings(model: nn.Module, pfm_name: str, num_patches: int, 
         elif pfm_name == 'conch_v1_5':
             if hasattr(model.pfm.trunk, 'pos_embed'):
                 pos_embed = model.pfm.trunk.pos_embed
-        elif pfm_name in ['hoptimus_0', 'hoptimus_1', 'uni_v2', 'patho3dmatrix-vision', 'PathOrchestra']:
+        elif pfm_name in ['hoptimus_0', 'hoptimus_1', 'h0_mini', 'uni_v2', 'patho3dmatrix-vision', 'PathOrchestra']:
             if hasattr(model.pfm, 'pos_embed'):
                 pos_embed = model.pfm.pos_embed
         elif pfm_name.startswith('kaiko-') or pfm_name == 'lunit_vits8':
@@ -426,6 +428,9 @@ def _get_position_embeddings(model: nn.Module, pfm_name: str, num_patches: int, 
         elif pfm_name == 'musk':
             # MUSK uses BEiT3 which has its own position encoding mechanism
             # Position embeddings are handled internally in the encoder
+            return None
+        elif pfm_name == 'genbio_pathfm':
+            # GenBio-PathFM uses RoPE; no absolute position embeddings to extract
             return None
         else:
             # Default: try to find pos_embed directly
@@ -613,10 +618,16 @@ def equip_model_with_cnn_adapter(model: nn.Module, cnn_config: dict) -> nn.Modul
             # Kaiko models: standard timm ViT
             features = self.pfm.blocks(cnn_tokens)
             features = self.pfm.norm(features)
-        elif self.PFM_name == 'hoptimus_0' or self.PFM_name == 'hoptimus_1':
-            # H-Optimus: standard timm ViT
+        elif self.PFM_name in ('hoptimus_0', 'hoptimus_1', 'h0_mini'):
+            # H-Optimus / H0-mini: standard timm ViT
             features = self.pfm.blocks(cnn_tokens)
             features = self.pfm.norm(features)
+        elif self.PFM_name == 'genbio_pathfm':
+            raise NotImplementedError(
+                "cnn_adapter_full_transformer does not support genbio_pathfm "
+                "(custom per-channel RoPE ViT). Use finetune_mode.type: cnn_adapter "
+                "or frozen/full/transformer_adapter instead."
+            )
         elif self.PFM_name == 'patho3dmatrix-vision':
             # Patho3DMatrix: standard timm ViT
             features = self.pfm.blocks(cnn_tokens)

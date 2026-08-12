@@ -9,7 +9,7 @@ def update_config(config, key, value):
     d = config
     for k in keys[:-1]:
         d = d.setdefault(k, {})
-    # 尝试转换值类型
+    # Try to convert the value type
     try:
         d[keys[-1]] = yaml.safe_load(value)
     except yaml.YAMLError:
